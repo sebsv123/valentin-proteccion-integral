@@ -1,0 +1,245 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, CircleHelp, ClipboardList, MessageCircle, ShieldAlert, ShieldCheck } from 'lucide-react';
+import type { Product, ProductSubpage } from '@/lib/products';
+import { buildWhatsAppHref, getRelatedProducts, getSubpagesForProduct } from '@/lib/products';
+import { FAQAccordion } from './faq-accordion';
+import { LeadForm } from './lead-form';
+
+export function ProductHero({ product }: { product: Product }) {
+  const subpages = getSubpagesForProduct(product.slug);
+  return (
+    <section className="section-pad pt-6 md:pt-10">
+      <div className="container-shell">
+        <div className="soft-card overflow-hidden">
+          <div className="grid items-stretch gap-0 lg:grid-cols-[1.02fr_0.98fr]">
+            <div className="p-7 md:p-10 lg:p-12">
+              <p className="kicker">{product.eyebrow}</p>
+              <h1 className="mt-3 font-heading text-5xl font-bold tracking-tight text-[var(--blue-deep)] md:text-6xl">{product.heroTitle}</h1>
+              <p className="mt-5 max-w-2xl text-lg leading-9 text-[var(--muted)] md:text-xl">{product.heroCopy}</p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <Link href="/contacto" className="btn-primary">Solicitar orientación</Link>
+                <a href={buildWhatsAppHref(product.whatsappMessage)} className="btn-whatsapp"><MessageCircle className="h-4 w-4" /> Hablar por WhatsApp</a>
+              </div>
+              {subpages.length ? (
+                <div className="mt-7 flex flex-wrap gap-3">
+                  {subpages.map((sub) => (
+                    <Link key={sub.slug} href={`/seguros/${product.slug}/${sub.slug}`} className="rounded-full border border-[var(--border)] bg-white px-4 py-3 text-sm font-semibold tracking-wide text-[var(--blue-deep)] hover:border-[var(--blue)] hover:text-[var(--blue)]">
+                      {sub.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+              <div className="mt-7 grid gap-3 md:grid-cols-3">
+                {product.benefits.map((item) => (
+                  <div key={item} className="rounded-[22px] bg-[var(--bg)] px-4 py-4 text-base leading-7 text-[var(--text)]">{item}</div>
+                ))}
+              </div>
+            </div>
+            <div className="relative min-h-[360px] lg:min-h-full">
+              <Image src={product.heroImage} alt={product.heroAlt} fill className="object-cover" priority />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,59,104,0.08)] via-transparent to-transparent" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function CoverageHighlights({ product }: { product: Product }) {
+  return (
+    <section className="section-pad">
+      <div className="container-shell grid gap-8 xl:grid-cols-[0.86fr_1.14fr]">
+        <div>
+          <p className="kicker">Coberturas destacadas</p>
+          <h2 className="mt-3 section-title">Lo importante de {product.label}, explicado con más orden</h2>
+          <p className="section-copy mt-4">Aquí resumimos los puntos que más suelen condicionar la decisión: qué se valora, qué cambia entre modalidades y qué preguntas merece la pena hacerse antes de contratar.</p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {product.highlights.map((item) => (
+            <div key={item} className="soft-card p-6">
+              <div className="mb-4 inline-flex rounded-2xl bg-[var(--bg)] p-3 text-[var(--blue)]"><ShieldCheck className="h-5 w-5" /></div>
+              <p className="text-base leading-8 text-[var(--text)]">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ProductDecisionGrid({ product }: { product: Product }) {
+  const blocks = [
+    {
+      title: 'Qué suele incluir',
+      items: product.whatIncludes,
+      icon: ClipboardList,
+      tint: 'bg-[rgba(15,94,156,0.06)]',
+    },
+    {
+      title: 'Qué no siempre viene igual',
+      items: product.whatVaries,
+      icon: ShieldAlert,
+      tint: 'bg-[rgba(242,140,40,0.08)]',
+    },
+    {
+      title: 'Qué conviene revisar antes de contratar',
+      items: product.whatReview,
+      icon: CircleHelp,
+      tint: 'bg-[rgba(123,198,126,0.12)]',
+    },
+  ];
+
+  return (
+    <section className="section-pad pt-0">
+      <div className="container-shell">
+        <div className="mb-8 max-w-3xl">
+          <p className="kicker">Lo que conviene tener claro</p>
+          <h2 className="mt-3 section-title">Una lectura breve para entender mejor {product.label}</h2>
+          <p className="section-copy mt-4">Este bloque resume qué suele incluir, qué puede cambiar según modalidad y qué merece la pena revisar antes de decidir. Sirve para orientar sin saturarte.</p>
+        </div>
+        <div className="grid gap-5 xl:grid-cols-3">
+          {blocks.map((block) => {
+            const Icon = block.icon;
+            return (
+              <article key={block.title} className="soft-card p-6 md:p-7">
+                <div className={`mb-5 inline-flex rounded-2xl p-3 text-[var(--blue-deep)] ${block.tint}`}>
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="font-heading text-2xl font-semibold text-[var(--blue-deep)]">{block.title}</h3>
+                <div className="mt-5 space-y-3">
+                  {block.items.map((item) => (
+                    <div key={item} className="rounded-[20px] border border-[var(--border)] bg-white px-4 py-4 text-sm leading-7 text-[var(--text)] md:text-base">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+        <div className="mt-6 rounded-[26px] border border-[var(--border)] bg-white px-6 py-5 text-sm leading-7 text-[var(--muted)] md:text-base">
+          {product.disclaimer}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function CasesAndForm({ product }: { product: Product }) {
+  return (
+    <section className="section-pad bg-[linear-gradient(180deg,rgba(255,255,255,0.6),rgba(238,242,247,0.92))]">
+      <div className="container-shell grid gap-8 xl:grid-cols-[0.92fr_1.08fr]">
+        <div className="soft-card p-7 md:p-10">
+          <p className="kicker">Perfiles y casos de uso</p>
+          <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight text-[var(--blue-deep)] md:text-5xl">Cuándo suele encajar mejor</h2>
+          <p className="mt-4 text-base leading-8 text-[var(--muted)] md:text-lg">No todo el mundo necesita leer el producto igual. Estos perfiles te ayudan a ver más rápido si esta opción va contigo o si conviene mirar otra modalidad.</p>
+          <div className="mt-6 grid gap-3 md:grid-cols-2">
+            {product.cases.map((item) => <div key={item} className="rounded-[22px] bg-[var(--bg)] px-4 py-4 text-base font-medium tracking-wide text-[var(--text)]">{item}</div>)}
+          </div>
+          <div className="mt-6 rounded-[24px] border border-[var(--border)] bg-white p-5 text-base leading-8 text-[var(--muted)]">Si tu situación no encaja exactamente en estos perfiles, no pasa nada. La orientación sirve precisamente para aterrizar lo que cambia según edad, uso, modalidad y necesidades concretas.</div>
+        </div>
+        <LeadForm defaultProduct={product.slug} compact />
+      </div>
+    </section>
+  );
+}
+
+export function ProductFaqSection({ product }: { product: Product }) {
+  return (
+    <section className="section-pad" id="faqs-producto">
+      <div className="container-shell grid gap-8 xl:grid-cols-[0.88fr_1.12fr]">
+        <div>
+          <p className="kicker">Preguntas frecuentes de {product.label}</p>
+          <h2 className="mt-3 section-title">Dudas reales para decidir con más tranquilidad</h2>
+          <p className="section-copy mt-4">Hemos recogido preguntas que suelen aparecer antes de contratar este tipo de seguro. La idea es ayudarte a decidir mejor, no llenarte de texto sin contexto.</p>
+        </div>
+        <FAQAccordion items={product.faqs} contextualLinks />
+      </div>
+    </section>
+  );
+}
+
+export function SubpageHero({ subpage }: { subpage: ProductSubpage }) {
+  return (
+    <section className="section-pad pt-6 md:pt-10">
+      <div className="container-shell">
+        <div className="soft-card overflow-hidden">
+          <div className="grid items-stretch gap-0 lg:grid-cols-[1fr_1fr]">
+            <div className="p-7 md:p-10 lg:p-12">
+              <p className="kicker">{subpage.eyebrow}</p>
+              <h1 className="mt-3 font-heading text-5xl font-bold tracking-tight text-[var(--blue-deep)] md:text-6xl">{subpage.title}</h1>
+              <p className="mt-5 max-w-2xl text-lg leading-9 text-[var(--muted)] md:text-xl">{subpage.summary}</p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <Link href="/contacto" className="btn-primary">Solicitar orientación</Link>
+                <a href={buildWhatsAppHref(subpage.whatsappMessage)} className="btn-whatsapp"><MessageCircle className="h-4 w-4" /> Consulta sin compromiso</a>
+              </div>
+              <div className="mt-7 grid gap-3">
+                {subpage.bullets.map((item) => (
+                  <div key={item} className="rounded-[22px] bg-[var(--bg)] px-4 py-4 text-base leading-7 text-[var(--text)]">{item}</div>
+                ))}
+              </div>
+            </div>
+            <div className="relative min-h-[340px]">
+              <Image src={subpage.heroImage} alt={subpage.heroAlt} fill className="object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function RelatedProducts({ product }: { product: Product }) {
+  const related = getRelatedProducts(product.related);
+  return (
+    <section className="section-pad pt-0">
+      <div className="container-shell">
+        <div className="mb-8 max-w-3xl">
+          <p className="kicker">Otros seguros relacionados</p>
+          <h2 className="mt-3 section-title">Si quieres comparar otras opciones, aquí tienes un siguiente paso lógico</h2>
+        </div>
+        <div className="grid gap-5 lg:grid-cols-3">
+          {related.map((item) => (
+            <article key={item.slug} className="soft-card overflow-hidden">
+              <div className="relative h-56">
+                <Image src={item.cardImage} alt={item.cardAlt} fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,59,104,0.55)] to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                  <p className="kicker !text-white/80">{item.eyebrow}</p>
+                  <h3 className="mt-2 font-heading text-3xl font-bold tracking-wide">{item.label}</h3>
+                </div>
+              </div>
+              <div className="p-6">
+                <p className="text-base leading-8 text-[var(--muted)]">{item.summary}</p>
+                <div className="mt-5 flex flex-col gap-3">
+                  <Link href={`/seguros/${item.slug}`} className="btn-secondary w-full justify-center">Ver más información <ArrowRight className="h-4 w-4" /></Link>
+                  <a href={buildWhatsAppHref(item.whatsappMessage)} className="btn-ghost w-full justify-center">WhatsApp contextual</a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ProductCTASection({ title, text, message }: { title: string; text: string; message: string }) {
+  return (
+    <section className="section-pad pt-0">
+      <div className="container-shell">
+        <div className="soft-card bg-[linear-gradient(135deg,rgba(18,59,104,0.96),rgba(15,94,156,0.9))] p-8 text-white md:p-10">
+          <p className="kicker !text-white/70">Consulta sin compromiso</p>
+          <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">{title}</h2>
+          <p className="mt-4 max-w-3xl text-lg leading-9 text-white/80">{text}</p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href={buildWhatsAppHref(message)} className="btn-whatsapp !bg-white !text-[var(--blue-deep)]">Hablar por WhatsApp</a>
+            <Link href="/contacto" className="btn-secondary !border-white/30 !text-white hover:!bg-white hover:!text-[var(--blue-deep)]">Solicitar orientación</Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

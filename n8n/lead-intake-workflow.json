@@ -1,0 +1,182 @@
+{
+  "name": "VPI - Lead Intake Webhook",
+  "meta": {
+    "kind": "blueprint",
+    "note": "Blueprint orientado a n8n. Puede importarse como base y ajustar credenciales, IDs y posiciones según tu instancia.",
+    "expected_env": {
+      "leadSecret": "pon-aqui-el-mismo-valor-que-en-la-landing-fase-1",
+      "allowedOriginA": "https://valentinproteccionintegral.com",
+      "allowedOriginB": "https://www.valentinproteccionintegral.com"
+    }
+  },
+  "nodes": [
+    {
+      "id": "webhook-node",
+      "name": "Webhook Lead",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [260, 280],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-pon-aqui-una-ruta-larga-e-impredecible",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://valentinproteccionintegral.com,https://www.valentinproteccionintegral.com"
+        }
+      }
+    },
+    {
+      "id": "validate-node",
+      "name": "Validate Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [520, 280],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "const body = $json.body ?? $json; const headers = $json.headers ?? {}; const secret = headers['x-lead-secret'] || headers['X-Lead-Secret'] || ''; const expected = $vars.leadSecret || 'pon-aqui-el-mismo-valor-que-en-la-landing-fase-1'; const origin = headers.origin || headers.Origin || ''; const allowed = new Set(['https://valentinproteccionintegral.com','https://www.valentinproteccionintegral.com']); const fullName = String(body.fullName || '').trim(); const phone = String(body.phone || '').trim(); const productInterest = String(body.productInterest || '').trim(); const consent = Boolean(body.consent); const honeypot = String(body.website || '').trim(); const valid = secret === expected && consent && !honeypot && fullName.length >= 2 && phone.length >= 6 && productInterest.length >= 2 && (!origin || allowed.has(origin)); return [{ json: { valid, secretOk: secret === expected, originOk: !origin || allowed.has(origin), honeypotOk: !honeypot, payload: body, receivedAt: new Date().toISOString() } }];"
+      }
+    },
+    {
+      "id": "if-valid-node",
+      "name": "Is Valid?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [760, 280],
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.valid}}",
+              "value2": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "normalize-node",
+      "name": "Normalize Lead",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [1010, 180],
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            { "name": "fullName", "value": "={{$json.payload.fullName || ''}}" },
+            { "name": "phone", "value": "={{$json.payload.phone || ''}}" },
+            { "name": "province", "value": "={{$json.payload.province || ''}}" },
+            { "name": "productInterest", "value": "={{$json.payload.productInterest || ''}}" },
+            { "name": "peopleCount", "value": "={{$json.payload.peopleCount || ''}}" },
+            { "name": "ages", "value": "={{$json.payload.ages || ''}}" },
+            { "name": "notes", "value": "={{$json.payload.notes || ''}}" },
+            { "name": "timestamp", "value": "={{$json.payload.timestamp || $json.receivedAt}}" },
+            { "name": "pageUrl", "value": "={{$json.payload.page?.url || ''}}" },
+            { "name": "referrer", "value": "={{$json.payload.page?.referrer || ''}}" },
+            { "name": "utm_source", "value": "={{$json.payload.utm?.source || ''}}" },
+            { "name": "utm_campaign", "value": "={{$json.payload.utm?.campaign || ''}}" },
+            { "name": "utm_medium", "value": "={{$json.payload.utm?.medium || ''}}" }
+          ],
+          "boolean": [{ "name": "consent", "value": "={{Boolean($json.payload.consent)}}" }]
+        }
+      }
+    },
+    {
+      "id": "store-placeholder-node",
+      "name": "Store Lead (placeholder)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [1260, 180],
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "storageHint",
+              "value": "Sustituye este nodo por Google Sheets, Airtable, Postgres o tu destino real."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "notify-placeholder-node",
+      "name": "Notify Sales (placeholder)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [1510, 180],
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "notifyHint",
+              "value": "Sustituye este nodo por Email, Slack, Telegram o WhatsApp interno."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "success-response-node",
+      "name": "Respond Success",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1760, 180],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\"ok\": true, \"message\": \"Gracias. Hemos recibido tu solicitud y te contactaremos pronto.\"}",
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              { "name": "Content-Type", "value": "application/json" }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "error-response-node",
+      "name": "Respond 401",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1010, 420],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\"ok\": false, \"message\": \"Solicitud rechazada.\"}",
+        "options": {
+          "responseCode": 401,
+          "responseHeaders": {
+            "entries": [
+              { "name": "Content-Type", "value": "application/json" }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Lead": {
+      "main": [[{ "node": "Validate Lead", "type": "main", "index": 0 }]]
+    },
+    "Validate Lead": {
+      "main": [[{ "node": "Is Valid?", "type": "main", "index": 0 }]]
+    },
+    "Is Valid?": {
+      "main": [
+        [{ "node": "Normalize Lead", "type": "main", "index": 0 }],
+        [{ "node": "Respond 401", "type": "main", "index": 0 }]
+      ]
+    },
+    "Normalize Lead": {
+      "main": [[{ "node": "Store Lead (placeholder)", "type": "main", "index": 0 }]]
+    },
+    "Store Lead (placeholder)": {
+      "main": [[{ "node": "Notify Sales (placeholder)", "type": "main", "index": 0 }]]
+    },
+    "Notify Sales (placeholder)": {
+      "main": [[{ "node": "Respond Success", "type": "main", "index": 0 }]]
+    }
+  }
+}

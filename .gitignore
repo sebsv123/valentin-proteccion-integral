@@ -7,3 +7,5 @@ out
 .dev.vars
 .dev.vars.*
 .DS_Store
+.vercel
+.env*.local

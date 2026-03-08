@@ -104,7 +104,6 @@ export function Header() {
           <div className="hidden items-center gap-3 xl:flex">
             <a href={site.instagram} target="_blank" rel="noreferrer" className="btn-ghost !px-5 !py-4"><Instagram className="h-4 w-4" /> @segurosrosavalentin</a>
             <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para elegir un seguro.')} className="btn-whatsapp !px-6 !py-4">WhatsApp</a>
-            <a href={`tel:${site.phoneHref}`} className="btn-ghost !px-5 !py-4"><Phone className="h-4 w-4" /> {site.phone}</a>
           </div>
 
           <button className="btn-ghost xl:hidden" onClick={() => setOpen((v) => !v)} aria-label="Abrir menú" aria-expanded={open}>
@@ -119,26 +118,31 @@ export function Header() {
         {open ? (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[80] bg-[rgba(18,59,104,0.34)] p-4">
             <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} className="ml-auto flex h-full w-full max-w-md flex-col rounded-[30px] bg-white p-5 shadow-2xl">
-              <div className="flex items-center justify-between gap-3">
-                <Brand />
-                <button className="btn-ghost !px-3 !py-3" onClick={() => setOpen(false)} aria-label="Cerrar menú"><X className="h-5 w-5" /></button>
+              <div className="flex items-center justify-between gap-3 border-b pb-4">
+                <div className="scale-75 origin-left"><Brand /></div>
+                <button className="btn-ghost !px-3 !py-3 hover:bg-[var(--bg)]" onClick={() => setOpen(false)} aria-label="Cerrar menú"><X className="h-6 w-6" /></button>
               </div>
               <div className="mt-6 space-y-3 overflow-y-auto pb-6">
                 <details className="soft-card p-4" open>
                   <summary className="cursor-pointer list-none font-heading text-lg font-semibold text-[var(--blue-deep)]">Seguros</summary>
-                  <div className="mt-3 grid gap-3">
-                    {grouped.map((item) => (
-                      <details key={item.slug} className="rounded-[18px] bg-[var(--bg)] px-4 py-3">
-                        <summary className="cursor-pointer list-none font-semibold tracking-wide text-[var(--text)]">{item.label}</summary>
-                        <div className="mt-2 space-y-2">
-                          <Link href={`/seguros/${item.slug}`} onClick={closeAll} className="block text-sm font-medium text-[var(--blue-deep)]">Ver {item.label}</Link>
-                          {item.children.map((child) => (
-                            <Link key={child.slug} href={`/seguros/${item.slug}/${child.slug}`} onClick={closeAll} className="block text-sm text-[var(--muted)]">{child.label}</Link>
-                          ))}
+                <div className="mt-3 grid gap-3">
+                  {grouped.map((item) => (
+                    <details key={item.slug} className="rounded-[18px] bg-[var(--bg)] px-4 py-3">
+                      <summary className="cursor-pointer list-none font-semibold tracking-wide text-[var(--text)]">
+                        <div className="flex items-center justify-between">
+                          <span>{item.label}</span>
+                          <span className="text-[var(--blue)] text-xs font-bold underline decoration-dotted underline-offset-4" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href=`/seguros/${item.slug}`; closeAll(); }}>Ir a sección</span>
                         </div>
-                      </details>
-                    ))}
-                  </div>
+                      </summary>
+                      <div className="mt-2 space-y-2 border-t border-black/5 pt-2">
+                        <Link href={`/seguros/${item.slug}`} onClick={closeAll} className="block text-sm font-bold text-[var(--blue-deep)]">Ver {item.label} (General)</Link>
+                        {item.children.map((child) => (
+                          <Link key={child.slug} href={`/seguros/${item.slug}/${child.slug}`} onClick={closeAll} className="block text-sm text-[var(--muted)] hover:text-[var(--blue)]">{child.label}</Link>
+                        ))}
+                      </div>
+                    </details>
+                  ))}
+                </div>
                 </details>
                 {mainNav.slice(2).map((item) => (
                   <Link key={item.href} href={item.href} onClick={closeAll} className="soft-card block px-5 py-5 font-heading text-lg font-semibold text-[var(--blue-deep)]">{item.label}</Link>

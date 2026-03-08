@@ -253,58 +253,56 @@ export function AgentTrustBlock() {
   return (
     <section className="section-pad" id="como-funciona">
       <div className="container-shell">
-        <div className="grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
-          <div className="soft-card overflow-hidden">
+        <div className="grid gap-8 xl:grid-cols-[0.95fr_1.05fr] xl:gap-12">
+          <div className="soft-card overflow-hidden shadow-xl">
             <div className="grid h-full lg:grid-cols-[0.9fr_1.1fr]">
               <div className="relative min-h-[420px]">
                 <Image src="/images/agent/rosa-valentin.jpg" alt="Rosa Valentín, asesora personal en seguros" fill className="object-cover object-top" />
               </div>
-              <div className="p-7 md:p-9">
+              <div className="p-7 md:p-9 xl:p-12">
                 <p className="kicker">Tu asesor personal en seguros</p>
                 <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight text-[var(--blue-deep)] md:text-5xl">Más de 10 años de experiencia para ayudarte a elegir con claridad</h2>
-                <p className="mt-4 text-base leading-8 text-[var(--muted)] md:text-lg">Rosa Valentín acompaña cada caso con una mirada cercana, profesional y comparativa. La idea no es venderte rápido, sino ayudarte a encontrar una opción que de verdad tenga sentido para tu vida y tu tranquilidad.</p>
-                <div className="mt-6 grid gap-3 md:grid-cols-3">
-                  <div className="rounded-[22px] bg-[var(--bg)] p-4"><p className="font-heading text-lg font-semibold text-[var(--blue-deep)]">Más de 10 años</p><p className="mt-1 text-sm leading-6 text-[var(--muted)]">asesorando a familias y particulares</p></div>
-                  <div className="rounded-[22px] bg-[var(--bg)] p-4"><p className="font-heading text-lg font-semibold text-[var(--blue-deep)]">Asesoramiento personalizado</p><p className="mt-1 text-sm leading-6 text-[var(--muted)]">según tu etapa, prioridades y necesidades</p></div>
-                  <div className="rounded-[22px] bg-[var(--bg)] p-4"><p className="font-heading text-lg font-semibold text-[var(--blue-deep)]">Comparativa entre compañías</p><p className="mt-1 text-sm leading-6 text-[var(--muted)]">con criterio y sin saturarte de información</p></div>
+                <p className="mt-6 text-base leading-8 text-[var(--muted)] md:text-lg">Rosa Valentín acompaña cada caso con una mirada cercana, profesional y comparativa. La idea no es venderte rápido, sino ayudarte a encontrar una opción que de verdad tenga sentido para tu vida y tu tranquilidad.</p>
+                <div className="mt-8 grid gap-4">
+                  <div className="flex items-center gap-4 rounded-[22px] bg-[var(--bg)] p-5"><div className="h-2 w-2 rounded-full bg-[var(--blue)]" /><p className="text-base font-semibold text-[var(--blue-deep)]">Asesoría según tu etapa y prioridades</p></div>
+                  <div className="flex items-center gap-4 rounded-[22px] bg-[var(--bg)] p-5"><div className="h-2 w-2 rounded-full bg-[var(--blue)]" /><p className="text-base font-semibold text-[var(--blue-deep)]">Comparativa real entre compañías</p></div>
                 </div>
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link href="/contacto" className="btn-primary">Consulta sin compromiso</Link>
-                  <a href={site.instagram} target="_blank" rel="noreferrer" className="btn-ghost"><Instagram className="h-4 w-4" /> @segurosrosavalentin</a>
+                  <a href={site.instagram} target="_blank" rel="noreferrer" className="btn-ghost"><Instagram className="h-4 w-4" /> Instagram</a>
                 </div>
               </div>
             </div>
           </div>
-          <div className="soft-card overflow-hidden">
+          <div className="soft-card overflow-hidden shadow-xl">
             <div className="grid h-full lg:grid-cols-[1.02fr_0.98fr]">
-              <div className="p-7 md:p-9">
+              <div className="p-7 md:p-9 xl:p-12">
                 <p className="kicker">Cómo te ayudamos</p>
                 <h3 className="mt-3 font-heading text-4xl font-bold text-[var(--blue-deep)]">Una orientación clara antes de contratar</h3>
-                <p className="mt-4 text-base leading-8 text-[var(--muted)]">No te dejamos solo con un listado de coberturas. Convertimos la comparación en un proceso más claro, humano y útil.</p>
-                <div className="mt-6 grid gap-4">
+                <p className="mt-6 text-base leading-8 text-[var(--muted)]">No te dejamos solo con un listado de coberturas. Convertimos la comparación en un proceso más claro, humano y útil.</p>
+                <div className="mt-8 grid gap-4">
                   {[
                     ['01', 'Escuchamos qué quieres proteger y en qué momento estás.'],
-                    ['02', 'Comparamos opciones con una explicación que se entiende.'],
-                    ['03', 'Aterrizamos coberturas, matices y diferencias sin lenguaje frío.'],
-                    ['04', 'Seguimos a tu lado también después de contratar.'],
+                    ['02', 'Comparamos opciones con una explicación sencilla.'],
+                    ['03', 'Aterrizamos coberturas y matices sin lenguaje frío.'],
+                    ['04', 'Seguimos a tu lado después de contratar.'],
                   ].map(([step, line]) => (
-                    <div key={line} className="flex items-center gap-4 rounded-[22px] border border-[var(--border)] bg-white px-5 py-4 shadow-sm">
+                    <div key={line} className="flex items-center gap-5 rounded-[22px] border border-[var(--border)] bg-white px-5 py-4 shadow-sm hover:border-[var(--blue)] transition-colors">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[var(--blue-deep)] text-sm font-bold text-white">{step}</div>
                       <div className="text-base font-medium text-[var(--text)]">{line}</div>
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link href="/contacto" className="btn-primary">Solicitar orientación</Link>
-                  <a href={buildWhatsAppHref('Hola, quiero una orientación clara antes de contratar.')} className="btn-whatsapp">Hablar por WhatsApp</a>
+                  <a href={buildWhatsAppHref('Hola, quiero una orientación clara antes de contratar.')} className="btn-whatsapp">WhatsApp</a>
                 </div>
               </div>
               <div className="relative min-h-[360px]">
                 <Image src="/images/home/handshake-real.jpg" alt="Acompañamiento cercano antes de contratar" fill className="object-cover object-center" />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,59,104,0.08),rgba(18,59,104,0.34))]" />
-                <div className="absolute inset-x-0 bottom-0 p-7 text-white">
-                  <p className="font-heading text-3xl font-bold">Acompañamiento real antes y después de decidir</p>
-                  <p className="mt-2 text-base leading-7 text-white/88">Una conversación clara puede ahorrarte dudas, tiempo y elecciones precipitadas.</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--blue-deep)]/60 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-8 text-white">
+                  <p className="font-heading text-2xl font-bold leading-tight">Acompañamiento real antes y después de decidir</p>
                 </div>
               </div>
             </div>

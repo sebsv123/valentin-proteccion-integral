@@ -43,6 +43,18 @@ export function Footer() {
               <a href={site.instagram} className="block hover:text-[var(--blue)]">@segurosrosavalentin</a>
               <a href={buildWhatsAppHref('Hola, quiero una orientación sobre seguros.')} className="block hover:text-[var(--blue)]">Abrir WhatsApp</a>
             </div>
+            <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--border)]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6234867.487348164!2d-7.491670849999999!3d40.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc42e3783261bc8b%3A0xa6acb69c749508a8!2sEspa%C3%B1a!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+                width="100%"
+                height="160"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación en España"
+              />
+            </div>
           </div>
         </div>
         <div className="mt-10 grid gap-4 border-t border-[var(--border)] pt-6 text-sm leading-7 text-[var(--muted)] md:grid-cols-3">
@@ -50,7 +62,11 @@ export function Footer() {
           <p>Las coberturas, límites, primas y condiciones pueden variar según modalidad, edad, provincia y aceptación.</p>
           <p>Esta web está pensada para orientar, comparar y acompañar antes de contratar.</p>
         </div>
+        <div className="mt-6 border-t border-[var(--border)] pt-6 text-center text-sm text-[var(--muted)]">
+          <p>© {new Date().getFullYear()} {site.name}. Todos los derechos reservados.</p>
+        </div>
       </div>
     </footer>
   );
 }
+

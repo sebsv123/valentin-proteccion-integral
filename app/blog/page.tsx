@@ -1,34 +1,18 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { StickyWhatsApp } from '@/components/sticky-whatsapp';
 import { site, buildWhatsAppHref } from '@/lib/products';
+import { blogPosts } from '@/lib/blog';
 
 export const metadata: Metadata = {
   title: `Blog | ${site.name}`,
   description: 'Guías breves y contenido útil para entender mejor seguros de salud, vida, mascotas y viaje en España.',
 };
-
-const posts = [
-  {
-    title: 'Cómo ordenar un seguro de SALUD antes de comparar',
-    excerpt: 'Copago, hospitalización, reembolso y uso real explicados con una mirada práctica y más clara.',
-    image: '/images/blog/blog-team.jpg',
-  },
-  {
-    title: 'VIDA, hipoteca e incapacidad: qué conviene separar bien',
-    excerpt: 'Una guía breve para no mezclar necesidades distintas dentro de la protección personal.',
-    image: '/images/home/family-window.jpg',
-  },
-  {
-    title: 'VIAJE y MASCOTAS: preguntas útiles antes de contratar',
-    excerpt: 'Límite médico, anulación, responsabilidad civil y veterinaria vistos sin lenguaje frío.',
-    image: '/images/products/viaje-city.jpg',
-  },
-];
 
 export default function BlogPage() {
   return (
@@ -48,16 +32,27 @@ export default function BlogPage() {
 
         <section className="section-pad pt-0">
           <div className="container-shell grid gap-6 lg:grid-cols-3">
-            {posts.map((post) => (
-              <article key={post.title} className="soft-card overflow-hidden">
-                <div className="relative h-60">
-                  <Image src={post.image} alt={post.title} fill className="object-cover" />
-                </div>
-                <div className="p-6">
-                  <h2 className="font-heading text-3xl font-semibold text-[var(--blue-deep)]">{post.title}</h2>
-                  <p className="mt-3 text-base leading-8 text-[var(--muted)]">{post.excerpt}</p>
-                  <div className="mt-5 rounded-[20px] bg-[var(--bg)] px-4 py-4 text-sm leading-7 text-[var(--text)]">Muy pronto iremos ampliando este espacio con más guías prácticas y contenido útil para filtrar mejor cada decisión.</div>
-                </div>
+            {blogPosts.map((post) => (
+              <article key={post.slug} className="soft-card overflow-hidden group">
+                <Link href={`/blog/${post.slug}`} className="block">
+                  <div className="relative h-60 overflow-hidden">
+                    <Image src={post.image} alt={post.imageAlt} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_50%,rgba(0,34,68,0.5))]" />
+                    <div className="absolute inset-x-0 bottom-0 p-5">
+                      <div className="flex items-center gap-3 text-xs text-white/80">
+                        <span className="inline-flex items-center gap-1"><Calendar className="h-3 w-3" /> {new Date(post.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                        <span className="inline-flex items-center gap-1"><Clock className="h-3 w-3" /> {post.readTime}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h2 className="font-heading text-2xl font-semibold text-[var(--blue-deep)] group-hover:text-[var(--blue)] transition-colors">{post.title}</h2>
+                    <p className="mt-3 text-base leading-8 text-[var(--muted)]">{post.excerpt}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[var(--blue)]">
+                      Leer artículo <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </Link>
               </article>
             ))}
           </div>
@@ -65,7 +60,7 @@ export default function BlogPage() {
 
         <section className="section-pad pt-0">
           <div className="container-shell">
-            <div className="soft-card bg-[linear-gradient(135deg,rgba(18,59,104,0.96),rgba(15,94,156,0.9))] p-8 text-white md:p-10">
+            <div className="soft-card bg-[linear-gradient(135deg,rgba(0,34,68,0.96),rgba(0,51,102,0.9))] p-8 text-white md:p-10">
               <p className="kicker !text-white/70">¿Prefieres resolverlo con una conversación?</p>
               <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight md:text-5xl">Podemos pasar de la guía a tu caso concreto</h2>
               <p className="mt-4 max-w-3xl text-lg leading-9 text-white/80">Si quieres aterrizar lo que has leído a tu situación real, puedes escribirnos por WhatsApp o pedir orientación sin compromiso.</p>

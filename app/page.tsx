@@ -1,7 +1,7 @@
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { StickyWhatsApp } from '@/components/sticky-whatsapp';
-import { AgentTrustBlock, BlogPreviewSection, ComparisonCardsSection, FinalCTASection, GeneralFaqSection, HeroLeadSection, MascotHelperSection, ProductCategoryGrid, TrustBadgesSection } from '@/components/home-sections';
+import { AgentTrustBlock, BlogPreviewSection, ComparisonCardsSection, FinalCTASection, GeneralFaqSection, HeroLeadSection, MascotHelperSection, ProductCategoryGrid, StatsSection, TrustBadgesSection } from '@/components/home-sections';
 import { TestimonialsCarousel } from '@/components/testimonials-carousel';
 
 export default function HomePage() {
@@ -10,6 +10,7 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroLeadSection />
+        <StatsSection />
         <TrustBadgesSection />
         <ProductCategoryGrid />
         <ComparisonCardsSection />

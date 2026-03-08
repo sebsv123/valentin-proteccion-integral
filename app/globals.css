@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --blue: #0f5e9c;
-  --blue-deep: #123b68;
-  --green: #4faf4e;
-  --green-soft: #7bc67e;
+  --blue: #003366;
+  --blue-deep: #002244;
+  --green: #4CAF50;
+  --green-soft: #81C784;
   --orange: #f28c28;
   --off-white: #f8fafc;
   --bg: #eef2f7;
@@ -69,4 +69,54 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 767px) {
   .btn-primary,.btn-secondary,.btn-ghost,.btn-whatsapp { width: 100%; }
   .section-copy { max-width: 100%; }
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.glass-dark {
+  background: rgba(0, 34, 68, 0.65);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Premium Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-premium {
+  background: radial-gradient(circle at top right, rgba(123, 198, 126, 0.1), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(0, 51, 102, 0.05), transparent 40%);
+}
+
+/* Animations */
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(76, 175, 80, 0.15); }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s infinite ease-in-out;
+}
+
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(18, 59, 104, 0.15);
+}
+
+.apple-mask {
+  mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
 }

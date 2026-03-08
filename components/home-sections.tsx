@@ -9,11 +9,11 @@ import { buildWhatsAppHref, comparisonProfiles, generalFaqs, products, site, tru
 import { FAQAccordion } from './faq-accordion';
 
 const cardImages: Record<string, string> = {
-  salud: '/images/home/salud-card.jpg',
-  vida: '/images/home/vida-card.jpg',
-  mascotas: '/brand/mascotas-card.jpeg',
-  viaje: '/images/home/viaje-card.jpg',
-  dental: '/brand/banner-dental.png',
+  salud: '/images/premium/hero-family.png',
+  vida: '/images/premium/life.png',
+  mascotas: '/images/premium/happy-pets.png',
+  viaje: '/images/premium/travel.png',
+  dental: '/images/premium/dental-care.png',
   accidentes: '/brand/banner-accidentes.png',
   hospitalizacion: '/brand/banner-hospitalizacion.png',
   decesos: '/brand/banner-decesos.png',
@@ -32,25 +32,25 @@ const sectionTints: Record<string, string> = {
 
 export function HeroLeadSection() {
   return (
-    <section className="section-pad pt-8 md:pt-12 overflow-hidden">
-      <div className="container-shell hero-grid items-stretch gap-6">
-        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.42 }} className="soft-card relative overflow-hidden p-7 md:p-10 xl:p-12">
+    <section className="section-pad pt-4 md:pt-8 overflow-hidden bg-premium">
+      <div className="container-shell hero-grid items-stretch gap-8">
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} className="soft-card glass relative overflow-hidden p-8 md:p-12 xl:p-16 border-white/40 shadow-2xl">
           <div className="absolute inset-0">
-            <Image src="/images/products/salud-hero-bike.jpg" alt="Familia disfrutando al aire libre con una bicicleta" fill className="object-cover object-center" priority />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,250,252,0.98)_0%,rgba(248,250,252,0.95)_42%,rgba(248,250,252,0.72)_70%,rgba(248,250,252,0.22)_100%)]" />
+            <Image src="/images/premium/hero-family.png" alt="Familia feliz disfrutando de un momento de bienestar y seguridad" fill className="object-cover object-center" priority />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,250,252,0.94)_0%,rgba(248,250,252,0.88)_42%,rgba(248,250,252,0.68)_70%,rgba(248,250,252,0.18)_100%)]" />
           </div>
           <div className="relative z-10 max-w-3xl">
-            <p className="kicker">{site.brandLine}</p>
-            <h1 className="mt-4 max-w-4xl font-heading text-5xl font-bold tracking-tight text-[var(--blue-deep)] md:text-6xl xl:text-7xl">
+            <p className="kicker text-[var(--blue)] font-bold tracking-[0.3em]">{site.brandLine}</p>
+            <h1 className="mt-6 max-w-4xl font-heading text-6xl font-extrabold tracking-tight text-gradient md:text-7xl xl:text-8xl leading-[1.05]">
               {site.heroTagline}
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-9 text-[var(--muted)] md:text-xl">
               Asesoramiento personalizado en <strong>SALUD</strong>, <strong>VIDA</strong>, <strong>MASCOTAS</strong>, <strong>VIAJE</strong>, <strong>DENTAL</strong>, <strong>ACCIDENTES</strong>, <strong>HOSPITALIZACIÓN</strong> y <strong>DECESOS</strong>.
               {' '}Te ayudamos a entender, comparar y elegir mejor antes de contratar.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contacto" className="btn-primary">Cuéntanos qué necesitas</Link>
-              <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para elegir un seguro.')} className="btn-whatsapp"><MessageCircle className="h-4 w-4" /> Hablar por WhatsApp</a>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link href="/contacto" className="btn-primary hover-lift px-10 py-5 text-lg shadow-xl">Cuéntanos qué necesitas</Link>
+              <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para elegir un seguro.')} className="btn-whatsapp animate-pulse-soft px-10 py-5 text-lg shadow-xl"><MessageCircle className="h-5 w-5" /> Hablar por WhatsApp</a>
             </div>
             <div className="mt-7 grid gap-3 md:grid-cols-3">
               {[
@@ -64,9 +64,9 @@ export function HeroLeadSection() {
                 </div>
               ))}
             </div>
-            <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold text-[var(--blue-deep)]">
+            <div className="mt-12 flex flex-wrap gap-4 text-sm font-bold text-[var(--blue-deep)]">
               {products.map((product) => (
-                <Link key={product.slug} href={`/seguros/${product.slug}`} className="rounded-full border border-[var(--border)] bg-white px-4 py-3 tracking-wide hover:border-[var(--blue)] hover:text-[var(--blue)]">
+                <Link key={product.slug} href={`/seguros/${product.slug}`} className="glass rounded-full border border-white/60 bg-white/40 px-6 py-4 tracking-wider hover:bg-white hover:text-[var(--blue)] hover:border-[var(--blue)] transition-all">
                   {product.label}
                 </Link>
               ))}
@@ -76,6 +76,37 @@ export function HeroLeadSection() {
         <motion.div initial={{ opacity: 0, x: 18 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.42, delay: 0.05 }} id="lead-form">
           <LeadForm defaultProduct="salud" compact />
         </motion.div>
+      </div>
+    </section>
+  );
+}
+
+export function StatsSection() {
+  const stats = [
+    { label: 'Años de experiencia', value: '10+' },
+    { label: 'Familias protegidas', value: '1.200+' },
+    { label: 'Ramos de seguro', value: '8' },
+    { label: 'Atención personalizada', value: '100%' },
+  ];
+
+  return (
+    <section className="bg-[var(--blue-deep)] py-12 md:py-16 overflow-hidden">
+      <div className="container-shell">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <motion.div 
+              key={stat.label}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="text-center"
+            >
+              <div className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#81C784] mb-2">{stat.value}</div>
+              <div className="text-white/70 text-sm md:text-base font-semibold uppercase tracking-widest">{stat.label}</div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -129,9 +160,9 @@ export function ProductCategoryGrid() {
           <h2 className="mt-3 section-title">Encuentra el ramo que mejor encaje con lo que quieres proteger</h2>
           <p className="section-copy mt-4">La portada te orienta y cada producto tiene su propia página para ampliar coberturas, ventajas, preguntas frecuentes y formas de contacto.</p>
         </div>
-        <div className="grid gap-6 lg:grid-cols-2 2xl:grid-cols-4">
+        <div className="grid gap-8 lg:grid-cols-2 2xl:grid-cols-4">
           {list.map((product, index) => (
-            <motion.article key={product.slug} initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.32, delay: index * 0.04 }} className="soft-card overflow-hidden">
+            <motion.article key={product.slug} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }} className="soft-card overflow-hidden hover-lift border-white/20 shadow-lg">
               <div className="relative h-72">
                 <Image src={product.image} alt={product.cardAlt} fill className="object-cover" />
                 <div className={`absolute inset-0 bg-gradient-to-t ${sectionTints[product.slug] || 'from-[rgba(18,59,104,0.6)] to-transparent'}`} />
@@ -173,22 +204,26 @@ export function ComparisonCardsSection() {
         <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
           <div className="grid gap-6 xl:grid-cols-3">
             {comparisonProfiles.map((profile, index) => (
-              <div key={profile.title} className="soft-card group p-7 transition-transform hover:-translate-y-1">
-                <div className="mb-5 inline-flex rounded-full bg-[var(--off-white)] px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-[var(--blue-deep)]">
+              <div key={profile.title} className="soft-card glass group p-8 transition-all hover-lift border-white/40 shadow-xl">
+                <div className="mb-6 inline-flex rounded-full bg-[var(--blue-deep)] px-5 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-white shadow-lg">
                   Paso {index + 1}
                 </div>
-                <h3 className="font-heading text-3xl font-semibold text-[var(--blue-deep)]">{profile.title}</h3>
-                <p className="mt-3 text-base leading-8 text-[var(--muted)]">{profile.description}</p>
-                <div className="mt-5 grid gap-3">
+                <h3 className="font-heading text-3xl font-bold text-[var(--blue-deep)] leading-tight">{profile.title}</h3>
+                <p className="mt-4 text-base leading-8 text-[var(--muted)]">{profile.description}</p>
+                <div className="mt-6 grid gap-4">
                   {profile.bullets.map((bullet) => (
-                    <div key={bullet} className="rounded-[20px] border border-[var(--border)] bg-white px-4 py-4 text-sm font-medium text-[var(--text)] md:text-base shadow-sm">
+                    <div key={bullet} className="rounded-2xl border border-white/60 bg-white/60 px-5 py-4 text-sm font-semibold text-[var(--text)] shadow-sm backdrop-blur">
                       {bullet}
                     </div>
                   ))}
                 </div>
-                <div className="mt-6 flex flex-col gap-3">
-                  <Link href={actions[index].href} className="btn-secondary w-full justify-center">{actions[index].cta}</Link>
-                  <a href={actions[index].wa} className="btn-ghost w-full justify-center">Hablar por WhatsApp</a>
+                <div className="mt-8 flex flex-col gap-4">
+                  <Link href={actions[index].href} className="btn-secondary w-full justify-center shadow-lg hover:shadow-2xl">
+                    {actions[index].cta}
+                  </Link>
+                  <a href={actions[index].wa} className="btn-ghost w-full justify-center border-white/40 bg-white/40 backdrop-blur">
+                    Hablar por WhatsApp
+                  </a>
                 </div>
               </div>
             ))}
@@ -330,30 +365,33 @@ export function MascotHelperSection() {
   return (
     <section className="section-pad pt-0">
       <div className="container-shell">
-        <div className="soft-card overflow-hidden">
-          <div className="grid gap-0 xl:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative min-h-[320px] bg-[linear-gradient(180deg,rgba(123,198,126,0.18),rgba(15,94,156,0.05))]">
-              <Image src="/images/home/mascota-vpi.png" alt="Mascota visual de ayuda de Valentín Protección Integral" fill className="object-contain p-6" />
+        <div className="soft-card glass overflow-hidden border-white/60 shadow-2xl">
+          <div className="grid gap-0 xl:grid-cols-[0.85fr_1.15fr]">
+            <div className="relative min-h-[360px] bg-gradient-to-br from-[#81C784]/20 to-[#003366]/10 flex items-center justify-center p-12">
+              <div className="relative w-full h-full max-w-[280px]">
+                <Image src="/images/home/mascota-vpi.png" alt="Tortuga protectora — Mascota de Valentín Protección Integral" fill className="object-contain drop-shadow-2xl" />
+              </div>
             </div>
-            <div className="p-7 md:p-10">
-              <p className="kicker">Cómo decidir sin liarte</p>
-              <h2 className="mt-3 section-title">Una guía breve para entender mejor antes de contratar</h2>
-              <p className="section-copy mt-4">Hemos convertido la orientación inicial en un bloque más visual y útil. La idea es ayudarte a separar lo esencial, detectar lo que cambia según modalidad y llegar a la conversación con mejores preguntas.</p>
-              <div className="mt-6 grid gap-3 md:grid-cols-2">
+            <div className="p-8 md:p-12 xl:p-16">
+              <p className="kicker font-bold tracking-[0.3em]">Tu punto de apoyo</p>
+              <h2 className="mt-4 section-title leading-tight">Orientación humana para decisiones importantes</h2>
+              <p className="section-copy mt-6 text-xl">Hemos diseñado esta experiencia para que te sientas acompañado en cada paso. Sin tecnicismos, sin presiones y con una mirada experta sobre lo que de verdad importa.</p>
+              <div className="mt-10 grid gap-4 md:grid-cols-2">
                 {[
                   'Ordenamos prioridades antes de comparar.',
-                  'Traducimos coberturas a lenguaje claro.',
+                  'Aterrizamos coberturas a lenguaje claro.',
                   'Te señalamos qué conviene revisar de verdad.',
-                  'Puedes seguir por WhatsApp, formulario o llamada.',
+                  'Acompañamiento por WhatsApp o llamada.',
                 ].map((item) => (
-                  <div key={item} className="rounded-[22px] border border-[var(--border)] bg-white px-4 py-4 text-sm leading-7 text-[var(--text)] md:text-base">
+                  <div key={item} className="flex items-center gap-4 rounded-2xl border border-white/40 bg-white/40 p-5 text-base font-bold text-[var(--blue-deep)] shadow-sm backdrop-blur">
+                    <div className="h-2 w-2 rounded-full bg-[#4CAF50]" />
                     {item}
                   </div>
                 ))}
               </div>
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link href="/como-te-ayudamos" className="btn-secondary">Ver cómo te ayudamos</Link>
-                <a href={buildWhatsAppHref('Hola, quiero una orientación para entender mejor qué seguro me conviene.')} className="btn-whatsapp">Resolverlo por WhatsApp</a>
+              <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+                <Link href="/como-te-ayudamos" className="btn-primary hover-lift px-8">Explorar cómo ayudamos</Link>
+                <a href={buildWhatsAppHref('Hola, quiero una orientación para entender mejor qué seguro me conviene.')} className="btn-whatsapp animate-pulse-soft px-8 font-extrabold">Hablar con Rosa</a>
               </div>
             </div>
           </div>

@@ -11,15 +11,15 @@ export function ProductHero({ product }: { product: Product }) {
   return (
     <section className="section-pad pt-6 md:pt-10">
       <div className="container-shell">
-        <div className="soft-card overflow-hidden">
-          <div className="grid items-stretch gap-0 lg:grid-cols-[1.02fr_0.98fr]">
-            <div className="p-7 md:p-10 lg:p-12">
-              <p className="kicker">{product.eyebrow}</p>
-              <h1 className="mt-3 font-heading text-5xl font-bold tracking-tight text-[var(--blue-deep)] md:text-6xl">{product.heroTitle}</h1>
-              <p className="mt-5 max-w-2xl text-lg leading-9 text-[var(--muted)] md:text-xl">{product.heroCopy}</p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contacto" className="btn-primary">Solicitar orientación</Link>
-                <a href={buildWhatsAppHref(product.whatsappMessage)} className="btn-whatsapp"><MessageCircle className="h-4 w-4" /> Hablar por WhatsApp</a>
+        <div className="soft-card glass overflow-hidden border-white/40 shadow-2xl">
+          <div className="grid items-stretch gap-0 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="p-8 md:p-12 lg:p-16">
+              <p className="kicker font-bold tracking-[0.3em]">{product.eyebrow}</p>
+              <h1 className="mt-4 font-heading text-5xl font-extrabold tracking-tight text-gradient md:text-6xl lg:text-7xl leading-[1.1]">{product.heroTitle}</h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--muted)] md:text-xl">{product.heroCopy}</p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link href="/contacto" className="btn-primary hover-lift px-10">Solicitar orientación</Link>
+                <a href={buildWhatsAppHref(product.whatsappMessage)} className="btn-whatsapp animate-pulse-soft px-10"><MessageCircle className="h-5 w-5" /> Hablar por WhatsApp</a>
               </div>
               {subpages.length ? (
                 <div className="mt-7 flex flex-wrap gap-3">
@@ -56,11 +56,11 @@ export function CoverageHighlights({ product }: { product: Product }) {
           <h2 className="mt-3 section-title">Lo importante de {product.label}, explicado con más orden</h2>
           <p className="section-copy mt-4">Aquí resumimos los puntos que más suelen condicionar la decisión: qué se valora, qué cambia entre modalidades y qué preguntas merece la pena hacerse antes de contratar.</p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {product.highlights.map((item) => (
-            <div key={item} className="soft-card p-6">
-              <div className="mb-4 inline-flex rounded-2xl bg-[var(--bg)] p-3 text-[var(--blue)]"><ShieldCheck className="h-5 w-5" /></div>
-              <p className="text-base leading-8 text-[var(--text)]">{item}</p>
+            <div key={item} className="soft-card glass p-8 hover-lift border-white/40">
+              <div className="mb-6 inline-flex rounded-2xl bg-[#4CAF50]/10 p-4 text-[#4CAF50] shadow-sm"><ShieldCheck className="h-6 w-6" /></div>
+              <p className="text-lg leading-relaxed text-[var(--text)] font-medium">{item}</p>
             </div>
           ))}
         </div>
@@ -103,14 +103,14 @@ export function ProductDecisionGrid({ product }: { product: Product }) {
           {blocks.map((block) => {
             const Icon = block.icon;
             return (
-              <article key={block.title} className="soft-card p-6 md:p-7">
-                <div className={`mb-5 inline-flex rounded-2xl p-3 text-[var(--blue-deep)] ${block.tint}`}>
-                  <Icon className="h-5 w-5" />
+              <article key={block.title} className="soft-card glass p-8 md:p-10 hover-lift border-white/40">
+                <div className={`mb-6 inline-flex rounded-2xl p-4 text-[var(--blue-deep)] shadow-sm ${block.tint}`}>
+                  <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="font-heading text-2xl font-semibold text-[var(--blue-deep)]">{block.title}</h3>
-                <div className="mt-5 space-y-3">
+                <h3 className="font-heading text-3xl font-bold text-[var(--blue-deep)] leading-tight">{block.title}</h3>
+                <div className="mt-8 space-y-4">
                   {block.items.map((item) => (
-                    <div key={item} className="rounded-[20px] border border-[var(--border)] bg-white px-4 py-4 text-sm leading-7 text-[var(--text)] md:text-base">
+                    <div key={item} className="rounded-2xl border border-white/60 bg-white/60 px-5 py-5 text-sm leading-relaxed text-[var(--text)] md:text-base font-semibold shadow-sm backdrop-blur">
                       {item}
                     </div>
                   ))}
@@ -200,22 +200,22 @@ export function RelatedProducts({ product }: { product: Product }) {
           <p className="kicker">Otros seguros relacionados</p>
           <h2 className="mt-3 section-title">Si quieres comparar otras opciones, aquí tienes un siguiente paso lógico</h2>
         </div>
-        <div className="grid gap-5 lg:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-3">
           {related.map((item) => (
-            <article key={item.slug} className="soft-card overflow-hidden">
-              <div className="relative h-56">
+            <article key={item.slug} className="soft-card overflow-hidden hover-lift border-white/20 shadow-xl">
+              <div className="relative h-64">
                 <Image src={item.cardImage} alt={item.cardAlt} fill className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,59,104,0.55)] to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                  <p className="kicker !text-white/80">{item.eyebrow}</p>
-                  <h3 className="mt-2 font-heading text-3xl font-bold tracking-wide">{item.label}</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,34,68,0.7)] to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6 text-white">
+                  <p className="kicker !text-white/70 font-bold tracking-widest">{item.eyebrow}</p>
+                  <h3 className="mt-2 font-heading text-4xl font-bold tracking-tight">{item.label}</h3>
                 </div>
               </div>
-              <div className="p-6">
-                <p className="text-base leading-8 text-[var(--muted)]">{item.summary}</p>
-                <div className="mt-5 flex flex-col gap-3">
-                  <Link href={`/seguros/${item.slug}`} className="btn-secondary w-full justify-center">Ver más información <ArrowRight className="h-4 w-4" /></Link>
-                  <a href={buildWhatsAppHref(item.whatsappMessage)} className="btn-ghost w-full justify-center">WhatsApp contextual</a>
+              <div className="p-8">
+                <p className="text-base leading-relaxed text-[var(--muted)]">{item.summary}</p>
+                <div className="mt-8 flex flex-col gap-3">
+                  <Link href={`/seguros/${item.slug}`} className="btn-secondary w-full justify-center shadow-lg">Ver más información <ArrowRight className="h-4 w-4" /></Link>
+                  <a href={buildWhatsAppHref(item.whatsappMessage)} className="btn-ghost w-full justify-center border-white/40 bg-white/40 backdrop-blur">Consulta rápida</a>
                 </div>
               </div>
             </article>

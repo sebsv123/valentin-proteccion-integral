@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Playfair_Display, Montserrat } from 'next/font/google';
 import Script from 'next/script';
+import { SocialProof } from '@/components/social-proof';
+import { ExitIntentPopup } from '@/components/exit-intent-popup';
 import { site } from '@/lib/products';
 import './globals.css';
 
-const heading = Poppins({ subsets: ['latin'], variable: '--font-heading', weight: ['600', '700', '800'] });
-const body = Inter({ subsets: ['latin'], variable: '--font-body', weight: ['400', '500', '600', '700'] });
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-heading', weight: ['600', '700', '800'] });
+const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-body', weight: ['400', '500', '600', '700'] });
 
 const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': ['InsuranceAgency', 'LocalBusiness'],
     name: site.name,
     description: site.description,
     image: `${site.domain}/brand/logo-vpi.jpeg`,
@@ -50,13 +52,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     sameAs: [site.instagram],
     areaServed: 'España',
     serviceType: 'Asesoramiento en seguros',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'ES',
+      addressRegion: 'España',
+    },
+    priceRange: '€€',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '19:00',
+    },
   };
 
   return (
     <html lang="es">
-      <body className={`${heading.variable} ${body.variable}`}>
+      <body className={`${montserrat.variable} ${playfair.variable} antialiased font-sans`}>
         <Script id="jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}
+        <SocialProof />
+        <ExitIntentPopup />
         {clarityId ? (
           <Script id="clarity" strategy="afterInteractive">{`
             (function(c,l,a,r,i,t,y){

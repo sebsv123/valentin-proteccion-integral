@@ -68,10 +68,10 @@ export const products: Product[] = [
     heroTitle: 'Te ayudamos a encontrar un seguro de SALUD que encaje contigo y con la forma en la que realmente quieres usarlo',
     heroCopy:
       'No todas las opciones funcionan igual. Hay modalidades más sencillas, otras con hospitalización y otras con mayor libertad de elección o reembolso. La clave está en comparar con contexto.',
-    heroImage: '/images/products/salud-hero-bike.jpg',
-    heroAlt: 'Familia montando en bicicleta y disfrutando de un momento de bienestar',
-    cardImage: '/images/home/salud-card.jpg',
-    cardAlt: 'Familia en movimiento y sensación de bienestar',
+    heroImage: '/images/premium/hero-family.png',
+    heroAlt: 'Familia disfrutando de un momento de bienestar y salud en el exterior',
+    cardImage: '/images/premium/hero-family.png',
+    cardAlt: 'Momento de salud familiar',
     summary:
       'Medicina general, especialidades, urgencias y pruebas, con diferencias importantes entre copago, hospitalización, reembolso, libertad de elección y nivel de cobertura según modalidad.',
     highlights: [
@@ -136,10 +136,10 @@ export const products: Product[] = [
     heroTitle: 'Un seguro de VIDA no sirve solo para dejar un capital: bien elegido, puede ayudarte a proteger a tu familia, tu hipoteca o tu estabilidad económica',
     heroCopy:
       'No todas las soluciones de VIDA responden a la misma necesidad. Algunas están pensadas para protección familiar, otras para hipoteca o deuda y otras conviene diferenciarlas de productos centrados en accidente, porque el riesgo cubierto no siempre es el mismo.',
-    heroImage: '/images/products/vida-hero.jpg',
-    heroAlt: 'Familia en casa con luz natural y ambiente tranquilo',
-    cardImage: '/images/home/vida-card.jpg',
-    cardAlt: 'Familia abrazada en casa',
+    heroImage: '/images/premium/life.png',
+    heroAlt: 'Manos de padre e hijo representando protección y seguridad familiar',
+    cardImage: '/images/premium/life.png',
+    cardAlt: 'Protección familiar',
     summary:
       'Protección económica, apoyo a tu familia y modalidades distintas según quieras cubrir una necesidad familiar, una deuda o una situación concreta.',
     highlights: [
@@ -203,10 +203,10 @@ export const products: Product[] = [
     heroTitle: 'El seguro para MASCOTAS puede ayudarte tanto con la parte veterinaria del día a día como con la protección frente a daños a terceros',
     heroCopy:
       'No todas las opciones parten del mismo enfoque. Algunas están más centradas en asistencia veterinaria y otras en responsabilidad civil. Además, según modalidad, también puede ampliarse la protección con opcionales como robo, fallecimiento accidental o determinados gastos asociados.',
-    heroImage: '/images/products/mascotas-hero.jpg',
-    heroAlt: 'Perro y gato en una creatividad de marca de mascotas',
-    cardImage: '/images/home/mascotas-card.jpg',
-    cardAlt: 'Creatividad de marca de mascotas',
+    heroImage: '/images/premium/happy-pets.png',
+    heroAlt: 'Perro y gato descansando juntos en un hogar seguro',
+    cardImage: '/images/premium/happy-pets.png',
+    cardAlt: 'Mascotas protegidas',
     summary:
       'Asistencia veterinaria, responsabilidad civil y coberturas opcionales con una lectura más clara para saber qué estás comparando de verdad.',
     highlights: [
@@ -271,10 +271,10 @@ export const products: Product[] = [
     heroTitle: 'El seguro DENTAL puede ayudarte a acceder a una atención bucodental más cómoda y previsible',
     heroCopy:
       'Según la modalidad, puede dar acceso a distintas especialidades, a determinados actos incluidos sin franquicia y a mejores condiciones frente a tarifas particulares, con opciones pensadas también para familias y empresas.',
-    heroImage: '/brand/banner-dental.png',
-    heroAlt: 'Creatividad de marca para DENTAL',
-    cardImage: '/brand/banner-dental.png',
-    cardAlt: 'Banner de DENTAL',
+    heroImage: '/images/premium/dental-care.png',
+    heroAlt: 'Sonrisa sana y cuidado dental profesional',
+    cardImage: '/images/premium/dental-care.png',
+    cardAlt: 'Cuidado dental premium',
     summary:
       'Una forma más clara de valorar revisiones, urgencias, especialidades y actos incluidos sin reducirlo todo a una limpieza o una revisión puntual.',
     highlights: [
@@ -536,10 +536,10 @@ export const products: Product[] = [
     heroTitle: 'No todos los seguros de VIAJE están pensados para lo mismo: elegir bien depende del destino, la duración y el tipo de desplazamiento',
     heroCopy:
       'Hay opciones para viajes puntuales, estudios, escapadas frecuentes o necesidades más específicas. La anulación, el límite médico y el alcance de ciertas coberturas no siempre son iguales entre modalidades.',
-    heroImage: '/images/products/viaje-hero.jpg',
-    heroAlt: 'Viajera en un entorno monumental',
-    cardImage: '/images/home/viaje-card.jpg',
-    cardAlt: 'Viajera en destino turístico',
+    heroImage: '/images/premium/travel.png',
+    heroAlt: 'Pareja disfrutando de un atardecer en la costa española con tranquilidad',
+    cardImage: '/images/premium/travel.png',
+    cardAlt: 'Viaje seguro',
     summary:
       'Asistencia médica, anulación, equipaje y modalidades distintas según el tipo de viaje, con una explicación más útil y menos genérica.',
     highlights: [

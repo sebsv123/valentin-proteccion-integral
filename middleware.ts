@@ -4,7 +4,7 @@ import { checkSecurity } from './lib/security';
 
 export async function middleware(request: NextRequest) {
   // Get IP from headers (Edge compatible)
-  const ip = request.ip || request.headers.get('x-forwarded-for') || '127.0.0.1';
+  const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
 
   // Check security engine
   const result = await checkSecurity(ip);

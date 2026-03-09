@@ -51,8 +51,8 @@ export function HeroLeadSection() {
               {site.heroTagline}
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-9 text-[var(--muted)] md:text-xl">
-              Asesoramiento personalizado en <strong>SALUD</strong>, <strong>VIDA</strong>, <strong>MASCOTAS</strong>, <strong>VIAJE</strong>, <strong>DENTAL</strong>, <strong>ACCIDENTES</strong>, <strong>LEGAL</strong> y <strong>NEGOCIOS</strong>.
-              {' '}Te ayudamos a entender, comparar y elegir mejor antes de contratar.
+              Asesoramiento personalizado en <strong>SALUD</strong>, <strong>VIDA</strong>, <strong>MASCOTAS</strong>, <strong>VIAJE</strong>, <strong>DENTAL</strong>, <strong>ACCIDENTES</strong>, <strong>PROTECCIÓN JURÍDICA</strong> y <strong>NEGOCIOS</strong>.
+              {' '}Protegemos lo que de verdad importa con el seguro adecuado para ti.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link href="/contacto" className="btn-primary hover-lift px-10 py-5 text-lg shadow-xl">Cuéntanos qué necesitas</Link>
@@ -60,9 +60,9 @@ export function HeroLeadSection() {
             </div>
             <div className="mt-7 grid gap-3 md:grid-cols-3">
               {[
-                ['Te ayudamos a elegir con claridad', 'Comparamos opciones contigo y te explicamos lo importante sin prisas ni presión.'],
-                ['Asesoramiento experto', 'No somos un comparador frío. Hay una persona detrás de cada orientación.'],
-                ['Consulta sin compromiso', 'Puedes empezar por llamada, WhatsApp o un formulario corto, como prefieras.'],
+                ['Te ayudamos a decidir', 'Comparamos opciones contigo y te explicamos la letra pequeña sin prisas ni presión.'],
+                ['Experiencia a tu servicio', 'No somos un comparador automático. Hay un equipo experto detrás de cada recomendación.'],
+                ['Consulta sin coste', 'Empieza por llamada, WhatsApp o formulario corto para resolver tus primeras dudas.'],
               ].map(([title, copy]) => (
                 <div key={title} className="rounded-[22px] bg-white/92 p-4 shadow-sm backdrop-blur">
                   <p className="font-heading text-lg font-semibold text-[var(--blue-deep)]">{title}</p>
@@ -148,8 +148,8 @@ export function TrustBadgesSection() {
                 <Image src="/images/home/handshake-real.jpg" alt="Apretón de manos que transmite confianza y acompañamiento" fill className="object-cover object-center" />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,59,104,0.08),rgba(18,59,104,0.36))]" />
                 <div className="absolute inset-x-0 bottom-0 p-7 text-white">
-                  <p className="font-heading text-3xl font-bold">Protegemos lo que más importa</p>
-                  <p className="mt-2 max-w-md text-base leading-7 text-white/88">Más de 10 años ayudando a familias y particulares a entender, comparar y elegir mejor.</p>
+                  <p className="font-heading text-3xl font-bold">Protegemos tu tranquilidad</p>
+                  <p className="mt-2 max-w-md text-base leading-7 text-white/88">Más de 10 años ayudando a familias y particulares a sentirse seguros con sus decisiones.</p>
                 </div>
               </div>
             </div>
@@ -169,7 +169,7 @@ export function ProductCategoryGrid() {
           <div className="mb-8 max-w-3xl">
             <p className="kicker">Nuestros seguros</p>
             <h2 className="mt-3 section-title">Encuentra el ramo que mejor encaje con lo que quieres proteger</h2>
-            <p className="section-copy mt-4">La portada te orienta y cada producto tiene su propia página para ampliar coberturas, ventajas, preguntas frecuentes y formas de contacto.</p>
+            <p className="section-copy mt-4">Selecciona la categoría para la que necesitas cobertura y descubre las mejores opciones analizadas para tu perfil.</p>
           </div>
         </ScrollReveal>
         <div className="grid gap-8 lg:grid-cols-2 2xl:grid-cols-4">
@@ -278,12 +278,12 @@ export function AgentTrustBlock() {
             <div className="soft-card overflow-hidden shadow-xl h-full">
               <div className="grid h-full lg:grid-cols-[0.9fr_1.1fr]">
                 <div className="relative min-h-[420px]">
-                  <Image src="/images/agent/rosa-valentin.jpg" alt="Rosa Valentín, asesora personal en seguros" fill className="object-cover object-top" />
+                  <Image src="/images/agent/rosa-valentin.jpg" alt="Rosa Valentín, asesora de Valentín Protección Integral" fill className="object-cover object-top" />
                 </div>
                 <div className="p-7 md:p-9 xl:p-12">
-                  <p className="kicker">Tu asesor personal en seguros</p>
-                  <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight text-[var(--blue-deep)] md:text-5xl">Más de 10 años de experiencia para ayudarte a elegir con claridad</h2>
-                  <p className="mt-6 text-base leading-8 text-[var(--muted)] md:text-lg">Rosa Valentín acompaña cada caso con una mirada cercana, profesional y comparativa. La idea no es venderte rápido, sino ayudarte a encontrar una opción que de verdad tenga sentido para tu vida y tu tranquilidad.</p>
+                  <p className="kicker">Tu equipo experto en Valentín Protección Integral</p>
+                  <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight text-[var(--blue-deep)] md:text-5xl">Criterio y cercanía para tu tranquilidad</h2>
+                  <p className="mt-6 text-base leading-8 text-[var(--muted)] md:text-lg">Nuestro equipo, liderado por Rosa Valentín, acompaña cada caso con una mirada transparente y profesional. No se trata solo de vender una póliza, sino de garantizar que tienes la mejor respuesta frente a un imprevisto.</p>
                   <div className="mt-8 grid gap-4">
                     <div className="flex items-center gap-4 rounded-[22px] bg-[var(--bg)] p-5"><div className="h-2 w-2 rounded-full bg-[var(--blue)]" /><p className="text-base font-semibold text-[var(--blue-deep)]">Asesoría según tu etapa y prioridades</p></div>
                     <div className="flex items-center gap-4 rounded-[22px] bg-[var(--bg)] p-5"><div className="h-2 w-2 rounded-full bg-[var(--blue)]" /><p className="text-base font-semibold text-[var(--blue-deep)]">Comparativa real entre compañías</p></div>
@@ -377,8 +377,8 @@ export function FinalCTASection() {
               </div>
               <div className="p-7 md:p-10">
                 <p className="kicker">¿Tienes el seguro adecuado?</p>
-                <h2 className="mt-3 section-title">Cuéntanos qué necesitas y te ayudamos a encontrar la opción adecuada</h2>
-                <p className="section-copy mt-4">Si quieres una orientación clara, humana y con más contexto, podemos empezar por una consulta sin compromiso. Desde ahí vemos juntos qué producto y qué modalidad tienen más sentido para ti.</p>
+                <h2 className="mt-3 section-title">Hablemos para encontrar la opción perfecta</h2>
+                <p className="section-copy mt-4">Una llamada breve suele ser el camino más rápido para despejar dudas. Desde ahí vemos juntos qué producto tiene sentido para ti de forma directa y profesional.</p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <Link href="/contacto" className="btn-primary">Consulta sin compromiso</Link>
                   <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para revisar qué seguro me encaja mejor.')} className="btn-whatsapp">Hablar por WhatsApp</a>
@@ -438,21 +438,21 @@ export function MascotHelperSection() {
 export function BlogPreviewSection() {
   const posts = [
     {
-      title: 'Cómo elegir un seguro de SALUD sin mirar solo la cuota',
-      copy: 'Tres claves para distinguir copago, hospitalización, reembolso y uso real antes de decidir.',
-      href: '/blog',
+      title: 'Guía definitiva: Cómo elegir un Seguro de Salud en España',
+      copy: 'Analizamos las claves para distinguir copago, reembolso y uso real antes de firmar cualquier póliza médica.',
+      href: '/blog/como-elegir-seguro-salud',
       image: '/images/blog/blog-team.jpg',
     },
     {
-      title: 'VIDA, ACCIDENTES y protección familiar: qué cambia de verdad',
-      copy: 'Una lectura breve para no mezclar productos que responden a riesgos distintos.',
-      href: '/blog',
+      title: 'Seguro de Vida vs Accidentes: Cuál necesitas realmente',
+      copy: 'Explicamos las diferencias fundamentales de coberturas para que no contrates riesgos solapados.',
+      href: '/blog/seguro-vida-vs-accidentes',
       image: '/images/home/family-window.jpg',
     },
     {
-      title: 'VIAJE y MASCOTAS: preguntas que conviene hacerte antes de contratar',
-      copy: 'Anulación, límite médico, RC, veterinaria y extras explicados con una mirada más útil.',
-      href: '/blog',
+      title: 'Todo lo que debes saber antes de asegurar tu Viaje a Mascotas',
+      copy: 'Revisiones clave de anulación, límites veterinarios y exclusiones que la mayoría de viajeros pasa por alto.',
+      href: '/blog/seguros-viaje-mascotas-guia',
       image: '/images/products/viaje-city.jpg',
     },
   ];
@@ -462,9 +462,9 @@ export function BlogPreviewSection() {
       <div className="container-shell">
         <ScrollReveal>
           <div className="mb-8 max-w-3xl">
-            <p className="kicker">Blog y contenido útil</p>
-            <h2 className="mt-3 section-title">Guías breves para entender mejor antes de elegir</h2>
-            <p className="section-copy mt-4">No todo tiene que resolverse en una llamada. Aquí también dejamos contenido práctico para ayudarte a comparar con más criterio.</p>
+            <p className="kicker">Blog Corporativo de Seguros</p>
+            <h2 className="mt-3 section-title">Información de valor para tomar decisiones informadas</h2>
+            <p className="section-copy mt-4">Te ayudamos a resolver dudas reales y a mantenerte al día sobre seguros con nuestros artículos especializados.</p>
           </div>
         </ScrollReveal>
         <div className="grid gap-5 lg:grid-cols-3">

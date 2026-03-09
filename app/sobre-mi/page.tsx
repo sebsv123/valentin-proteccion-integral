@@ -9,12 +9,12 @@ import { StickyWhatsApp } from '@/components/sticky-whatsapp';
 import { buildWhatsAppHref, site, testimonials } from '@/lib/products';
 
 export const metadata: Metadata = {
-  title: `Rosa Valentín · Asesora de Seguros en Madrid | ${site.name}`,
-  description: 'Asesora certificada con más de 10 años de experiencia en seguros de salud, vida, mascotas y más. Orientación personalizada en Boadilla del Monte, Madrid.',
+  title: `Valentín Protección Integral · Equipo y Valores | ${site.name}`,
+  description: 'Conoce a Rosa Valentín, asesora experta de Valentín Protección Integral. Más de 10 años de experiencia en seguros de salud, vida, mascotas y negocios.',
   openGraph: {
-    title: `Rosa Valentín · Asesora de Seguros en Madrid | ${site.name}`,
-    description: 'Asesoramiento personalizado en seguros para familias y particulares en Madrid. Sin presión, con escucha y comparativa real.',
-    images: [{ url: `${site.domain}/images/agent/rosa-valentin.jpg`, alt: 'Rosa Valentín — Asesora de seguros en Madrid' }],
+    title: `Valentín Protección Integral · Equipo y Valores | ${site.name}`,
+    description: 'Asesoramiento personalizado en seguros para familias y particulares. Sin presión y con una comparativa transparente.',
+    images: [{ url: `${site.domain}/images/agent/rosa-valentin.jpg`, alt: 'Rosa Valentín — Asesora en Valentín Protección Integral' }],
   },
 };
 
@@ -41,7 +41,7 @@ export default function SobreMiPage() {
                 {/* Name & Title - Now separate from image card */}
                 <div className="soft-card bg-white p-6 text-center shadow-md">
                   <p className="font-heading text-3xl font-bold text-[var(--blue-deep)]">Rosa Valentín</p>
-                  <p className="mt-1 text-base font-semibold text-[var(--blue)]">Asesora certificada en seguros</p>
+                  <p className="mt-1 text-base font-semibold text-[var(--blue)]">Socia y asesora experta en VPI</p>
                   <div className="mt-3 flex items-center justify-center gap-2 text-sm text-[var(--muted)]">
                     <MapPin className="h-4 w-4" />
                     Boadilla del Monte, Madrid
@@ -71,9 +71,9 @@ export default function SobreMiPage() {
 
               {/* Content */}
               <div className="soft-card p-8 md:p-10 lg:p-12">
-                <p className="kicker font-bold tracking-[0.3em]">Sobre mí</p>
+                <p className="kicker font-bold tracking-[0.3em]">Nuestra filosofía</p>
                 <h1 className="mt-4 font-heading text-4xl font-extrabold tracking-tight text-gradient md:text-5xl xl:text-6xl leading-[1.08]">
-                  Una orientación cercana, profesional y sin prisas
+                  Valentín Protección Integral: Criterio y cercanía
                 </h1>
                 <p className="mt-6 text-lg leading-9 text-[var(--muted)]">
                   Valentín Protección Integral nace con una idea sencilla: ayudar a familias y particulares a entender mejor lo que están contratando. No se trata de empujar un producto, sino de comparar con criterio y acompañar cada decisión con más contexto.

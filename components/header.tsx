@@ -14,8 +14,8 @@ import IridescenceBackground from './ui/iridescence-background';
 
 function Brand() {
   return (
-    <Link href="/" className="flex items-center gap-3">
-      <MetallicPaint className="relative h-[74px] w-[260px] max-w-[64vw] overflow-hidden rounded-[24px] border border-white/20 bg-white p-2 shadow-sm sm:w-[315px]">
+    <Link href="/" className="flex items-center gap-3 shrink-0">
+      <MetallicPaint className="relative h-[54px] w-[180px] max-w-[60vw] overflow-hidden rounded-[20px] border border-white/20 bg-white p-1 shadow-sm sm:w-[220px]">
         <Image src="/brand/logo-vpi.jpeg" alt={site.name} fill className="object-contain" priority />
       </MetallicPaint>
     </Link>
@@ -42,19 +42,19 @@ export function Header() {
   return (
     <>
       <header className={`sticky top-0 z-50 transition-all ${scrolled ? 'border-b border-white/10 bg-[#002244] text-white backdrop-blur-xl shadow-[0_14px_42px_rgba(0,0,0,0.3)]' : 'border-transparent bg-[#002244]/95 text-white backdrop-blur-md'}`}>
-      <div className="container-shell">
-        <div className="flex items-center justify-between gap-4 py-5 xl:gap-6 xl:py-6">
+      <div className="container-shell mx-auto px-4 max-w-[1400px]">
+        <div className="flex items-center justify-between gap-3 py-3 xl:gap-5 xl:py-4">
           <Brand />
 
-          <nav className="hidden items-center gap-2 xl:flex">
+          <nav className="hidden items-center gap-1 xl:flex">
             <div className="relative z-[60]">
               <button
                 onClick={() => setMega((v) => !v)}
-                className="group relative px-6 py-4"
+                className="group relative px-4 py-2"
                 aria-expanded={mega}
                 aria-controls="mega-menu"
               >
-                <div className="flex items-center gap-2 font-semibold text-white/90 hover:text-white transition-colors">
+                <div className="flex items-center gap-1.5 font-semibold text-white/90 hover:text-white transition-colors text-[15px]">
                   Seguros <ChevronDown className={`h-4 w-4 transition ${mega ? 'rotate-180' : ''}`} />
                 </div>
                 <motion.div 
@@ -123,7 +123,7 @@ export function Header() {
                 ) : null}
               </AnimatePresence>
             </div>
-            <div className="flex h-[72px] items-center gap-2 -ml-2">
+            <div className="flex h-[42px] items-center gap-1">
               <PillNav
                 items={[
                   ...mainNav.slice(2).map(item => ({
@@ -136,16 +136,17 @@ export function Header() {
                 pillColor="rgba(255,255,255,0.15)"
                 pillTextColor="white"
                 hoveredPillTextColor="white"
+                className="scale-95 origin-left"
               />
             </div>
           </nav>
 
-          <div className="hidden items-center gap-3 xl:flex">
-            <a href={site.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-5 py-3.5 text-white bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90 rounded-[18px] font-semibold transition-opacity shadow-md"><Instagram className="h-4 w-4" /> @segurosrosavalentin</a>
-            <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para elegir un seguro.')} className="btn-whatsapp !px-6 !py-3.5 shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.6)]">WhatsApp</a>
+          <div className="hidden items-center gap-2 xl:flex shrink-0">
+            <a href={site.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 px-4 py-2.5 text-white/95 text-sm bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90 rounded-[14px] font-semibold transition-opacity shadow-md"><Instagram className="h-4 w-4" /> @segurosrosavalentin</a>
+            <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para elegir un seguro.')} className="btn-whatsapp !text-sm !px-5 !py-2.5 shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.6)]">WhatsApp</a>
           </div>
 
-          <button className="flex items-center gap-2 text-white/90 hover:text-white px-5 py-3.5 rounded-[18px] hover:bg-white/10 transition-colors font-semibold border border-white/20" onClick={() => document.querySelector<HTMLButtonElement>('.sm-toggle')?.click()} aria-label="Abrir menú">
+          <button className="flex items-center gap-2 text-white/90 hover:text-white px-4 py-2.5 rounded-[14px] text-sm hover:bg-white/10 transition-colors font-semibold border border-white/20 shrink-0" onClick={() => document.querySelector<HTMLButtonElement>('.sm-toggle')?.click()} aria-label="Abrir menú">
             <Menu className="h-5 w-5" /> Menú
           </button>
 

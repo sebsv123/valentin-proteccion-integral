@@ -428,7 +428,7 @@ export const products: Product[] = [
   {
     slug: 'proteccion-juridica',
     name: 'Protección jurídica',
-    label: 'LEGAL',
+    label: 'PROTECCIÓN JURÍDICA',
     eyebrow: 'DEFENSA LEGAL',
     heroTitle: 'Contar con un abogado a tu lado para defender tus derechos no debería ser un lujo',
     heroCopy:
@@ -668,13 +668,12 @@ export const subpages: ProductSubpage[] = [
 ];
 
 export const generalFaqs: FAQItem[] = [
-  { q: '¿Puedo empezar por WhatsApp y decidir después si relleno el formulario?', a: 'Sí. Muchas personas prefieren comenzar por WhatsApp para contar su caso con naturalidad y, si hace falta, seguir después por llamada o formulario. La idea es adaptarnos al canal que te resulte más cómodo desde el primer momento.' },
-  { q: '¿Me ayudáis aunque todavía no tenga claro qué seguro necesito?', a: 'Sí. Es una de las situaciones más habituales. Podemos ordenar contigo si conviene empezar por SALUD, VIDA, MASCOTAS, VIAJE, DENTAL, ACCIDENTES o NEGOCIOS e después afinar modalidad, coberturas y nivel de protección.' },
-  { q: '¿Trabajáis como comparador automático o como asesoramiento personalizado?', a: 'El enfoque es de asesoramiento personalizado. No se trata de dejarte solo ante una tabla de precios, sino de explicarte qué cambia entre opciones, qué tiene más sentido para tu situación y qué conviene revisar antes de contratar.' },
-  { q: '¿La orientación tiene algún compromiso o me obliga a contratar?', a: 'No. La orientación es sin compromiso. Puedes consultar, entender mejor tus opciones y decidir con calma si quieres avanzar o no. Lo importante es que tomes una decisión más clara y más segura.' },
-  { q: '¿Qué diferencia hay entre pedir orientación general y entrar directamente a un producto?', a: 'Si todavía estás ordenando opciones, suele venir mejor una orientación general. Si ya sabes que buscas SALUD, VIDA, ELECTRODOMÉSTICOS o NEGOCIOS, entrar al producto te permite profundizar más rápido en coberturas perfiles y preguntas frecuentes.' },
-  { q: '¿La información de la web sustituye a las condiciones de la póliza?', a: 'No. La web sirve para orientarte, ayudarte a comparar y hacerte más sencilla la decisión. La contratación final siempre debe revisarse con la documentación contractual correspondiente a la opción que te interese.' },
-  { q: '¿Puedo pedir ayuda ante cualquier duda familiar?', a: 'Claro. Es una de las consultas más frecuentes. Podemos ayudarte a separar qué conviene mirar primero, qué producto tiene más sentido para vuestro caso y qué puntos pesan más, como asistencia, hospitalización, responsabilidad civil o protección económica.' },
+  { q: '¿Puedo recibir asesoramiento sin compromiso?', a: 'Sí. La orientación es 100% gratuita y sin compromiso. Puedes consultar, entender mejor tus opciones y decidir con calma si quieres avanzar o no.' },
+  { q: '¿Trabajáis con distintas opciones de seguro?', a: 'Trabajamos con las principales aseguradoras del mercado para poder ofrecerte una comparativa real e independiente basada en lo que tú necesitas.' },
+  { q: '¿Me ayudáis a comparar coberturas?', a: 'Ese es nuestro principal valor. No somos un comparador automático de precios; traducimos la letra pequeña, te explicamos diferencias reales (ej. copago vs reembolso) y te ayudamos a elegir con criterio.' },
+  { q: '¿Qué necesito para contratar?', a: 'Una vez hayamos elegido la mejor opción, nosotros nos encargamos de toda la gestión administrativa. Solo necesitaremos tus datos básicos y confirmar las condiciones pactadas.' },
+  { q: '¿Puedo resolver dudas después de contratar?', a: 'Por supuesto. Nuestro trabajo no termina al firmar la póliza. Seguiremos a tu lado para ayudarte con autorizaciones, partes de siniestro o cambios en tus condiciones.' },
+  { q: '¿Qué tipo de seguros puedo consultar?', a: 'Somos especialistas en seguros de SALUD, VIDA, MASCOTAS, VIAJES, DENTAL, ACCIDENTES, ELECTRODOMÉSTICOS, PROTECCIÓN JURÍDICA y NEGOCIOS. Además, ofrecemos soluciones específicas para familias, seniors, extranjeros, autónomos y pymes.' },
 ];
 
 export const testimonials = [

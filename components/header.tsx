@@ -70,7 +70,7 @@ export function Header() {
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 8 }}
-                    className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)] w-[1180px] max-w-[calc(100vw-4rem)] rounded-[30px] border border-[var(--border)] bg-white/95 p-6 shadow-[0_24px_72px_rgba(18,59,104,0.14)] backdrop-blur-xl overflow-hidden"
+                    className="absolute left-1/2 -translate-x-1/2 top-[calc(100%+12px)] w-[1180px] max-w-[calc(100vw-4rem)] rounded-[30px] border border-[var(--border)] bg-white/95 p-6 shadow-[0_24px_72px_rgba(18,59,104,0.14)] backdrop-blur-xl overflow-y-auto max-h-[calc(100vh-100px)] overscroll-contain"
                   >
                     <div className="relative z-10 grid gap-5 lg:grid-cols-[300px_1fr]">
                       <div className="rounded-[24px] bg-[linear-gradient(180deg,rgba(15,94,156,0.06),rgba(123,198,126,0.08))] p-5">

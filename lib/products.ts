@@ -80,7 +80,7 @@ export const products: Product[] = [
     cardImage: '/images/products/health-medical-care.png',
     cardAlt: 'Asistencia médica de calidad',
     summary:
-      'Medicina general, especialidades, urgencias y pruebas. Modalidades específicas para seniors, extranjeros o con libertad total de elección mediante reembolso de gastos.',
+      'Medicina general, especialidades, urgencias, pruebas y hospitalización. Modalidades específicas para familias, seniors, extranjeros o con libre elección mediante reembolso.',
     highlights: [
       'Los seguros de salud básicos suelen centrarse en diagnóstico y especialistas sin hospitalización. Si buscas algo más completo, conviene mirar opciones que incluyan ingreso y cirugía.',
       'Contamos con soluciones específicas para perfiles senior, extranjeros con repatriación para visados y modalidades de reembolso para libre elección mundial.',

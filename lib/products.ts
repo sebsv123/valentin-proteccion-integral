@@ -22,6 +22,13 @@ export type Product = {
   disclaimer: string;
   related: string[];
   whatsappMessage: string;
+  customAdvisor?: {
+    name: string;
+    photo: string;
+    phone: string;
+    phoneHref: string;
+    whatsappNumber: string;
+  };
 };
 
 export type ProductSubpage = {
@@ -44,7 +51,7 @@ export const site = {
   shortName: 'VPI',
   title: 'Valentín Protección Integral | Asesora de Seguros en Madrid',
   description:
-    'Asesoramiento personalizado en SALUD, VIDA, MASCOTAS, VIAJE, DENTAL, ACCIDENTES, HOSPITALIZACIÓN y DECESOS en Madrid y Boadilla del Monte. Más de 10 años ayudando a familias a elegir con claridad.',
+    'Asesoramiento personalizado en SALUD, VIDA, MASCOTAS, VIAJE, DENTAL, ACCIDENTES, ELECTRODOMÉSTICOS, PROTECCIÓN JURÍDICA y NEGOCIOS en Madrid y Boadilla del Monte. Más de 10 años ayudando a familias a elegir con claridad.',
   phone: '+34 603 448 765',
   phoneHref: '+34603448765',
   domain: process.env.NEXT_PUBLIC_SITE_URL || 'https://valentinproteccionintegral.com',
@@ -67,16 +74,16 @@ export const products: Product[] = [
     eyebrow: 'SALUD',
     heroTitle: 'Te ayudamos a encontrar un seguro de SALUD que encaje contigo y con la forma en la que realmente quieres usarlo',
     heroCopy:
-      'No todas las opciones funcionan igual. Hay modalidades más sencillas, otras con hospitalización y otras con mayor libertad de elección o reembolso. La clave está en comparar con contexto.',
-    heroImage: '/images/premium/hero-family.png',
-    heroAlt: 'Familia disfrutando de un momento de bienestar y salud en el exterior',
-    cardImage: '/images/premium/hero-family.png',
-    cardAlt: 'Momento de salud familiar',
+      'No todas las opciones funcionan igual. Hay modalidades equilibradas, otras para mayores de 55, para extranjeros o con libre elección de médico y reembolso. La clave está en comparar con contexto.',
+    heroImage: '/images/products/health-medical-care.png',
+    heroAlt: 'Consulta médica profesional y cercana',
+    cardImage: '/images/products/health-medical-care.png',
+    cardAlt: 'Asistencia médica de calidad',
     summary:
-      'Medicina general, especialidades, urgencias y pruebas, con diferencias importantes entre copago, hospitalización, reembolso, libertad de elección y nivel de cobertura según modalidad.',
+      'Medicina general, especialidades, urgencias y pruebas. Modalidades específicas para seniors, extranjeros o con libertad total de elección mediante reembolso de gastos.',
     highlights: [
-      'Elegir SALUD no consiste solo en mirar si tiene copago o reembolso. También conviene distinguir entre modalidades más ambulatorias y otras más completas con hospitalización, porque no todas responden al mismo uso ni al mismo nivel de protección.',
-      'Nuestro trabajo es ayudarte a comparar bien, sin complicarte, para que sepas qué cambia de verdad antes de contratar.',
+      'Los seguros de salud básicos suelen centrarse en diagnóstico y especialistas sin hospitalización. Si buscas algo más completo, conviene mirar opciones que incluyan ingreso y cirugía.',
+      'Contamos con soluciones específicas para perfiles senior, extranjeros con repatriación para visados y modalidades de reembolso para libre elección mundial.',
       'Hay opciones pensadas para un uso más básico y otras para quienes priorizan más amplitud, más libertad o un encaje familiar concreto.',
     ],
     benefits: [
@@ -107,24 +114,16 @@ export const products: Product[] = [
     faqs: [
       {
         q: '¿Todos los seguros de SALUD incluyen hospitalización?',
-        a: 'No. Hay modalidades más ambulatorias y otras más completas. Conviene revisar este punto antes de decidir, porque cambia bastante la utilidad real del seguro.',
+        a: 'No. Las modalidades básicas se centran en medicina ambulatoria (especialistas y pruebas). Si quieres cobertura de ingreso y cirugía, debes optar por modalidades completas.',
       },
       {
-        q: '¿Todos tienen copago?',
-        a: 'No siempre. Depende del producto y del tipo de contratación. Conviene valorar cuánto crees que lo vas a usar y qué equilibrio buscas entre cuota y utilización.',
-      },
-      {
-        q: '¿Puedo elegir médico libremente?',
-        a: 'Depende. Algunas modalidades funcionan dentro del cuadro médico y otras permiten mayor libertad de elección o reembolso. No siempre viene igual.',
-      },
-      {
-        q: '¿El reembolso viene incluido?',
-        a: 'No en todos los casos. Es una característica específica de determinadas modalidades y conviene revisar cómo funciona antes de darlo por supuesto.',
+        q: '¿Qué diferencia hay entre copago y reembolso?',
+        a: 'El copago es un importe bajo que pagas por uso dentro del cuadro médico. El reembolso te permite ir a cualquier médico del mundo y recuperar luego el 80-90% de la factura.',
       },
     ],
     disclaimer:
       'Coberturas, copagos, hospitalización, reembolso y alcance territorial sujetos a modalidad y documentación contractual.',
-    related: ['vida', 'dental', 'hospitalizacion'],
+    related: ['vida', 'dental', 'accidentes'],
     whatsappMessage:
       'Hola, quiero orientación sobre SALUD y entender qué modalidad me encaja mejor.',
   },
@@ -133,24 +132,24 @@ export const products: Product[] = [
     name: 'Seguro de vida',
     label: 'VIDA',
     eyebrow: 'VIDA',
-    heroTitle: 'Un seguro de VIDA no sirve solo para dejar un capital: bien elegido, puede ayudarte a proteger a tu familia, tu hipoteca o tu estabilidad económica',
+    heroTitle: 'Un seguro de VIDA no sirve solo para dejar un capital: te ayudo a proteger a tu familia y tu hipoteca con total seguridad',
     heroCopy:
-      'No todas las soluciones de VIDA responden a la misma necesidad. Algunas están pensadas para protección familiar, otras para hipoteca o deuda y otras conviene diferenciarlas de productos centrados en accidente, porque el riesgo cubierto no siempre es el mismo.',
-    heroImage: '/images/products/vida-hero.png',
-    heroAlt: 'Familia protegida con seguridad y estabilidad económica',
-    cardImage: '/images/products/vida-hero.png',
-    cardAlt: 'Protección familiar',
+      'Hola, soy Sebastián. Me especializo en encontrar la solución de VIDA que realmente responda a tu necesidad, ya sea protección familiar o asegurar tu hipoteca. El objetivo es tu tranquilidad absoluta.',
+    heroImage: '/images/agent/sebastian.jpg',
+    heroAlt: 'Sebastián, asesor especialista en seguros de vida',
+    cardImage: '/images/agent/sebastian.jpg',
+    cardAlt: 'Asesoría en seguros de vida',
     summary:
       'Protección económica, apoyo a tu familia y modalidades distintas según quieras cubrir una necesidad familiar, una deuda o una situación concreta.',
     highlights: [
-      'La clave está en elegir la modalidad adecuada, no solo un capital.',
-      'Algunas opciones están pensadas para protección familiar y otras para hipoteca o deuda.',
-      'No todas las soluciones de protección personal responden al mismo riesgo: algunas cubren fallecimiento por cualquier causa y otras se centran en accidente.',
+      'Asesoramiento directo con Sebastián para una protección real.',
+      'Diferenciamos claramente entre protección familiar y seguros vinculados a hipoteca.',
+      'Analizamos tu caso para que el capital contratado sea el que de verdad necesitas.',
     ],
     benefits: [
-      'Ayuda real para separar una protección familiar de una solución para deuda o hipoteca.',
-      'Comparativa con más contexto y menos letra pequeña.',
-      'Orientación sobre capital, edad y finalidad del seguro.',
+      'Contacto directo y personal con Sebastián.',
+      'Claridad total en coberturas de fallecimiento e incapacidad.',
+      'Gestión ágil y sin complicaciones burocráticas.',
     ],
     whatIncludes: [
       'Cobertura principal por fallecimiento.',
@@ -173,16 +172,12 @@ export const products: Product[] = [
     cases: ['FAMILIAS', 'HIPOTECA', 'PROTECCIÓN ECONÓMICA'],
     faqs: [
       {
-        q: '¿Todos los seguros de VIDA cubren lo mismo?',
-        a: 'No. Hay opciones más familiares, otras ligadas a hipoteca y otras con un enfoque distinto según la cobertura incluida. Conviene revisar la finalidad del producto.',
+        q: '¿Hablaré con Sebastián directamente?',
+        a: 'Sí, Sebastián gestiona personalmente todas las consultas de seguros de vida para ofrecerte un trato cercano y experto.',
       },
       {
-        q: '¿La incapacidad viene siempre incluida?',
-        a: 'No. Puede ser opcional o variar según modalidad. No siempre forma parte del producto con el mismo alcance.',
-      },
-      {
-        q: '¿Existe una modalidad pensada para hipoteca?',
-        a: 'Sí. Hay soluciones orientadas a proteger deuda o hipoteca, y suelen funcionar con una lógica distinta a la de una protección familiar más abierta.',
+        q: '¿Cómo contacto con Sebastián?',
+        a: 'Puedes llamarle o escribirle por WhatsApp al +34 689 791 380 para cualquier duda sobre tu póliza de vida.',
       },
       {
         q: '¿Un seguro de ACCIDENTES es lo mismo que uno de VIDA?',
@@ -190,10 +185,17 @@ export const products: Product[] = [
       },
     ],
     disclaimer:
-      'Capital, incapacidad, duración y alcance de la cobertura sujetos a modalidad y condiciones de contratación.',
+      'Capital, incapacidad, duración y alcance de la cobertura sujetos a modalidad y condiciones de contratación gestionadas por Sebastián.',
     related: ['salud', 'accidentes', 'decesos'],
     whatsappMessage:
-      'Hola, quiero orientación sobre VIDA para mi familia o mi hipoteca.',
+      'Hola Sebastián, quiero orientación sobre el seguro de VIDA para mi familia o mi hipoteca.',
+    customAdvisor: {
+      name: 'Sebastián',
+      photo: '/images/agent/sebastian.jpg',
+      phone: '+34 689 791 380',
+      phoneHref: '+34689791380',
+      whatsappNumber: '34689791380',
+    },
   },
   {
     slug: 'mascotas',
@@ -248,14 +250,6 @@ export const products: Product[] = [
         q: '¿Incluye responsabilidad civil?',
         a: 'Puede ser principal u opcional según producto. No siempre viene con el mismo peso ni con los mismos límites.',
       },
-      {
-        q: '¿Se puede ampliar?',
-        a: 'Sí, puede haber coberturas opcionales adicionales. Lo importante es ver si te aportan valor real o solo hacen más complejo el producto.',
-      },
-      {
-        q: '¿Sirve para cumplir con obligaciones legales?',
-        a: 'Algunas modalidades se orientan expresamente a cubrir esa necesidad, según su configuración y la documentación del producto.',
-      },
     ],
     disclaimer:
       'Asistencia veterinaria, responsabilidad civil, opcionales y límites económicos sujetos a modalidad y condiciones de la póliza.',
@@ -293,7 +287,7 @@ export const products: Product[] = [
       'Descuentos frente a tarifas particulares.',
       'Opciones orientadas a contratación individual, familiar o para pymes.',
     ],
-    whatVaries: [
+     whatVaries: [
       'El listado de actos incluidos.',
       'Las tarifas de tratamientos.',
       'El tipo de contratación: individual, familiar o pymes.',
@@ -315,18 +309,10 @@ export const products: Product[] = [
         q: '¿Hay servicios sin franquicia?',
         a: 'Sí, determinados actos pueden estar incluidos sin franquicia. Conviene revisar cuáles y en qué condiciones.',
       },
-      {
-        q: '¿Hay opciones para familias?',
-        a: 'Sí. Existen soluciones familiares y también para empresas, con diferencias que merece la pena ordenar antes de decidir.',
-      },
-      {
-        q: '¿Incluye reembolso por accidente dental?',
-        a: 'Algunas modalidades incluyen apoyo o reembolso en este tipo de situaciones, según condiciones y documentación del producto.',
-      },
     ],
     disclaimer:
       'Actos incluidos, tratamientos, descuentos y condiciones para familias o empresas sujetos a modalidad y documentación del producto.',
-    related: ['salud', 'vida', 'hospitalizacion'],
+    related: ['salud', 'vida', 'accidentes'],
     whatsappMessage: 'Hola, quiero orientación sobre DENTAL.',
   },
   {
@@ -336,131 +322,218 @@ export const products: Product[] = [
     eyebrow: 'ACCIDENTES',
     heroTitle: 'Un seguro de ACCIDENTES puede ayudarte a protegerte frente a imprevistos que alteran tu estabilidad económica',
     heroCopy:
-      'La clave está en saber si buscas una protección básica o una solución más amplia. Hay modalidades más sencillas y otras que amplían la protección con invalidez, hospitalización o apoyo económico temporal.',
+      'La clave está en saber si buscas una protección básica o una solución más amplia. Al no requerir examen médico, es una forma rápida y efectiva de protegerte a ti y a tu negocio.',
     heroImage: '/images/products/accidentes-hero.png',
     heroAlt: 'Apoyo profesional tras un accidente — protección y recuperación',
     cardImage: '/images/products/accidentes-hero.png',
     cardAlt: 'Protección ante accidentes',
     summary:
-      'Indemnización, invalidez, renta y hospitalización con una lectura más clara para distinguir una modalidad básica de otra más completa.',
+      'Indemnización, invalidez y hospitalización por causa accidental, sin necesidad de cuestionarios de salud complejos.',
     highlights: [
-      'Dentro del ramo de ACCIDENTES hay opciones más sencillas y otras más completas.',
-      'Algunas se centran en una indemnización básica y otras amplían la protección con invalidez, hospitalización o apoyo económico temporal, según modalidad.',
-      'Capital, invalidez, hospitalización y renta no siempre vienen igual y conviene compararlos con contexto.',
+      'No requiere examen médico ni cuestionario de salud detallado.',
+      'Protección 24/7 tanto en la vida privada como profesional.',
+      'Indemnizaciones por fallecimiento o invalidez permanente absoluta.',
     ],
     benefits: [
-      'Más claridad al separar protección básica de ampliada.',
-      'Explicación humana de un ramo sensible.',
-      'Ayuda para revisar capitales y matices antes de decidir.',
+      'Ideal para autónomos que no pueden permitirse parar.',
+      'Contratación ágil e inmediata.',
+      'Complemento perfecto para cubrir la incapacidad parcial.',
     ],
     whatIncludes: [
-      'Indemnización por accidente.',
-      'Posibles capitales por invalidez, según modalidad.',
-      'Coberturas complementarias en opciones más amplias.',
-      'Protección económica frente a imprevistos graves.',
+      'Indemnización por fallecimiento accidental.',
+      'Capital por invalidez permanente (total o parcial).',
+      'Anticipo de gastos de sepelio y sucesiones.',
     ],
     whatVaries: [
-      'La invalidez.',
-      'La hospitalización.',
-      'La renta mensual.',
-      'El importe del capital.',
-      'El alcance real de las coberturas ampliadas.',
+      'El capital asegurado.',
+      'La inclusión de indemnización diaria por hospitalización.',
+      'La cobertura específica para convenios colectivos.',
     ],
     whatReview: [
-      'Si buscas protección básica o ampliada.',
-      'Si quieres invalidez incluida.',
-      'Si necesitas hospitalización o renta.',
-      'Qué capital y límites encajan contigo.',
+      'Si buscas protección individual o para tus empleados.',
+      'Si el riesgo es solo laboral o también en tu vida privada.',
+      'Qué capital es suficiente para compensar una incapacidad.',
     ],
-    cases: ['BÁSICO', 'AMPLIADO', 'INVALIDEZ', 'HOSPITALIZACIÓN'],
+    cases: ['PARTICULARES', 'AUTÓNOMOS', 'PYMES', 'SIN EXAMEN MÉDICO'],
     faqs: [
       {
-        q: '¿Todos los seguros de ACCIDENTES incluyen hospitalización?',
-        a: 'No. Depende del producto y del nivel de cobertura elegido. Conviene revisar este punto porque cambia bastante el alcance de la protección.',
+        q: '¿Es lo mismo un seguro de ACCIDENTES que uno de VIDA?',
+        a: 'No. El de vida cubre fallecimiento por cualquier causa (enfermedad o accidente), mientras que el de accidentes se centra exclusivamente en causas accidentales, lo que permite contratarlo sin cuestionarios médicos.',
       },
       {
-        q: '¿La invalidez viene siempre incluida?',
-        a: 'No siempre. Puede variar mucho según modalidad y conviene mirarlo con calma antes de tratar dos opciones como equivalentes.',
-      },
-      {
-        q: '¿Puedo contratar una opción más básica?',
-        a: 'Sí. Hay soluciones más simples y otras más completas. La clave está en saber qué nivel de respaldo económico quieres realmente.',
-      },
-      {
-        q: '¿Qué debería comparar de verdad?',
-        a: 'Capital, invalidez, hospitalización, renta y alcance de la modalidad. Son los puntos que más cambian la utilidad real del producto.',
+        q: '¿Qué cubre para autónomos y pymes?',
+        a: 'Es una protección 24/7 que ayuda a cumplir con los convenios colectivos y protege la estabilidad económica del negocio ante una incapacidad del titular o empleado.',
       },
     ],
     disclaimer:
-      'Capitales, invalidez, hospitalización, rentas y coberturas complementarias sujetos a modalidad y condiciones del producto.',
-    related: ['vida', 'hospitalizacion', 'salud'],
-    whatsappMessage: 'Hola, quiero orientación sobre ACCIDENTES.',
+      'Capitales, invalidez, indemnización diaria y coberturas para autónomos sujetos a modalidad y condiciones del producto.',
+    related: ['vida', 'salud', 'negocio'],
+    whatsappMessage: 'Hola, quiero orientación sobre ACCIDENTES para mí o para mi negocio.',
   },
   {
-    slug: 'hospitalizacion',
-    name: 'Seguro de hospitalización',
-    label: 'HOSPITALIZACIÓN',
-    eyebrow: 'PROTECCIÓN DIARIA',
-    heroTitle: 'Un seguro de HOSPITALIZACIÓN puede ayudarte a contar con un apoyo económico diario si tienes que ingresar en un hospital por una causa cubierta',
+    slug: 'electrodomesticos',
+    name: 'Seguro de electrodomésticos',
+    label: 'ELECTRODOMÉSTICOS',
+    eyebrow: 'HOGAR · TECNOLOGÍA',
+    heroTitle: 'Protege el corazón tecnológico de tu hogar frente a averías que la garantía oficial no siempre cubre',
     heroCopy:
-      'Cubre hospitalización por accidente, enfermedad o intervención quirúrgica, dentro de los límites y exclusiones del producto. La cuantía diaria puede adaptarse a tus necesidades y conviene revisar duración máxima y supuestos no cubiertos.',
-    heroImage: '/images/products/hospitalizacion-hero.png',
-    heroAlt: 'Entorno hospitalario profesional y tranquilizador',
-    cardImage: '/images/products/hospitalizacion-hero.png',
-    cardAlt: 'Apoyo durante hospitalización',
+      'Una protección pensada para alargar la vida de tus electrodomésticos (frigorífico, lavadora, TV, etc.) cubriendo piezas, mano de obra y desplazamiento en caso de avería mecánica.',
+    heroImage: '/images/products/electrodomesticos.png',
+    heroAlt: 'Cocina moderna con electrodomésticos protegidos',
+    cardImage: '/images/products/electrodomesticos.png',
+    cardAlt: 'Reparación de electrodomésticos del hogar',
     summary:
-      'Indemnización diaria por ingreso hospitalario, con una explicación más precisa de causas cubiertas, límites y funcionamiento.',
+      'Reparación de averías mecánicas en línea blanca y marrón para aparatos de menos de 12 años, con un funcionamiento ágil y profesional.',
     highlights: [
-      'Este producto está pensado para ofrecer una indemnización diaria en caso de hospitalización por accidente, enfermedad o intervención quirúrgica, dentro de los límites y exclusiones del producto.',
-      'La cuantía diaria puede adaptarse a tus necesidades.',
-      'No hace falta recargarlo: lo importante es revisar bien qué causa se cubre, cuánto dura y cómo se define el ingreso hospitalario cubierto.',
+      'Cubre averías mecánicas y eléctricas fuera de la garantía del fabricante.',
+      'Incluye desplazamiento, mano de obra y piezas originales.',
+      'Válido para aparatos de hasta 12 años de antigüedad.',
     ],
     benefits: [
-      'Explicación concreta y sencilla.',
-      'Útil como complemento bien entendido.',
-      'Ayuda para revisar cuantía diaria y límites sin ruido.',
+      'Tranquilidad ante facturas de reparación inesperadas.',
+      'Acceso directo a técnicos profesionales.',
+      'Sustitución o indemnización si el aparato no tiene arreglo.',
     ],
     whatIncludes: [
-      'Indemnización diaria por hospitalización cubierta.',
-      'Ingreso por accidente, enfermedad o intervención quirúrgica.',
-      'Cobertura en distintos tipos de centro.',
-      'Posible aplicación en España y en el extranjero.',
+      'Reparación de frigoríficos, lavadoras y lavavajillas.',
+      'Asistencia para televisores, hornos y placas de cocina.',
+      'Desplazamiento y mano de obra sin costes extra.',
     ],
     whatVaries: [
-      'La cuantía diaria.',
-      'El detalle de exclusiones.',
-      'El funcionamiento en situaciones concretas.',
-      'Las condiciones operativas del ingreso cubierto.',
+      'El número de intervenciones anuales.',
+      'El límite máximo por reparación.',
+      'La edad máxima admitida del aparato.',
     ],
     whatReview: [
-      'Qué cuantía diaria necesitas.',
-      'Cuántos días cubre la póliza, con límites que pueden llegar hasta 365 días según producto.',
-      'Qué exclusiones aplican.',
-      'Cómo se define el ingreso hospitalario cubierto.',
+      'Si cubre piezas y mano de obra al 100%.',
+      'El periodo de carencia (suele ser de 30 días).',
+      'Qué aparatos específicos de tu hogar entran en cobertura.',
     ],
-    cases: ['INDEMNIZACIÓN DIARIA', 'COMPLEMENTO', 'APOYO ECONÓMICO'],
+    cases: ['LÍNEA BLANCA', 'LÍNEA MARRÓN', 'MANTENIMIENTO'],
     faqs: [
       {
-        q: '¿Puedo elegir la cuantía diaria?',
-        a: 'Sí, normalmente puede adaptarse según producto. Conviene revisar qué importe tiene sentido para ti y qué límites operan después.',
+        q: '¿Qué aparatos puedo asegurar?',
+        a: 'Principalmente línea blanca (frigoríficos, lavadoras, hornos) y línea marrón (TVs). Deben tener menos de 12 años y estar en buen estado.',
       },
       {
-        q: '¿Qué causas suelen estar cubiertas?',
-        a: 'Accidente, enfermedad o intervención quirúrgica, según condiciones. No siempre viene igual y merece la pena confirmarlo antes de contratar.',
-      },
-      {
-        q: '¿Hay exclusiones importantes?',
-        a: 'Sí. Conviene revisar especialmente exclusiones destacadas y supuestos no cubiertos para entender bien la utilidad real del producto.',
-      },
-      {
-        q: '¿Cuánto tiempo puede durar la cobertura?',
-        a: 'Puede existir un límite máximo de días cubiertos, que puede llegar hasta 365 días según producto. Conviene revisar ese punto con atención.',
+        q: '¿Cubre la garantía oficial de la marca?',
+        a: 'Es un complemento que entra en juego cuando la garantía oficial termina o para situaciones que el fabricante no cubre.',
       },
     ],
     disclaimer:
-      'Indemnización diaria, causas cubiertas, exclusiones, duración y alcance territorial sujetos a póliza y modalidad.',
-    related: ['salud', 'accidentes', 'decesos'],
-    whatsappMessage: 'Hola, quiero orientación sobre HOSPITALIZACIÓN.',
+      'Cobertura, límites y requisitos de antigüedad sujetos a las condiciones de la póliza.',
+    related: ['mascotas', 'salud', 'accidentes'],
+    whatsappMessage: 'Hola, quiero proteger mis ELECTRODOMÉSTICOS de averías.',
+  },
+  {
+    slug: 'proteccion-juridica',
+    name: 'Protección jurídica',
+    label: 'LEGAL',
+    eyebrow: 'DEFENSA LEGAL',
+    heroTitle: 'Contar con un abogado a tu lado para defender tus derechos no debería ser un lujo',
+    heroCopy:
+      'Asesoramiento jurídico y defensa legal en conflictos de consumo, vivienda, trabajo o familia. Acceso telefónico 24h y cobertura de gastos judiciales.',
+    heroImage: '/images/products/proteccion-juridica.png',
+    heroAlt: 'Consulta legal profesional y cercana',
+    cardImage: '/images/products/proteccion-juridica.png',
+    cardAlt: 'Protección jurídica',
+    summary:
+      'Defensa de tus intereses legales, reclamación de daños y asesoramiento telefónico ilimitado con especialistas.',
+    highlights: [
+      'Asesoramiento jurídico telefónico 24/7.',
+      'Defensa en conflictos de consumo y vivienda.',
+      'Reclamación de daños y perjuicios a terceros.',
+    ],
+    benefits: [
+      'Resuelve dudas legales antes de que se conviertan en problemas.',
+      'Ahorra en honorarios de abogados y gastos judiciales.',
+      'Tranquilidad ante conflictos laborales o familiares.',
+    ],
+    whatIncludes: [
+      'Defensa penal y civil.',
+      'Reclamaciones a suministros y servicios.',
+      'Asesoramiento en trámites de extranjería o sucesiones.',
+    ],
+    whatVaries: [
+      'El capital máximo para gastos judiciales.',
+      'La inclusión de defensa en temas familiares (divorcio, etc.).',
+      'Los periodos de carencia según el tipo de conflicto.',
+    ],
+    whatReview: [
+      'Si incluye defensa en internet e identidad digital.',
+      'El alcance de la defensa laboral.',
+      'Los límites geográficos de la cobertura.',
+    ],
+    cases: ['PARTICULARES', 'CONSUMO', 'LABORAL', 'FAMILIA'],
+    faqs: [
+      {
+        q: '¿Puedo llamar cualquier día para una duda legal?',
+        a: 'Sí, la mayoría de modalidades incluyen asesoramiento telefónico ilimitado para resolver consultas rápidas.',
+      },
+      {
+        q: '¿Cubre los gastos de ir a juicio?',
+        a: 'Sí, hasta el límite de capital contratatado, el seguro cubre los honorarios de abogados, procuradores y costas.',
+      },
+    ],
+    disclaimer:
+      'Capitales de defensa y ámbitos de actuación sujetos a la modalidad contratada.',
+    related: ['vida', 'accidentes', 'negocio'],
+    whatsappMessage: 'Hola, necesito asesoramiento sobre PROTECCIÓN JURÍDICA.',
+  },
+  {
+    slug: 'negocio',
+    name: 'Seguro para negocios',
+    label: 'NEGOCIOS',
+    eyebrow: 'PYMES · AUTÓNOMOS',
+    heroTitle: 'Protege tu local, tu stock y tu actividad profesional frente a imprevistos que puedan parar tu negocio',
+    heroCopy:
+      'Seguro multirriesgo para locales, oficinas y comercios. Protección total frente a robos, daños por agua, incendio y responsabilidad civil profesional.',
+    heroImage: '/images/products/negocio.png',
+    heroAlt: 'Local comercial moderno y protegido',
+    cardImage: '/images/products/negocio.png',
+    cardAlt: 'Seguro para negocios y pymes',
+    summary:
+      'Cobertura integral para el continente y contenido de tu negocio, incluyendo la protección frente a reclamaciones de terceros.',
+    highlights: [
+      'Protección frente a robo, incendio y daños eléctricos.',
+      'Responsabilidad civil ante clientes y empleados.',
+      'Cobertura de pérdida de beneficios por cese de actividad.',
+    ],
+    benefits: [
+      'Asegura la continuidad de tu negocio tras un siniestro.',
+      'Adapta las coberturas según tu sector (retail, oficina, servicios).',
+      'Cumple con los requisitos legales y contractuales de tu local.',
+    ],
+    whatIncludes: [
+      'Rotura de cristales y rótulos.',
+      'Daños por agua y filtraciones.',
+      'Responsabilidad Civil de explotación y patronal.',
+    ],
+    whatVaries: [
+      'El capital asegurado de existencias y mobiliario.',
+      'La cobertura de transporte de mercancías.',
+      'Los límites de RC según la actividad profesional.',
+    ],
+    whatReview: [
+      'Si cubre la defensa jurídica del negocio.',
+      'Si necesitas cobertura para equipos electrónicos especializados.',
+      'Las exclusiones específicas según tu tipo de local.',
+    ],
+    cases: ['COMERCIOS', 'OFICINAS', 'AUTÓNOMOS', 'TALLERES'],
+    faqs: [
+      {
+        q: '¿Cubre si tengo que cerrar unos días por un siniestro?',
+        a: 'Sí, muchas modalidades incluyen una indemnización por pérdida de beneficios para que el cierre temporal no arruine tu economía.',
+      },
+      {
+        q: '¿Es obligatorio si el local es de alquiler?',
+        a: 'Suele ser requisito del contrato de arrendamiento para cubrir los daños al continente y la responsabilidad civil.',
+      },
+    ],
+    disclaimer:
+      'Capitales asegurados y límites de RC sujetos a la actividad y condiciones de contratación.',
+    related: ['accidentes', 'proteccion-juridica', 'salud'],
+    whatsappMessage: 'Hola, quiero proteger mi NEGOCIO con un seguro a medida.',
   },
   {
     slug: 'decesos',
@@ -514,18 +587,10 @@ export const products: Product[] = [
         q: '¿Incluye traslados?',
         a: 'Puede incluirlos, incluso a nivel nacional o internacional según producto. No siempre viene igual y es un punto importante para comparar.',
       },
-      {
-        q: '¿Puede incluir servicios legales?',
-        a: 'En algunos casos sí, según la modalidad y las coberturas adicionales. Conviene revisar este punto si para ti es relevante.',
-      },
-      {
-        q: '¿Se puede personalizar?',
-        a: 'Puede haber servicios extra o añadidos según contratación. Lo importante es entender bien qué va de base y qué no.',
-      },
     ],
     disclaimer:
       'Servicio funerario, traslados, gestiones y coberturas complementarias sujetos a modalidad y contratación.',
-    related: ['vida', 'salud', 'hospitalizacion'],
+    related: ['vida', 'salud', 'accidentes'],
     whatsappMessage: 'Hola, quiero orientación sobre DECESOS.',
   },
   {
@@ -581,14 +646,6 @@ export const products: Product[] = [
         q: '¿Todos tienen el mismo límite médico?',
         a: 'No. Puede variar bastante según modalidad, destino y tipo de viaje. Conviene revisar este punto antes de elegir.',
       },
-      {
-        q: '¿Hay seguros para estudiantes o viajes frecuentes?',
-        a: 'Sí. Existen opciones orientadas a diferentes usos y no conviene tratar un viaje puntual igual que una estancia larga o repetida.',
-      },
-      {
-        q: '¿Qué debería mirar primero?',
-        a: 'Destino, duración, tipo de viaje y si necesitas anulación o mayor asistencia médica. Con eso ya se aclara gran parte de la comparación.',
-      },
     ],
     disclaimer:
       'Asistencia médica, anulación, equipaje, duración y ámbito territorial sujetos a modalidad y documentación contractual.',
@@ -599,25 +656,25 @@ export const products: Product[] = [
 
 export const subpages: ProductSubpage[] = [
   { parent: 'salud', slug: 'familias', name: 'Salud para familias', label: 'FAMILIAS', eyebrow: 'SALUD · FAMILIAS', title: 'SALUD para familias con una comparación más útil y menos fría', summary: 'Pediatría, urgencias, hospitalización y equilibrio entre prima y uso ordenados para decidir mejor.', heroImage: '/images/premium/hero-family.png', heroAlt: 'Familia caminando junta', bullets: ['Orientación sobre copago y sin copago según frecuencia de uso.', 'Especial atención a coberturas familiares y atención pediátrica según modalidad.', 'Ayuda para comparar sin perderte en términos técnicos.'], faqs: [ { q: '¿Compensa una modalidad con copago para una familia?', a: 'Depende del uso previsto y del equilibrio que busquéis entre prima y utilización. Lo revisamos con un criterio práctico.' }, { q: '¿Conviene mirar solo el precio?', a: 'No. En SALUD familiar suelen importar mucho las urgencias, la hospitalización y la flexibilidad del producto.' } ], whatsappMessage: 'Hola, quiero orientación sobre SALUD para FAMILIAS.' },
-  { parent: 'salud', slug: 'senior', name: 'Salud senior', label: 'SENIOR', eyebrow: 'SALUD · SENIOR', title: 'SALUD senior con una lectura más clara de lo que cambia de verdad', summary: 'Edad, cuadro médico, hospitalización, aceptación y ritmo de uso explicados con más calma.', heroImage: '/images/agent/rosa-valentin.jpg', heroAlt: 'Rosa Valentín', bullets: ['Más ayuda para entender aceptación, edad y modalidad.', 'Comparación sencilla entre opciones ambulatorias, completas o con reembolso.', 'Acompañamiento humano para revisar dudas con calma.'], faqs: [ { q: '¿La edad afecta mucho a la decisión?', a: 'Sí. Puede influir en precio, aceptación y tipo de modalidad que encaja mejor.' }, { q: '¿Se puede priorizar cuadro médico y hospitalización?', a: 'Sí. Para muchos perfiles senior esos puntos son una parte importante de la comparación.' } ], whatsappMessage: 'Hola, quiero orientación sobre SALUD senior.' },
-  { parent: 'salud', slug: 'reembolso', name: 'Salud con reembolso', label: 'REEMBOLSO', eyebrow: 'SALUD · REEMBOLSO', title: 'Cuando quieres más libertad de elección, conviene entender bien el REEMBOLSO', summary: 'Porcentajes, límites y libertad para acudir fuera del cuadro concertado explicados con más claridad.', heroImage: '/images/premium/hero-family.png', heroAlt: 'Familia en actividad saludable', bullets: ['Ideal para quien valora elegir médico o centro fuera de red.', 'Importa revisar porcentajes, límites y ámbito territorial.', 'Ayuda real para saber si compensa frente a una modalidad cerrada.'], faqs: [ { q: '¿REEMBOLSO significa que todo se cubre fuera del cuadro?', a: 'No exactamente. Suele haber porcentajes y límites que conviene aterrizar antes de decidir.' }, { q: '¿Encaja para cualquier perfil?', a: 'No siempre. Tiene más sentido cuando realmente vas a aprovechar esa libertad de elección.' } ], whatsappMessage: 'Hola, quiero orientación sobre SALUD con REEMBOLSO.' },
+  { parent: 'salud', slug: 'senior', name: 'Salud senior', label: 'SENIOR', eyebrow: 'SALUD · SENIOR', title: 'SALUD para mayores de 55 con asesor médico personal', summary: 'Una opción pensada para quienes buscan tranquilidad, con un médico que te guía y sin sorpresas en el precio.', heroImage: '/images/products/salud-senior.png', heroAlt: 'Pareja senior disfrutando con plenitud', bullets: ['Acceso a un asesor médico personal que gestiona tus citas y dudas.', 'Cobertura completa incluyendo hospitalización y cirugía.', 'Asistencia en viaje mundial hasta 12.000€.'], faqs: [ { q: '¿Hay límite de edad para contratar?', a: 'Está diseñado para personas de entre 55 y 84 años.' }, { q: '¿Qué es el asesor médico personal?', a: 'Es un especialista que te orienta sobre qué médico visitar y te ayuda a sacar el máximo partido a tu seguro.' } ], whatsappMessage: 'Hola, quiero orientación sobre SALUD para mayores (Senior).' },
+  { parent: 'salud', slug: 'extranjeros', name: 'Salud para extranjeros', label: 'EXTRANJEROS', eyebrow: 'SALUD · VISADOS', title: 'Seguro médico para extranjeros en España con todo lo necesario para tu visado', summary: 'Cumple con los requisitos de extranjería: sin copagos, sin carencias y con repatriación incluida.', heroImage: '/images/products/salud-extranjeros.png', heroAlt: 'Persona extranjera residiendo en España', bullets: ['Válido para solicitud de visado y permiso de residencia.', 'Sin copagos y sin periodos de carencia (acceso inmediato).', 'Incluye repatriación a país de origen por enfermedad o fallecimiento.'], faqs: [ { q: '¿Sirve para el NIE o TIE?', a: 'Sí, el certificado cumple con todos los requisitos legales exigidos por las oficinas de extranjería.' }, { q: '¿Puedo contratar con pasaporte?', a: 'Sí, es posible realizar la contratación utilizando el número de pasaporte si aún no tienes el NIE.' } ], whatsappMessage: 'Hola, necesito un seguro de SALUD para trámites de EXTRANJERÍA.' },
+  { parent: 'salud', slug: 'reembolso', name: 'Salud con reembolso', label: 'REEMBOLSO', eyebrow: 'SALUD · LIBRE ELECCIÓN', title: 'Libertad total para elegir médico en cualquier parte del mundo', summary: 'Cuando quieres lo mejor de la sanidad privada sin límites de cuadro médico: tú elige, nosotros reembolsamos.', heroImage: '/images/products/reembolso-hero.png', heroAlt: 'Paciente eligiendo libremente su atención médica', bullets: ['Libertad para acudir a cualquier especialista o centro mundial.', 'Reembolso de entre el 80% y el 90% de la factura.', 'Límites de cobertura muy amplios (hasta 1 millón de euros).'], faqs: [ { q: '¿Cómo funciona el reembolso?', a: 'Pagas la factura fuera de la red concertada, nos la envías y en unos 15 días te ingresamos el porcentaje correspondiente.' }, { q: '¿Incluye también el cuadro médico nacional?', a: 'Sí, además del reembolso fuera de red, tienes acceso al 100% de los centros concertados sin pagar nada.' } ], whatsappMessage: 'Hola, quiero información sobre la modalidad de REEMBOLSO.' },
   { parent: 'vida', slug: 'hipoteca', name: 'Vida para hipoteca', label: 'HIPOTECA', eyebrow: 'VIDA · HIPOTECA', title: 'VIDA pensada para hipoteca o deuda ligada a vivienda', summary: 'Una forma más clara de entender el capital decreciente y cuándo tiene sentido.', heroImage: '/images/premium/life.png', heroAlt: 'Familia en casa', bullets: ['Protección de una deuda concreta.', 'El capital no funciona igual que en una protección familiar estándar.', 'Te ayudamos a valorar capital, plazo y tranquilidad real.'], faqs: [ { q: '¿Es mejor para hipoteca que un VIDA general?', a: 'Depende. A veces interesa un producto muy ligado a deuda y otras una protección más abierta para la familia.' } ], whatsappMessage: 'Hola, quiero orientación sobre VIDA para hipoteca.' },
   { parent: 'mascotas', slug: 'responsabilidad-civil', name: 'Mascotas con responsabilidad civil', label: 'RESPONSABILIDAD CIVIL', eyebrow: 'MASCOTAS · RESPONSABILIDAD CIVIL', title: 'Cuando lo principal es la RESPONSABILIDAD CIVIL, conviene verlo claro desde el principio', summary: 'Ayuda a entender cuándo la RC es el núcleo del producto y cuándo se combina con servicios veterinarios.', heroImage: '/images/premium/happy-pets.png', heroAlt: 'Creatividad de mascotas', bullets: ['Útil para quien prioriza daños a terceros y tranquilidad legal.', 'La asistencia veterinaria puede ir como apoyo o como producto principal.', 'Te ayudamos a diferenciar límites y extras sin ruido.'], faqs: [ { q: '¿La RESPONSABILIDAD CIVIL siempre viene igual?', a: 'No. Cambian los límites y la posición que ocupa dentro del producto.' } ], whatsappMessage: 'Hola, quiero orientación sobre MASCOTAS con responsabilidad civil.' },
   { parent: 'dental', slug: 'familias', name: 'Dental para familias', label: 'FAMILIAS', eyebrow: 'DENTAL · FAMILIAS', title: 'DENTAL para familias con revisiones y tratamientos mejor explicados', summary: 'Pensada para ordenar qué aporta cada modalidad familiar antes de contratar.', heroImage: '/images/premium/dental-care.png', heroAlt: 'Creatividad de dental', bullets: ['Buena opción para revisar actos incluidos y urgencias.', 'Aterriza diferencias entre uso puntual y base más estable.', 'Explicación clara antes de decidir.'], faqs: [ { q: '¿DENTAL familiar sirve para uso continuo?', a: 'Sí, especialmente cuando queréis tener una base más estable para revisiones y tratamientos.' } ], whatsappMessage: 'Hola, quiero orientación sobre DENTAL para FAMILIAS.' },
-  { parent: 'accidentes', slug: 'plus', name: 'Accidentes ampliado', label: 'AMPLIADO', eyebrow: 'ACCIDENTES · AMPLIADO', title: 'ACCIDENTES con más capas de protección y una lectura más útil', summary: 'Indemnización, invalidez y hospitalización explicadas con mejor contexto.', heroImage: '/images/premium/life.png', heroAlt: 'Creatividad de accidentes', bullets: ['Más contexto sobre invalidez y apoyo económico.', 'Lectura clara de diferencias entre modalidad básica y ampliada.', 'Enfoque más humano en un ramo sensible.'], faqs: [ { q: '¿Qué cambia en una opción ampliada?', a: 'Suelen ganar peso la invalidez, la hospitalización u otras capas de protección, pero conviene revisarlo en cada modalidad.' } ], whatsappMessage: 'Hola, quiero orientación sobre ACCIDENTES ampliado.' },
-  { parent: 'hospitalizacion', slug: 'diaria', name: 'Indemnización diaria', label: 'INDEMNIZACIÓN DIARIA', eyebrow: 'HOSPITALIZACIÓN · INDEMNIZACIÓN DIARIA', title: 'HOSPITALIZACIÓN con indemnización diaria mejor explicada', summary: 'Te ayudamos a valorar cuándo encaja como complemento y qué límites conviene revisar.', heroImage: '/images/agent/rosa-valentin.jpg', heroAlt: 'Creatividad de hospitalización', bullets: ['Importa la cuantía diaria y la duración máxima.', 'Conviene revisar causas cubiertas y exclusiones.', 'Muy útil como complemento bien entendido.'], faqs: [ { q: '¿Es un complemento o un seguro principal?', a: 'Suele entenderse mejor como complemento económico a otra base de protección.' } ], whatsappMessage: 'Hola, quiero orientación sobre HOSPITALIZACIÓN con indemnización diaria.' },
+  { parent: 'accidentes', slug: 'pyme-autonomos', name: 'Accidentes para empresas', label: 'PYMES', eyebrow: 'ACCIDENTES · NEGOCIO', title: 'Protección para el motor de tu negocio: autónomos y empleados', summary: 'Seguro de accidentes que cumple con convenios y garantiza la estabilidad ante imprevistos laborales.', heroImage: '/images/products/accidentes-hero.png', heroAlt: 'Oficina con equipo de trabajo protegido', bullets: ['Cumplimiento de obligaciones de convenios colectivos.', 'Garantía de ingresos ante incapacidad o fallecimiento accidental.', 'Primas deducibles al 100% para la empresa.'], faqs: [ { q: '¿Es obligatorio para mi empresa?', a: 'Muchos convenios colectivos obligan a contratar una póliza de accidentes para los trabajadores bajo pena de sanción.' } ], whatsappMessage: 'Hola, quiero información sobre el seguro de ACCIDENTES para mi empresa.' },
   { parent: 'decesos', slug: 'familias', name: 'Decesos para familias', label: 'FAMILIAS', eyebrow: 'DECESOS · FAMILIAS', title: 'DECESOS para familias con una explicación serena y clara', summary: 'Una sección para entender mejor servicios, gestiones y tranquilidad familiar.', heroImage: '/images/premium/hero-family.png', heroAlt: 'Creatividad de decesos', bullets: ['Ayuda a revisar el alcance real del servicio.', 'Buena opción para quien quiere prever con orden.', 'Comparación sensible y más humana.'], faqs: [ { q: '¿Se puede adaptar a diferentes familias?', a: 'Sí, y es un punto importante al elegir una opción adecuada.' } ], whatsappMessage: 'Hola, quiero orientación sobre DECESOS para FAMILIAS.' },
   { parent: 'viaje', slug: 'estudios', name: 'Viaje para estudios', label: 'ESTUDIOS', eyebrow: 'VIAJE · ESTUDIOS', title: 'VIAJE para estudios o estancias largas con una explicación más aterrizada', summary: 'Asistencia, duración, destino y tipo de viaje ordenados para decidir mejor.', heroImage: '/images/premium/travel.png', heroAlt: 'Viajera en destino monumental', bullets: ['Buena opción para revisar estancias por estudios.', 'Ayuda a leer mejor límites, duración y asistencia.', 'Comparación más útil entre un viaje puntual y uno de estudio.'], faqs: [ { q: '¿Es lo mismo que un viaje de ocio?', a: 'No. Suele cambiar la lógica del producto según duración, destino y finalidad del desplazamiento.' } ], whatsappMessage: 'Hola, quiero orientación sobre VIAJE para ESTUDIOS.' },
 ];
 
 export const generalFaqs: FAQItem[] = [
   { q: '¿Puedo empezar por WhatsApp y decidir después si relleno el formulario?', a: 'Sí. Muchas personas prefieren comenzar por WhatsApp para contar su caso con naturalidad y, si hace falta, seguir después por llamada o formulario. La idea es adaptarnos al canal que te resulte más cómodo desde el primer momento.' },
-  { q: '¿Me ayudáis aunque todavía no tenga claro qué seguro necesito?', a: 'Sí. Es una de las situaciones más habituales. Podemos ordenar contigo si conviene empezar por SALUD, VIDA, MASCOTAS, VIAJE, DENTAL, ACCIDENTES, HOSPITALIZACIÓN o DECESOS y después afinar modalidad, coberturas y nivel de protección.' },
+  { q: '¿Me ayudáis aunque todavía no tenga claro qué seguro necesito?', a: 'Sí. Es una de las situaciones más habituales. Podemos ordenar contigo si conviene empezar por SALUD, VIDA, MASCOTAS, VIAJE, DENTAL, ACCIDENTES o NEGOCIOS e después afinar modalidad, coberturas y nivel de protección.' },
   { q: '¿Trabajáis como comparador automático o como asesoramiento personalizado?', a: 'El enfoque es de asesoramiento personalizado. No se trata de dejarte solo ante una tabla de precios, sino de explicarte qué cambia entre opciones, qué tiene más sentido para tu situación y qué conviene revisar antes de contratar.' },
   { q: '¿La orientación tiene algún compromiso o me obliga a contratar?', a: 'No. La orientación es sin compromiso. Puedes consultar, entender mejor tus opciones y decidir con calma si quieres avanzar o no. Lo importante es que tomes una decisión más clara y más segura.' },
-  { q: '¿Qué diferencia hay entre pedir orientación general y entrar directamente a un producto?', a: 'Si todavía estás ordenando opciones, suele venir mejor una orientación general. Si ya sabes que buscas SALUD, VIDA, MASCOTAS, VIAJE, DENTAL o DECESOS, entrar al producto te permite profundizar más rápido en coberturas, perfiles y preguntas frecuentes.' },
+  { q: '¿Qué diferencia hay entre pedir orientación general y entrar directamente a un producto?', a: 'Si todavía estás ordenando opciones, suele venir mejor una orientación general. Si ya sabes que buscas SALUD, VIDA, ELECTRODOMÉSTICOS o NEGOCIOS, entrar al producto te permite profundizar más rápido en coberturas perfiles y preguntas frecuentes.' },
   { q: '¿La información de la web sustituye a las condiciones de la póliza?', a: 'No. La web sirve para orientarte, ayudarte a comparar y hacerte más sencilla la decisión. La contratación final siempre debe revisarse con la documentación contractual correspondiente a la opción que te interese.' },
-  { q: '¿Puedo pedir ayuda si quiero proteger a mi familia y no sé por dónde empezar?', a: 'Claro. Es una de las consultas más frecuentes. Podemos ayudarte a separar qué conviene mirar primero, qué producto tiene más sentido para vuestro caso y qué puntos pesan más, como asistencia, hospitalización, responsabilidad civil o protección económica.' },
+  { q: '¿Puedo pedir ayuda ante cualquier duda familiar?', a: 'Claro. Es una de las consultas más frecuentes. Podemos ayudarte a separar qué conviene mirar primero, qué producto tiene más sentido para vuestro caso y qué puntos pesan más, como asistencia, hospitalización, responsabilidad civil o protección económica.' },
 ];
 
 export const testimonials = [

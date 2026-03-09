@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ExternalLink, Instagram, MapPin, MessageCircle, Shield, Star } from 'lucide-react';
+import { ExternalLink, Instagram, MapPin, MessageCircle, Shield, Star, Users } from 'lucide-react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
@@ -35,27 +35,42 @@ export default function OpinionesPage() {
         {/* Hero */}
         <section className="section-pad pb-0">
           <div className="container-shell">
-            <div className="soft-card glass overflow-hidden border-white/40 p-8 md:p-12 shadow-xl">
+            <div className="soft-card glass overflow-hidden border-white/40 p-8 md:p-12 shadow-xl bg-premium-glow">
               <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] items-center">
                 <div>
-                  <p className="kicker font-bold tracking-[0.3em]">Opiniones y confianza</p>
+                  <p className="kicker font-bold tracking-[0.3em]">Confianza y opiniones</p>
                   <h1 className="mt-4 font-heading text-5xl font-extrabold tracking-tight text-gradient md:text-6xl leading-[1.05]">
                     Lo que dicen quienes ya han confiado en nosotros
                   </h1>
                   <p className="mt-5 max-w-2xl text-lg leading-9 text-[var(--muted)]">
-                    La mejor señal de que algo funciona no es lo que decimos nosotros, sino cómo lo viven las personas que han confiado en nuestra orientación.
+                    La mejor señal de un buen asesoramiento no es lo que decimos nosotros, sino cómo lo viven las personas que han confiado en nuestra orientación para proteger a su familia.
                   </p>
+                  
+                  {/* Trust Summary Bar - Filling the gap */}
+                  <div className="mt-10 flex flex-wrap gap-6 items-center border-t border-black/5 pt-8">
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[var(--green)]/10 text-[var(--green)]">
+                        <Shield className="h-5 w-5" />
+                      </div>
+                      <span className="text-sm font-bold text-[var(--blue-deep)]">100% Verificado</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[var(--blue)]/10 text-[var(--blue)]">
+                        <Users className="h-5 w-5" />
+                      </div>
+                      <span className="text-sm font-bold text-[var(--blue-deep)]">+1.2k Familias</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex flex-col gap-5 items-center lg:items-end">
-                  <div className="rounded-[24px] border border-[var(--border)] bg-white px-8 py-6 text-center shadow-sm">
-                    <p className="font-heading text-5xl font-extrabold text-[var(--blue-deep)]">4.9<span className="text-2xl text-[var(--muted)]">/5</span></p>
-                    <StarRating />
-                    <p className="mt-2 text-sm font-semibold text-[var(--muted)] uppercase tracking-widest">Valoración media</p>
-                    <p className="mt-1 text-sm text-[var(--muted)]">Basada en opiniones de clientes</p>
+                  <div className="rounded-[30px] border border-[var(--border)] bg-white px-8 py-8 text-center shadow-lg transition-transform hover:scale-[1.02] duration-300">
+                    <p className="font-heading text-6xl font-extrabold text-[var(--blue-deep)]">4.9<span className="text-2xl text-[var(--muted)]">/5</span></p>
+                    <div className="my-3"><StarRating /></div>
+                    <p className="text-xs font-bold text-[var(--muted)] uppercase tracking-[0.2em]">Valoración media</p>
+                    <p className="mt-1 text-sm text-[var(--muted)]">Basada en reseñas reales</p>
                   </div>
                   <div className="flex gap-3">
-                    <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso.')} className="btn-whatsapp !px-6"><MessageCircle className="h-4 w-4" /> Contactar</a>
-                    <Link href="/contacto" className="btn-ghost !px-6">Más info</Link>
+                    <a href={buildWhatsAppHref('Hola Rosa, he leído las opiniones y me gustaría hablar contigo.')} className="btn-whatsapp !px-6"><MessageCircle className="h-4 w-4" /> Hablar ahora</a>
                   </div>
                 </div>
               </div>
@@ -64,7 +79,7 @@ export default function OpinionesPage() {
         </section>
 
         {/* All testimonials grid */}
-        <section className="section-pad">
+        <section className="section-pad bg-alternate">
           <div className="container-shell">
             <div className="mb-8 max-w-3xl">
               <p className="kicker">Todas las opiniones</p>

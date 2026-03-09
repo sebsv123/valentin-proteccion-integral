@@ -46,7 +46,7 @@ export default async function ProductSubpagePage({ params }: { params: Promise<{
         <SubpageHero subpage={subpage} />
         <ProductDecisionGrid product={product} />
         <ProductFaqSection product={faqProduct} />
-        <ProductCTASection title={`¿Quieres que revisemos ${product.label} con más calma?`} text="Si este perfil o modalidad encaja contigo, te ayudamos a aterrizar matices, resolver dudas y decidir con más tranquilidad." message={subpage.whatsappMessage} />
+        <ProductCTASection product={product} title={`¿Quieres que revisemos ${product.label} con más calma?`} text="Si este perfil o modalidad encaja contigo, te ayudamos a aterrizar matices, resolver dudas y decidir con más tranquilidad." message={subpage.whatsappMessage} />
         <RelatedProducts product={product} />
       </main>
       <Footer />

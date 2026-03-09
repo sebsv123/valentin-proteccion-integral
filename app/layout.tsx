@@ -10,6 +10,9 @@ const montserrat = Montserrat({ subsets: ['latin'], variable: '--font-body', wei
 
 const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
 
+import { BackgroundWrapper } from "@/components/background-wrapper";
+import ClickSpark from "@/components/ui/click-spark";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
   title: site.title,
@@ -74,6 +77,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body className={`${montserrat.variable} ${playfair.variable} antialiased font-sans`}>
+        <BackgroundWrapper />
+        <ClickSpark />
         <Script id="jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}
         <SocialProof />

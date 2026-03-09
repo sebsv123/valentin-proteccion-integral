@@ -30,38 +30,42 @@ export default function SobreMiPage() {
           <div className="container-shell">
             <Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: 'Sobre mí' }]} />
             <div className="mt-6 grid gap-8 xl:grid-cols-[0.85fr_1.15fr]">
-              {/* Photo card */}
-              <div className="soft-card overflow-hidden shadow-xl">
-                <div className="relative min-h-[440px]">
-                  <Image src="/images/agent/rosa-valentin.jpg" alt="Rosa Valentín, asesora personal de seguros en Madrid" fill className="object-cover object-top" />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,rgba(0,34,68,0.8))]" />
-                  <div className="absolute inset-x-0 bottom-0 p-8 text-white">
-                    <p className="font-heading text-3xl font-bold">Rosa Valentín</p>
-                    <p className="mt-1 text-base text-white/80">Asesora certificada en seguros</p>
-                    <div className="mt-2 flex items-center gap-2 text-sm text-white/70">
-                      <MapPin className="h-3.5 w-3.5" />
-                      Boadilla del Monte, Madrid
-                    </div>
+              {/* Photo section */}
+              <div className="space-y-6">
+                <div className="soft-card overflow-hidden shadow-2xl transition-transform hover:scale-[1.01] duration-500">
+                  <div className="relative aspect-[4/5] w-full">
+                    <Image src="/images/agent/rosa-valentin.jpg" alt="Rosa Valentín, asesora personal de seguros en Madrid" fill className="object-cover object-top" priority />
                   </div>
                 </div>
-                {/* Values grid */}
-                <div className="p-6 bg-gradient-to-b from-[rgba(18,59,104,0.04)] to-transparent">
-                  <div className="grid grid-cols-2 gap-3">
-                    {[
-                      { icon: HeartHandshake, text: 'Enfoque personalizado' },
-                      { icon: ShieldCheck, text: 'Sin presión comercial' },
-                      { icon: ClipboardList, text: 'Comparativa real' },
-                      { icon: MessageCircle, text: 'Escucha activa' },
-                    ].map((item) => {
-                      const Icon = item.icon;
-                      return (
-                        <div key={item.text} className="flex items-center gap-3 rounded-2xl bg-white px-4 py-3.5 text-sm font-semibold text-[var(--blue-deep)] shadow-sm border border-[var(--border)]">
-                          <Icon className="h-4 w-4 shrink-0 text-[var(--blue)]" />
-                          {item.text}
-                        </div>
-                      );
-                    })}
+
+                {/* Name & Title - Now separate from image card */}
+                <div className="soft-card bg-white p-6 text-center shadow-md">
+                  <p className="font-heading text-3xl font-bold text-[var(--blue-deep)]">Rosa Valentín</p>
+                  <p className="mt-1 text-base font-semibold text-[var(--blue)]">Asesora certificada en seguros</p>
+                  <div className="mt-3 flex items-center justify-center gap-2 text-sm text-[var(--muted)]">
+                    <MapPin className="h-4 w-4" />
+                    Boadilla del Monte, Madrid
                   </div>
+                </div>
+
+                {/* Values grid */}
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { icon: HeartHandshake, text: 'Enfoque personalizado' },
+                    { icon: ShieldCheck, text: 'Sin presión comercial' },
+                    { icon: ClipboardList, text: 'Comparativa real' },
+                    { icon: MessageCircle, text: 'Escucha activa' },
+                  ].map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <div key={item.text} className="flex flex-col items-center gap-2 rounded-[24px] bg-white px-4 py-5 text-center text-sm font-bold text-[var(--blue-deep)] shadow-sm border border-[var(--border)] transition-all hover:border-[var(--blue)]/20 hover:shadow-md">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--blue)]/5 text-[var(--blue)]">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        {item.text}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 

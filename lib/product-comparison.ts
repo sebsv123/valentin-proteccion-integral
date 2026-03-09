@@ -24,28 +24,29 @@ export const productCompare: Record<string, ProductCompareConfig> = {
         label: 'Modalidades',
         intro: 'No todas las opciones funcionan igual. Elige antes qué tipo de uso le darás al seguro.',
         cards: [
-          { title: 'Ambulatorio / Extrahospitalario', desc: 'Consultas, pruebas y especialistas sin necesidad de ingreso. Ideal si buscas acceso rápido a medicina general.', tag: 'Más accesible' },
-          { title: 'Con hospitalización', desc: 'Incluye cobertura por ingreso, cirugía y estancias hospitalarias. Más completo para familias o perfiles senior.', tag: 'Más completo' },
-          { title: 'Con copago / Sin copago', desc: 'Con copago la cuota baja pero pagas por uso. Sin copago pagas más al mes pero nada al ir al médico.', tag: 'Clave decisiva' },
-          { title: 'Reembolso', desc: 'Libertad de elegir cualquier especialista, también fuera del cuadro médico. Se reembolsa un porcentaje establecido.', tag: 'Más libertad' },
+          { title: 'Básico / Ambulatorio', desc: 'Consultas, pruebas y especialistas sin necesidad de ingreso. Ideal si buscas acceso rápido a medicina general.', tag: 'Más accesible' },
+          { title: 'Senior (+55 años)', desc: 'Asesor médico personal, sin copagos y asistencia en viaje amplia. Diseñado para plenitud y tranquilidad.', tag: 'Especializado' },
+          { title: 'Extranjeros (Visado)', desc: 'Sin copagos, sin carencias y con repatriación incluida. Cumple requisitos para residencia/visado.', tag: 'Visado OK' },
+          { title: 'Reembolso / Libre Elección', desc: 'Libertad de elegir cualquier especialista en el mundo. Recuperas entre el 80% y 90% de la factura.', tag: 'Más libertad' },
         ],
         bullets: [
-          'Hay opciones más ambulatorias y otras más completas con hospitalización.',
-          'El copago, el reembolso y la libertad de elección no siempre vienen igual.',
-          'Conviene ordenar prioridades antes de mirar solo la cuota.',
+          'Hay opciones ambulatorias y otras completas que incluyen hospitalización y cirugía.',
+          'Las modalidades senior y para extranjeros resuelven necesidades muy específicas.',
+          'El reembolso permite acudir a médicos fuera del cuadro médico concertado.',
         ],
       },
       {
         id: 'comparador',
         label: 'Comparador',
         intro: 'Tabla orientativa para ver diferencias generales entre niveles. No es un presupuesto.',
-        columns: ['Básico', 'Equilibrado', 'Completo'],
+        columns: ['Básico', 'Completo', 'Senior', 'Extranjeros'],
         rows: [
-          { label: 'Medicina general y especialidades', values: [yes, yes, yes] },
-          { label: 'Urgencias y pruebas diagnósticas', values: [medium, yes, yes] },
-          { label: 'Hospitalización', values: ['No siempre', medium, yes] },
-          { label: 'Reembolso', values: ['No', 'No siempre', medium] },
-          { label: 'Asistencia internacional', values: ['No siempre', medium, medium] },
+          { label: 'Medicina y especialistas', values: [yes, yes, yes, yes] },
+          { label: 'Urgencias y pruebas', values: [yes, yes, yes, yes] },
+          { label: 'Hospitalización y cirugía', values: ['No', yes, yes, yes] },
+          { label: 'Asesor Médico Personal', values: ['No', 'No', yes, 'No'] },
+          { label: 'Repatriación', values: ['No', 'No', 'No', yes] },
+          { label: 'Sin copagos', values: ['No siempre', medium, yes, yes] },
         ],
       },
       {
@@ -179,7 +180,7 @@ export const productCompare: Record<string, ProductCompareConfig> = {
         label: 'Consejos',
         intro: 'Lo más importante antes de elegir un seguro para tu mascota.',
         advice: [
-          { title: '¿RC obligatoria?', desc: 'Algunas razas y municipios exigen responsabilidad civil obligatoria. Verifica la normativa de tu zona antes de elegir.' },
+          { title: '¿RC obligatoria?', desc: 'La Ley de Bienestar Animal exige responsabilidad civil para todos los perros. Asegúrate de cumplir la normativa.' },
           { title: 'Veterinaria vs. RC', desc: 'No es lo mismo cubrir gastos de veterinario que cubrir daños a terceros. Decide qué necesitas primero.' },
           { title: 'Opcionales que merecen la pena', desc: 'Asistencia en viaje, robo/extravío y sacrificio necesario son complementos que pueden marcar diferencia.' },
         ],
@@ -216,47 +217,61 @@ export const productCompare: Record<string, ProductCompareConfig> = {
         label: 'Consejos',
         intro: 'Lo que conviene saber sobre seguros de accidentes.',
         advice: [
-          { title: 'No lo confundas con vida', desc: 'El seguro de accidentes solo cubre fallecimiento o invalidez por accidente, no por enfermedad. Son productos distintos.' },
-          { title: 'Revisa el capital de invalidez', desc: 'Es la garantía más utilizada. Asegúrate de que el capital sea suficiente para cubrir un cambio de vida importante.' },
-          { title: 'Comprueba los gastos médicos', desc: 'Algunos incluyen gastos médicos por accidente. Si no tienes seguro de salud, puede ser un complemento importante.' },
+          { title: 'No lo confundas con vida', desc: 'El seguro de accidentes solo cubre fallecimiento o invalidez por accidente, no por enfermedad. Esto permite contratarlo sin cuestionarios médicos.' },
+          { title: 'Protección para Autónomos y Pymes', desc: 'Fundamental para cumplir con convenios colectivos y garantizar la estabilidad si el motor del negocio tiene que parar.' },
+          { title: 'Cobertura 24 horas', desc: 'Protege tanto en el ámbito profesional como en tu vida privada y deportiva (salvo exclusiones específicas).' },
         ],
       },
     ],
   },
-  hospitalizacion: {
+  electrodomesticos: {
     tabs: [
       {
         id: 'modalidades',
         label: 'Modalidades',
-        intro: 'Seguro de hospitalización: cobertura económica diaria durante un ingreso.',
+        intro: 'Protección para la tecnología de tu hogar.',
         cards: [
-          { title: 'Indemnización diaria', desc: 'Recibes una cantidad fija por cada día de ingreso hospitalario. Tú decides en qué gastarlo.', tag: 'Más habitual' },
-          { title: 'Con intervención quirúrgica', desc: 'Incluye también indemnización por intervenciones quirúrgicas, no solo por ingreso.', tag: 'Más completo' },
-          { title: 'Complemento a salud', desc: 'Ideal como refuerzo si ya tienes un seguro de salud y quieres cubrir el impacto económico de un ingreso.', tag: 'Complementario' },
+          { title: 'Reparación mecánica', desc: 'Cubre piezas y mano de obra ante averías internas que el seguro de hogar estándar suele excluir.', tag: 'Principal' },
+          { title: 'Línea blanca y marrón', desc: 'Desde frigos y lavadoras hasta televisores y equipos de sonido de última generación.', tag: 'Completo' },
         ],
-        bullets: ['No sustituye al seguro de salud, lo complementa.', 'La indemnización es libre: la usas como necesites.'],
-      },
-      {
-        id: 'comparador',
-        label: 'Comparador',
-        intro: 'Diferencias generales entre niveles de cobertura por hospitalización.',
-        columns: ['Básico', 'Intermedio', 'Reforzado'],
-        rows: [
-          { label: 'Indemnización diaria por ingreso', values: [yes, yes, yes] },
-          { label: 'Intervención quirúrgica', values: ['No', medium, yes] },
-          { label: 'Ingreso por accidente y enfermedad', values: ['Solo accidente', yes, yes] },
-          { label: 'Capital máximo', values: ['Básico', 'Medio', 'Amplio'] },
-        ],
+        bullets: ['Válido para aparatos de hasta 12 años.', 'Sin costes de desplazamiento ni mano de obra.'],
       },
       {
         id: 'consejos',
         label: 'Consejos',
-        intro: 'Lo que conviene entender sobre el seguro de hospitalización.',
+        intro: 'Alarga la vida de tus aparatos.',
         advice: [
-          { title: 'No es un seguro de salud', desc: 'La hospitalización no cubre consultas ni tratamientos. Es una indemnización diaria que recibes por estar ingresado.' },
-          { title: 'Ideal como complemento', desc: 'Si ya tienes seguro de salud, la hospitalización cubre el impacto económico de un ingreso: desplazamientos, cuidadores, pérdida de ingresos.' },
-          { title: 'Revisa si cubre enfermedad o solo accidente', desc: 'Algunas modalidades solo cubren ingreso por accidente. Si quieres cobertura completa, revisa que incluya enfermedad.' },
+          { title: 'Garantía vs Seguro', desc: 'El seguro entra cuando la garantía del fabricante termina o para averías que no están bajo garantía oficial.' },
+          { title: 'Ahorro real', desc: 'Una sola reparación de un frigorífico o TV puede costar más que varios años de seguro.' },
         ],
+      },
+    ],
+  },
+  'proteccion-juridica': {
+    tabs: [
+      {
+        id: 'modalidades',
+        label: 'Modalidades',
+        intro: 'Defensa legal a tu medida.',
+        cards: [
+          { title: 'Legal Particular', desc: 'Defensa en consumo, vivienda y temas laborales diarios.', tag: 'Más común' },
+          { title: 'Legal Familiar', desc: 'Extensión a todo el núcleo familiar, incluyendo temas de sucesiones o divorcios.', tag: 'Para familias' },
+        ],
+        bullets: ['Asesoramiento telefónico 24h incluido.', 'Libertad de elección de abogado hasta el límite capital.'],
+      },
+    ],
+  },
+  negocio: {
+    tabs: [
+      {
+        id: 'modalidades',
+        label: 'Modalidades',
+        intro: 'Protege la continuidad de tu actividad.',
+        cards: [
+          { title: 'Comercio / Local', desc: 'Multirriesgo para daños por agua, robo, cristales e incendio en tu punto de venta.', tag: 'Físico' },
+          { title: 'RC Profesional', desc: 'Protección ante reclamaciones de clientes o terceros por errores en tu actividad profesional.', tag: 'Servicios' },
+        ],
+        bullets: ['Indemnización por pérdida de beneficios.', 'Asistencia urgente para el negocio (fontanería, electricidad).'],
       },
     ],
   },

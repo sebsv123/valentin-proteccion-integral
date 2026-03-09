@@ -12,8 +12,9 @@ export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const product = getProduct(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const product = getProduct(slug);
   if (!product) return {};
   const seoTitle = `${product.name} en Madrid · Comparar y Elegir | ${site.name}`;
   const seoDesc = `${product.heroCopy} Asesoramiento personalizado en ${product.label} en Madrid y Boadilla del Monte. Orientación sin compromiso.`;
@@ -46,7 +47,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <ProductDecisionGrid product={product} />
         <CasesAndForm product={product} />
         <ProductFaqSection product={product} />
-        <ProductCTASection title={`¿Quieres que te ayudemos con ${product.label}?`} text={`Te ayudamos a entender, comparar y elegir mejor, con una orientación humana y útil antes de contratar.`} message={product.whatsappMessage} />
+        <ProductCTASection product={product} title={`¿Quieres que te ayudemos con ${product.label}?`} text={`Te ayudamos a entender, comparar y elegir mejor, con una orientación humana y útil antes de contratar.`} message={product.whatsappMessage} />
         <RelatedProducts product={product} />
       </main>
       <Footer />

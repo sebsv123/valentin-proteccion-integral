@@ -79,7 +79,7 @@ export function LeadForm({ defaultProduct = 'salud', compact = false }: { defaul
       </div>
 
       <div className="mb-6 rounded-[24px] bg-[var(--bg)] p-4 text-sm leading-7 text-[var(--muted)] md:text-base">
-        Si prefieres ir más rápido, también puedes escribirnos por <a className="font-semibold text-[var(--blue)] underline underline-offset-4" href={buildWhatsAppHref(`Hola, quiero orientación sobre ${defaultProduct}.`)}>WhatsApp</a>.
+        Si prefieres ir más rápido, también puedes escribirnos por <a className="font-semibold text-[var(--blue)] underline underline-offset-4" href={buildWhatsAppHref(`Hola, quiero una orientación clara sobre el seguro de ${defaultProduct}.`)}>WhatsApp</a>.
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4" noValidate>
@@ -102,12 +102,14 @@ export function LeadForm({ defaultProduct = 'salud', compact = false }: { defaul
           <div>
             <label className="mb-2 block text-sm font-semibold text-[var(--text)]">Producto</label>
             <select className="select-ui" {...register('productInterest')}>
-              <option value="salud">SALUD</option>
+              <option value="salud">SALUD (Básico, Senior, Reembolso...)</option>
               <option value="vida">VIDA</option>
+              <option value="negocio">NEGOCIO / PYME</option>
+              <option value="proteccion-juridica">PROTECCIÓN JURÍDICA</option>
+              <option value="electrodomesticos">ELECTRODOMÉSTICOS</option>
               <option value="mascotas">MASCOTAS</option>
-              <option value="dental">DENTAL</option>
               <option value="accidentes">ACCIDENTES</option>
-              <option value="hospitalizacion">HOSPITALIZACIÓN</option>
+              <option value="dental">DENTAL</option>
               <option value="decesos">DECESOS</option>
               <option value="viaje">VIAJE</option>
             </select>
@@ -130,7 +132,7 @@ export function LeadForm({ defaultProduct = 'salud', compact = false }: { defaul
             {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
             Solicitar orientación
           </button>
-          <a href={buildWhatsAppHref(`Hola, quiero orientación sobre ${defaultProduct}.`)} className="btn-whatsapp w-full sm:w-auto">
+          <a href={buildWhatsAppHref(`Hola, quiero una orientación clara sobre el seguro de ${defaultProduct}.`)} className="btn-whatsapp w-full sm:w-auto">
             <MessageCircle className="h-4 w-4" /> Hablar por WhatsApp
           </a>
         </div>

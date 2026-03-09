@@ -4,7 +4,7 @@ import { buildWhatsAppHref, site } from '@/lib/products';
 export function StickyWhatsApp() {
   return (
     <>
-      <a href={buildWhatsAppHref('Hola, quiero orientación sobre un seguro.')} className="floating-whatsapp glass animate-pulse-soft !border-white/20 hidden md:inline-flex items-center gap-3 pr-6">
+      <a href={buildWhatsAppHref('Hola, quiero orientación sobre un seguro.')} className="floating-whatsapp bg-[#25D366] hover:bg-[#1DA851] text-white animate-pulse-soft hidden md:inline-flex items-center gap-3 pr-6 shadow-xl font-semibold transition-colors">
         <div className="bg-white/20 p-2 rounded-full"><MessageCircle className="h-5 w-5" /></div> WhatsApp
       </a>
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/20 bg-white/80 p-4 shadow-2xl backdrop-blur-xl md:hidden">

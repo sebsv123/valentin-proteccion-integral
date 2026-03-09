@@ -14,7 +14,7 @@ export function Footer() {
               </div>
               <p className="text-[var(--muted)]">{site.brandLine}</p>
             </div>
-            <p className="max-w-xl text-base leading-8 text-[var(--muted)]">Asesoramiento personalizado para ayudarte a entender, comparar y elegir mejor. Una web pensada para orientar con claridad y acompañarte antes de contratar.</p>
+            <p className="max-w-xl text-base leading-8 text-[var(--muted)]">Valentín Protección Integral ofrece asesoramiento personalizado para asegurar tu tranquilidad. Una firma especializada en proteger lo que de verdad importa, acompañándote con cercanía antes y después de contratar.</p>
             <div className="flex flex-wrap gap-3">
               <a href={buildWhatsAppHref('Hola, quiero hablar por WhatsApp con Valentín Protección Integral.')} className="btn-whatsapp !px-5 !py-3">WhatsApp</a>
               <Link href="/contacto" className="btn-ghost !px-5 !py-3">Formulario</Link>
@@ -58,9 +58,9 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 grid gap-4 border-t border-[var(--border)] pt-6 text-sm leading-7 text-[var(--muted)] md:grid-cols-3">
-          <p>La información mostrada es orientativa y no sustituye a la documentación contractual final.</p>
-          <p>Las coberturas, límites, primas y condiciones pueden variar según modalidad, edad, provincia y aceptación.</p>
-          <p>Esta web está pensada para orientar, comparar y acompañar antes de contratar.</p>
+          <p>La información mostrada es orientativa y no sustituye a la documentación contractual final de cada aseguradora.</p>
+          <p>Las coberturas, límites, primas y condiciones pueden variar según modalidad, edad, provincia y aceptación del riesgo.</p>
+          <p>Valentín Protección Integral es tu agencia de confianza para asesorar, comparar y acompañarte en cada paso.</p>
         </div>
         <div className="mt-6 border-t border-[var(--border)] pt-6 text-center text-sm text-[var(--muted)]">
           <p>© {new Date().getFullYear()} {site.name}. Todos los derechos reservados.</p>

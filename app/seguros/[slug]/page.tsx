@@ -15,12 +15,14 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const product = getProduct(params.slug);
   if (!product) return {};
+  const seoTitle = `${product.name} en Madrid · Comparar y Elegir | ${site.name}`;
+  const seoDesc = `${product.heroCopy} Asesoramiento personalizado en ${product.label} en Madrid y Boadilla del Monte. Orientación sin compromiso.`;
   return {
-    title: `${product.name} | ${site.name}`,
-    description: product.heroCopy,
+    title: seoTitle,
+    description: seoDesc,
     openGraph: {
-      title: `${product.name} | ${site.name}`,
-      description: product.heroCopy,
+      title: seoTitle,
+      description: seoDesc,
       images: [{ url: `${site.domain}${product.heroImage}`, alt: product.heroAlt }],
     },
   };

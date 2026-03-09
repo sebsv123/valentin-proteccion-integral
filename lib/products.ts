@@ -42,9 +42,9 @@ export type ProductSubpage = {
 export const site = {
   name: 'Valentín Protección Integral',
   shortName: 'VPI',
-  title: 'Valentín Protección Integral | Protegemos lo que más importa',
+  title: 'Valentín Protección Integral | Asesora de Seguros en Madrid',
   description:
-    'Asesoramiento personalizado en SALUD, VIDA, MASCOTAS, VIAJE, DENTAL, ACCIDENTES, HOSPITALIZACIÓN y DECESOS. Más de 10 años ayudando a familias y particulares a elegir con claridad.',
+    'Asesoramiento personalizado en SALUD, VIDA, MASCOTAS, VIAJE, DENTAL, ACCIDENTES, HOSPITALIZACIÓN y DECESOS en Madrid y Boadilla del Monte. Más de 10 años ayudando a familias a elegir con claridad.',
   phone: '+34 603 448 765',
   phoneHref: '+34603448765',
   domain: process.env.NEXT_PUBLIC_SITE_URL || 'https://valentinproteccionintegral.com',
@@ -136,9 +136,9 @@ export const products: Product[] = [
     heroTitle: 'Un seguro de VIDA no sirve solo para dejar un capital: bien elegido, puede ayudarte a proteger a tu familia, tu hipoteca o tu estabilidad económica',
     heroCopy:
       'No todas las soluciones de VIDA responden a la misma necesidad. Algunas están pensadas para protección familiar, otras para hipoteca o deuda y otras conviene diferenciarlas de productos centrados en accidente, porque el riesgo cubierto no siempre es el mismo.',
-    heroImage: '/images/premium/life.png',
-    heroAlt: 'Manos de padre e hijo representando protección y seguridad familiar',
-    cardImage: '/images/premium/life.png',
+    heroImage: '/images/products/vida-hero.png',
+    heroAlt: 'Familia protegida con seguridad y estabilidad económica',
+    cardImage: '/images/products/vida-hero.png',
     cardAlt: 'Protección familiar',
     summary:
       'Protección económica, apoyo a tu familia y modalidades distintas según quieras cubrir una necesidad familiar, una deuda o una situación concreta.',
@@ -271,9 +271,9 @@ export const products: Product[] = [
     heroTitle: 'El seguro DENTAL puede ayudarte a acceder a una atención bucodental más cómoda y previsible',
     heroCopy:
       'Según la modalidad, puede dar acceso a distintas especialidades, a determinados actos incluidos sin franquicia y a mejores condiciones frente a tarifas particulares, con opciones pensadas también para familias y empresas.',
-    heroImage: '/images/premium/dental-care.png',
-    heroAlt: 'Sonrisa sana y cuidado dental profesional',
-    cardImage: '/images/premium/dental-care.png',
+    heroImage: '/images/products/dental-hero.png',
+    heroAlt: 'Consulta dental profesional con atención cercana',
+    cardImage: '/images/products/dental-hero.png',
     cardAlt: 'Cuidado dental premium',
     summary:
       'Una forma más clara de valorar revisiones, urgencias, especialidades y actos incluidos sin reducirlo todo a una limpieza o una revisión puntual.',
@@ -337,10 +337,10 @@ export const products: Product[] = [
     heroTitle: 'Un seguro de ACCIDENTES puede ayudarte a protegerte frente a imprevistos que alteran tu estabilidad económica',
     heroCopy:
       'La clave está en saber si buscas una protección básica o una solución más amplia. Hay modalidades más sencillas y otras que amplían la protección con invalidez, hospitalización o apoyo económico temporal.',
-    heroImage: '/brand/banner-accidentes.png',
-    heroAlt: 'Creatividad de marca para ACCIDENTES',
-    cardImage: '/brand/banner-accidentes.png',
-    cardAlt: 'Banner de ACCIDENTES',
+    heroImage: '/images/products/accidentes-hero.png',
+    heroAlt: 'Apoyo profesional tras un accidente — protección y recuperación',
+    cardImage: '/images/products/accidentes-hero.png',
+    cardAlt: 'Protección ante accidentes',
     summary:
       'Indemnización, invalidez, renta y hospitalización con una lectura más clara para distinguir una modalidad básica de otra más completa.',
     highlights: [
@@ -404,10 +404,10 @@ export const products: Product[] = [
     heroTitle: 'Un seguro de HOSPITALIZACIÓN puede ayudarte a contar con un apoyo económico diario si tienes que ingresar en un hospital por una causa cubierta',
     heroCopy:
       'Cubre hospitalización por accidente, enfermedad o intervención quirúrgica, dentro de los límites y exclusiones del producto. La cuantía diaria puede adaptarse a tus necesidades y conviene revisar duración máxima y supuestos no cubiertos.',
-    heroImage: '/brand/banner-hospitalizacion.png',
-    heroAlt: 'Creatividad de marca para HOSPITALIZACIÓN',
-    cardImage: '/brand/banner-hospitalizacion.png',
-    cardAlt: 'Banner de HOSPITALIZACIÓN',
+    heroImage: '/images/products/hospitalizacion-hero.png',
+    heroAlt: 'Entorno hospitalario profesional y tranquilizador',
+    cardImage: '/images/products/hospitalizacion-hero.png',
+    cardAlt: 'Apoyo durante hospitalización',
     summary:
       'Indemnización diaria por ingreso hospitalario, con una explicación más precisa de causas cubiertas, límites y funcionamiento.',
     highlights: [
@@ -470,10 +470,10 @@ export const products: Product[] = [
     heroTitle: 'El seguro de DECESOS puede ayudarte a dejar resueltas muchas gestiones y servicios importantes en un momento delicado',
     heroCopy:
       'No se trata solo del servicio funerario. Según contratación, puede incluir traslados, gestiones y servicios complementarios que ayudan a reducir carga para la familia en un momento delicado.',
-    heroImage: '/brand/banner-decesos.png',
-    heroAlt: 'Creatividad de marca para DECESOS',
-    cardImage: '/brand/banner-decesos.png',
-    cardAlt: 'Banner de DECESOS',
+    heroImage: '/images/products/decesos-hero.png',
+    heroAlt: 'Acompañamiento familiar con dignidad y apoyo',
+    cardImage: '/images/products/decesos-hero.png',
+    cardAlt: 'Acompañamiento y previsión familiar',
     summary:
       'Una explicación más clara y humana de un ramo donde importa sentirse acompañado y entender qué gestiones y servicios pueden quedar resueltos.',
     highlights: [
@@ -536,9 +536,9 @@ export const products: Product[] = [
     heroTitle: 'No todos los seguros de VIAJE están pensados para lo mismo: elegir bien depende del destino, la duración y el tipo de desplazamiento',
     heroCopy:
       'Hay opciones para viajes puntuales, estudios, escapadas frecuentes o necesidades más específicas. La anulación, el límite médico y el alcance de ciertas coberturas no siempre son iguales entre modalidades.',
-    heroImage: '/images/premium/travel.png',
-    heroAlt: 'Pareja disfrutando de un atardecer en la costa española con tranquilidad',
-    cardImage: '/images/premium/travel.png',
+    heroImage: '/images/products/viaje-hero.png',
+    heroAlt: 'Viajero explorando con tranquilidad y cobertura de seguro',
+    cardImage: '/images/products/viaje-hero.png',
     cardAlt: 'Viaje seguro',
     summary:
       'Asistencia médica, anulación, equipaje y modalidades distintas según el tipo de viaje, con una explicación más útil y menos genérica.',

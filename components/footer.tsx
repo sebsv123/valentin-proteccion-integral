@@ -39,20 +39,20 @@ export function Footer() {
             <p className="font-heading text-lg font-semibold text-[var(--blue-deep)]">Contacto</p>
             <div className="mt-4 space-y-3 text-[var(--muted)]">
               <p>{site.phone}</p>
-              <p>España</p>
+              <p className="font-medium text-[var(--blue-deep)]">Boadilla del Monte, Madrid</p>
               <a href={site.instagram} className="block hover:text-[var(--blue)]">@segurosrosavalentin</a>
               <a href={buildWhatsAppHref('Hola, quiero una orientación sobre seguros.')} className="block hover:text-[var(--blue)]">Abrir WhatsApp</a>
             </div>
-            <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--border)]">
+            <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--border)] shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6234867.487348164!2d-7.491670849999999!3d40.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc42e3783261bc8b%3A0xa6acb69c749508a8!2sEspa%C3%B1a!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24320.79618946965!2d-3.892!3d40.407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4189ae3e2492e3%3A0x6e9e5e3b0c8e0c0a!2sBoadilla%20del%20Monte%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
                 width="100%"
-                height="160"
+                height="200"
                 style={{ border: 0 }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación en España"
+                title="Ubicación en Boadilla del Monte, Madrid"
               />
             </div>
           </div>

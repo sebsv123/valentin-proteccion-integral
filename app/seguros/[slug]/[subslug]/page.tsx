@@ -15,12 +15,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug, subslug } = await params;
   const subpage = getProductSubpage(slug, subslug);
   if (!subpage) return {};
+  const seoTitle = `${subpage.title} · Madrid | ${site.name}`;
+  const seoDesc = `${subpage.summary} Asesoramiento personalizado en Madrid y Boadilla del Monte. Orientación sin compromiso.`;
   return {
-    title: `${subpage.title} | ${site.name}`,
-    description: subpage.summary,
+    title: seoTitle,
+    description: seoDesc,
     openGraph: {
-      title: `${subpage.title} | ${site.name}`,
-      description: subpage.summary,
+      title: seoTitle,
+      description: seoDesc,
       images: [{ url: `${site.domain}${subpage.heroImage}`, alt: subpage.heroAlt }],
     },
   };

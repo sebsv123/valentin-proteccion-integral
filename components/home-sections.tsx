@@ -10,13 +10,13 @@ import { FAQAccordion } from './faq-accordion';
 
 const cardImages: Record<string, string> = {
   salud: '/images/premium/hero-family.png',
-  vida: '/images/premium/life.png',
+  vida: '/images/products/vida-hero.png',
   mascotas: '/images/premium/happy-pets.png',
-  viaje: '/images/premium/travel.png',
-  dental: '/images/premium/dental-care.png',
-  accidentes: '/brand/banner-accidentes.png',
-  hospitalizacion: '/brand/banner-hospitalizacion.png',
-  decesos: '/brand/banner-decesos.png',
+  dental: '/images/products/dental-hero.png',
+  viaje: '/images/products/viaje-hero.png',
+  accidentes: '/images/products/accidentes-hero.png',
+  hospitalizacion: '/images/products/hospitalizacion-hero.png',
+  decesos: '/images/products/decesos-hero.png',
 };
 
 const sectionTints: Record<string, string> = {

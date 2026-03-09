@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Playfair_Display, Montserrat } from 'next/font/google';
 import Script from 'next/script';
 import { SocialProof } from '@/components/social-proof';
-import { ExitIntentPopup } from '@/components/exit-intent-popup';
 import { site } from '@/lib/products';
 import './globals.css';
 
@@ -50,12 +49,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     telephone: site.phone,
     url: site.domain,
     sameAs: [site.instagram],
-    areaServed: 'España',
-    serviceType: 'Asesoramiento en seguros',
+    areaServed: ['Madrid', 'Boadilla del Monte', 'Comunidad de Madrid', 'España'],
+    serviceType: 'Asesoramiento y mediación en seguros',
     address: {
       '@type': 'PostalAddress',
+      addressLocality: 'Boadilla del Monte',
+      addressRegion: 'Comunidad de Madrid',
       addressCountry: 'ES',
-      addressRegion: 'España',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 40.407,
+      longitude: -3.892,
     },
     priceRange: '€€',
     openingHoursSpecification: {
@@ -72,7 +77,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}
         <SocialProof />
-        <ExitIntentPopup />
         {clarityId ? (
           <Script id="clarity" strategy="afterInteractive">{`
             (function(c,l,a,r,i,t,y){

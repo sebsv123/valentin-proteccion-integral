@@ -8,8 +8,8 @@ import { LeadForm } from '@/components/lead-form';
 import { buildWhatsAppHref, site } from '@/lib/products';
 
 export const metadata: Metadata = {
-  title: `Contacto | ${site.name}`,
-  description: 'Habla con la agente, pide orientación y resuelve tus dudas por formulario, WhatsApp o llamada.',
+  title: `Contacto · Asesora de Seguros en Madrid | ${site.name}`,
+  description: 'Contacta con Rosa Valentín, asesora certificada en seguros en Boadilla del Monte, Madrid. Orientación sin compromiso por formulario, WhatsApp o llamada.',
 };
 
 export default function ContactoPage() {

@@ -29,6 +29,11 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [open]);
+
   const grouped = useMemo(() => products.map((product) => ({ ...product, children: getSubpagesForProduct(product.slug) })), []);
 
   const closeAll = () => {
@@ -116,45 +121,93 @@ export function Header() {
 
       <AnimatePresence>
         {open ? (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-[80] bg-[rgba(18,59,104,0.34)] p-4">
-            <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} className="ml-auto flex h-full w-full max-w-md flex-col rounded-[30px] bg-white p-5 shadow-2xl">
-              <div className="flex items-center justify-between gap-3 border-b pb-4">
-                <div className="scale-75 origin-left"><Brand /></div>
-                <button className="btn-ghost !px-3 !py-3 hover:bg-[var(--bg)]" onClick={() => setOpen(false)} aria-label="Cerrar menú"><X className="h-6 w-6" /></button>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[80] bg-[rgba(18,59,104,0.4)]"
+              onClick={() => setOpen(false)}
+            />
+            {/* Panel */}
+            <motion.aside
+              key="drawer"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 300 }}
+              className="fixed inset-y-0 right-0 z-[90] flex w-full max-w-[22rem] flex-col bg-white shadow-2xl sm:max-w-md"
+              style={{ height: '100dvh' }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header */}
+              <div className="flex shrink-0 items-center justify-between gap-3 border-b border-[var(--border)] px-5 py-4">
+                <div className="origin-left scale-[0.68]"><Brand /></div>
+                <button className="rounded-2xl p-3 text-[var(--blue-deep)] hover:bg-[var(--bg)] transition-colors" onClick={() => setOpen(false)} aria-label="Cerrar menú">
+                  <X className="h-6 w-6" />
+                </button>
               </div>
-              <div className="mt-6 space-y-3 overflow-y-auto pb-6">
-                <details className="soft-card p-4" open>
-                  <summary className="cursor-pointer list-none font-heading text-lg font-semibold text-[var(--blue-deep)]">Seguros</summary>
-                <div className="mt-3 grid gap-3">
-                  {grouped.map((item) => (
-                    <details key={item.slug} className="rounded-[18px] bg-[var(--bg)] px-4 py-3">
-                      <summary className="cursor-pointer list-none font-semibold tracking-wide text-[var(--text)]">
-                        <div className="flex items-center justify-between">
-                          <span>{item.label}</span>
-                          <span className="text-[var(--blue)] text-xs font-bold underline decoration-dotted underline-offset-4" onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href=`/seguros/${item.slug}`; closeAll(); }}>Ir a sección</span>
+
+              {/* Scrollable nav */}
+              <nav className="flex-1 min-h-0 overflow-y-auto overscroll-contain px-5 py-4 space-y-2">
+                <Link href="/" onClick={closeAll} className="block rounded-2xl px-4 py-3.5 text-[17px] font-semibold text-[var(--blue-deep)] hover:bg-[var(--bg)] transition-colors">
+                  Inicio
+                </Link>
+
+                <details className="rounded-2xl border border-[var(--border)] bg-white" open>
+                  <summary className="cursor-pointer list-none px-4 py-3.5 text-[17px] font-semibold text-[var(--blue-deep)]">
+                    Seguros
+                  </summary>
+                  <div className="px-3 pb-3 grid gap-1.5">
+                    {grouped.map((item) => (
+                      <details key={item.slug} className="rounded-xl bg-[var(--bg)]">
+                        <summary className="cursor-pointer list-none px-3.5 py-3 text-[15px] font-semibold text-[var(--text)]">
+                          <div className="flex items-center justify-between">
+                            <span>{item.label}</span>
+                            <span
+                              className="text-[var(--blue)] text-xs font-bold"
+                              role="link"
+                              onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.href=`/seguros/${item.slug}`; closeAll(); }}
+                            >
+                              Ver →
+                            </span>
+                          </div>
+                        </summary>
+                        <div className="px-3.5 pb-3 space-y-1.5 border-t border-black/5 pt-2">
+                          <Link href={`/seguros/${item.slug}`} onClick={closeAll} className="block rounded-lg px-2.5 py-2 text-sm font-bold text-[var(--blue-deep)] hover:bg-white transition-colors">
+                            Ver {item.label} (General)
+                          </Link>
+                          {item.children.map((child) => (
+                            <Link key={child.slug} href={`/seguros/${item.slug}/${child.slug}`} onClick={closeAll} className="block rounded-lg px-2.5 py-2 text-sm text-[var(--muted)] hover:text-[var(--blue)] hover:bg-white transition-colors">
+                              {child.label}
+                            </Link>
+                          ))}
                         </div>
-                      </summary>
-                      <div className="mt-2 space-y-2 border-t border-black/5 pt-2">
-                        <Link href={`/seguros/${item.slug}`} onClick={closeAll} className="block text-sm font-bold text-[var(--blue-deep)]">Ver {item.label} (General)</Link>
-                        {item.children.map((child) => (
-                          <Link key={child.slug} href={`/seguros/${item.slug}/${child.slug}`} onClick={closeAll} className="block text-sm text-[var(--muted)] hover:text-[var(--blue)]">{child.label}</Link>
-                        ))}
-                      </div>
-                    </details>
-                  ))}
-                </div>
+                      </details>
+                    ))}
+                  </div>
                 </details>
+
                 {mainNav.slice(2).map((item) => (
-                  <Link key={item.href} href={item.href} onClick={closeAll} className="soft-card block px-5 py-5 font-heading text-lg font-semibold text-[var(--blue-deep)]">{item.label}</Link>
+                  <Link key={item.href} href={item.href} onClick={closeAll} className="block rounded-2xl px-4 py-3.5 text-[17px] font-semibold text-[var(--blue-deep)] hover:bg-[var(--bg)] transition-colors">
+                    {item.label}
+                  </Link>
                 ))}
-                <a href={site.instagram} target="_blank" rel="noreferrer" className="soft-card block px-5 py-5 font-heading text-lg font-semibold text-[var(--blue-deep)]">Instagram · @segurosrosavalentin</a>
+
+                <a href={site.instagram} target="_blank" rel="noreferrer" className="flex items-center gap-3 rounded-2xl px-4 py-3.5 text-[17px] font-semibold text-[var(--blue-deep)] hover:bg-[var(--bg)] transition-colors">
+                  <Instagram className="h-5 w-5" /> @segurosrosavalentin
+                </a>
+              </nav>
+
+              {/* Fixed footer CTAs */}
+              <div className="shrink-0 border-t border-[var(--border)] bg-[var(--bg)] px-5 py-4 grid gap-2.5">
+                <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para elegir un seguro.')} className="btn-whatsapp justify-center">Consulta sin compromiso</a>
+                <a href={`tel:${site.phoneHref}`} className="btn-secondary justify-center"><Phone className="h-4 w-4" /> Llamar al {site.phone}</a>
               </div>
-              <div className="mt-auto grid gap-3 pt-4">
-                <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para elegir un seguro.')} className="btn-whatsapp">Consulta sin compromiso</a>
-                <a href={`tel:${site.phoneHref}`} className="btn-secondary">Llamar al {site.phone}</a>
-              </div>
-            </motion.div>
-          </motion.div>
+            </motion.aside>
+          </>
         ) : null}
       </AnimatePresence>
     </header>

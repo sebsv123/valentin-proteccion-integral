@@ -34,7 +34,7 @@ export default function SobreMiPage() {
               <div className="space-y-6">
                 <div className="soft-card overflow-hidden shadow-2xl transition-transform hover:scale-[1.01] duration-500">
                   <div className="relative aspect-[4/5] w-full">
-                    <Image src="/images/agent/rosa-valentin.jpg" alt="Rosa Valentín, asesora personal de seguros en Madrid" fill className="object-cover object-top" priority />
+                    <Image src="/images/agent/rosa-despacho.jpg" alt="Rosa Valentín, asesora personal de seguros en Madrid" fill className="object-cover object-top" priority />
                   </div>
                 </div>
 
@@ -149,6 +149,20 @@ export default function SobreMiPage() {
                     );
                   })}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Rosa lifestyle photo block */}
+        <section className="section-pad pt-0">
+          <div className="container-shell">
+            <div className="grid gap-6 md:grid-cols-2 items-center">
+              <div className="relative aspect-[4/3] rounded-[28px] overflow-hidden shadow-xl border border-[var(--border)]">
+                <Image src="/images/agent/rosa-oficina-2.jpg" alt="Rosa Valentín en su oficina de Boadilla del Monte" fill className="object-cover object-top" />
+              </div>
+              <div className="relative aspect-[4/3] rounded-[28px] overflow-hidden shadow-xl border border-[var(--border)]">
+                <Image src="/images/agent/rosa-exterior-2.jpg" alt="Rosa Valentín, cercanía y profesionalidad" fill className="object-cover object-top" />
               </div>
             </div>
           </div>

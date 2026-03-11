@@ -100,7 +100,7 @@ export function StatsSection() {
       <div className="container-shell">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
-            <motion.div 
+            <motion.div
               key={stat.label}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -249,7 +249,7 @@ export function ComparisonCardsSection() {
           <ScrollReveal direction="left">
             <div className="soft-card overflow-hidden h-full">
               <div className="relative min-h-[520px] h-full">
-                <Image src="/images/home/meeting-real.jpg" alt="Reunión de orientación personalizada en seguros" fill className="object-cover" />
+                <Image src="/images/agent/rosa-exterior.jpg" alt="Rosa Valentín, tu asesora de seguros de confianza" fill className="object-cover object-top" />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,250,252,0.08),rgba(18,59,104,0.58))]" />
                 <div className="absolute inset-x-0 bottom-0 p-7 text-white md:p-8">
                   <p className="kicker !text-white/70">Una decisión mejor empieza con una conversación clara</p>
@@ -311,8 +311,8 @@ export function AgentTrustBlock() {
                       ['04', 'Contratación ágil: Gestionamos todo para que no te preocupes de nada.'],
                       ['05', 'Acompañamiento continuo: Seguimos a tu lado después de la firma.'],
                     ].map(([step, line], idx) => (
-                      <motion.div 
-                        key={line} 
+                      <motion.div
+                        key={line}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}

@@ -246,6 +246,114 @@ export const blogPosts: BlogPost[] = [
       'Compara opcionales con criterio: no pagues por lo que no necesitas.',
     ],
   },
+  {
+    slug: 'mejor-seguro-salud-madrid-2026',
+    title: 'Mejor Seguro de Salud en Madrid 2026: Guía completa de coberturas y hospitales',
+    excerpt: 'Analizamos las opciones de salud privada en Madrid para 2026: cuadros médicos, hospitales de referencia y cómo elegir sin pagar de más.',
+    image: '/images/blog/blog_salud_madrid_2026_1776077536984.png',
+    imageAlt: 'Consulta médica premium en Madrid',
+    date: '2026-04-13',
+    readTime: '9 min',
+    metaTitle: 'Mejor Seguro de Salud en Madrid 2026 | Guía VPI',
+    metaDescription: 'Comparativa de seguros de salud en Madrid 2026. Hospitales de referencia, telemedicina avanzada y claves para elegir tu cuadro médico ideal.',
+    sections: [
+      {
+        heading: 'El panorama de la salud privada en Madrid en 2026',
+        content: [
+          'El panorama de la sanidad privada en Madrid ha evolucionado hacia una integración total con la tecnología. En 2026, la clave no es solo tener un seguro, sino saber en qué red de hospitales te vas a mover y qué servicios digitales te ofrecen.',
+          'Desde los grandes grupos hospitalarios hasta centros de alta especialización, la elección del cuadro médico determina tu experiencia real como paciente.',
+          'En este artículo desglosamos qué factores técnicos hacen que un seguro se considere "premium" en la capital hoy en día.',
+        ],
+      },
+      {
+        heading: 'Hospitales de referencia: ¿Dónde quieres ser atendido?',
+        content: [
+          'Un seguro es tan bueno como la puerta que te abre. En Madrid, contar con acceso a centros de alta complejidad es fundamental para muchos asegurados.',
+          'Debes revisar si tu póliza incluye estos centros sin restricciones o si requiere autorizaciones especiales. En 2026, la mayoría de estos centros permiten gestiones instantáneas vía app.',
+        ],
+      },
+    ],
+    tips: [
+      'Verifica que tu hospital de confianza está en el cuadro médico.',
+      'La telemedicina avanzada ahorra desplazamientos en una ciudad como Madrid.',
+      'Compara los límites de reembolso si optas por especialistas fuera de red.',
+    ],
+  },
+  {
+    slug: 'seguro-vida-hipoteca-obligatorio',
+    title: '¿Es obligatorio el seguro de vida con la hipoteca? Lo que los bancos no te cuentan',
+    excerpt: 'Desmontamos los mitos sobre la vinculación de seguros de vida e hipotecas según la legislación vigente.',
+    image: '/images/blog/blog_vida_hipoteca_1776077585025.png',
+    imageAlt: 'Familia segura en su nuevo hogar',
+    date: '2026-04-20',
+    readTime: '7 min',
+    metaTitle: 'Seguro de vida e hipoteca: ¿Es obligatorio? | VPI',
+    metaDescription: 'Entiende tus derechos legales frente a la banca. ¿Pueden obligarte a contratar el seguro de vida con el banco? Análisis de la ley y ahorro real.',
+    sections: [
+      {
+        heading: 'La Ley de Contratos de Crédito Inmobiliario',
+        content: [
+          'Desde la entrada en vigor de la nueva ley hipotecaria, la transparencia ha mejorado, pero siguen existiendo dudas. La respuesta corta es NO: el banco no puede obligarte a contratar SU seguro de vida.',
+          'Sin embargo, el banco puede exigirte que TENGAS un seguro de vida como garantía, pero tú tienes la libertad de contratarlo con la entidad que prefieras.',
+        ],
+      },
+    ],
+    tips: [
+      'Puedes contratar tu seguro de vida fuera del banco y seguir cumpliendo las condiciones.',
+      'Compara siempre el coste del seguro del banco vs. un asesor independiente.',
+      'La diferencia de precio puede superar el 40% anual.',
+    ],
+  },
+  {
+    slug: 'seguro-perros-madrid-ley-bienestar-2026',
+    title: 'Responsabilidad Civil para Perros en Madrid: Guía de la Ley de Bienestar Animal',
+    excerpt: 'Todo sobre la obligatoriedad del seguro de RC para perros en 2026 y cómo afecta a los propietarios en la Comunidad de Madrid.',
+    image: '/images/blog/blog_perros_rc_madrid_1776077914058.png',
+    imageAlt: 'Perro paseando por Madrid responsablemente',
+    date: '2026-04-27',
+    readTime: '6 min',
+    metaTitle: 'Seguro Perros Madrid 2026: Ley Bienestar Animal | VPI',
+    metaDescription: 'Guía técnica sobre el seguro de responsabilidad civil obligatorio para perros en Madrid. Coberturas, multas y requisitos legales en 2026.',
+    sections: [
+      {
+        heading: 'La obligatoriedad del seguro de Responsabilidad Civil',
+        content: [
+          'Con la consolidación de la Ley de Bienestar Animal en 2026, todos los propietarios de perros en España deben contar con un seguro de responsabilidad civil.',
+          'En la Comunidad de Madrid, esta normativa se aplica para garantizar que cualquier incidente causado por el animal esté cubierto financieramente.',
+        ],
+      },
+    ],
+    tips: [
+      'El seguro de RC debe cubrir como mínimo los daños a terceros.',
+      'Revisa si el seguro de hogar ya incluye a tu mascota.',
+      'Lleva siempre el recibo del seguro en formato digital.',
+    ],
+  },
+  {
+    slug: 'asesor-seguros-vs-comparador-online',
+    title: 'Asesor Personal vs. Comparador Online: Por qué la letra pequeña te puede salir cara',
+    excerpt: '¿Por qué en 2026 seguimos necesitando el criterio humano frente a los algoritmos de los comparadores automáticos?',
+    image: '/images/blog/blog_asesor_vs_comparador_1776077957194.png',
+    imageAlt: 'Asesoría personal de seguros Rosa Valentín',
+    date: '2026-05-04',
+    readTime: '8 min',
+    metaTitle: 'Asesor de Seguros vs Comparador Online | VPI',
+    metaDescription: 'La importancia del criterio humano en la contratación de seguros. Por qué un comparador automático a veces omite detalles críticos.',
+    sections: [
+      {
+        heading: 'El límite de los algoritmos',
+        content: [
+          'Los comparadores online son herramientas útiles para una primera aproximación, pero carecen de contexto personalizado.',
+          'Un algoritmo no sabe que tu situación familiar o profesional requiere un análisis detallado antes de que una póliza sea efectiva.',
+        ],
+      },
+    ],
+    tips: [
+      'Un asesor te acompaña en caso de siniestro, un comparador no.',
+      'La letra pequeña es donde reside la verdadera protección.',
+      'El asesoramiento personal suele ser gratuito para el cliente.',
+    ],
+  },
 ];
 
 export function getBlogPost(slug: string) {

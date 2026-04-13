@@ -108,10 +108,10 @@ export function StatsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#81C784] mb-2">
+              <div className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#4CAF50] mb-2 drop-shadow-[0_2px_10px_rgba(76,175,80,0.3)]">
                 <CountUp to={stat.value} suffix={stat.suffix} delay={index * 0.15} />
               </div>
-              <div className="text-white/70 text-sm md:text-base font-semibold uppercase tracking-widest">{stat.label}</div>
+              <div className="text-white/80 text-xs md:text-sm font-bold uppercase tracking-[0.2em]">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -229,7 +229,7 @@ export function ComparisonCardsSection() {
                   <p className="mt-4 text-base leading-8 text-[var(--muted)]">{profile.description}</p>
                   <div className="mt-6 grid gap-4 flex-grow">
                     {profile.bullets.map((bullet) => (
-                      <div key={bullet} className="rounded-2xl border border-white/60 bg-white/60 px-5 py-4 text-sm font-semibold text-[var(--text)] shadow-sm backdrop-blur">
+                      <div key={bullet} className="rounded-2xl border border-white/60 bg-white/40 px-5 py-4 text-xs font-bold text-[var(--blue-deep)] shadow-sm backdrop-blur-md transition-all hover:bg-white/80">
                         {bullet}
                       </div>
                     ))}

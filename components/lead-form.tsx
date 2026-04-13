@@ -66,7 +66,7 @@ export function LeadForm({ defaultProduct = 'salud', compact = false }: { defaul
   };
 
   return (
-    <div className="soft-card p-6 md:p-8">
+    <div className="soft-card p-6 md:p-8 border-white/40 shadow-xl bg-gradient-to-br from-white via-white to-emerald-50/20">
       <div className="mb-6 flex items-start justify-between gap-4">
         <div>
           <p className="kicker">Consulta sin compromiso</p>

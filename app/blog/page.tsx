@@ -32,7 +32,10 @@ export default function BlogPage() {
 
         <section className="section-pad pt-0">
           <div className="container-shell grid gap-6 lg:grid-cols-3">
-            {blogPosts.map((post) => (
+            {blogPosts
+              .filter((post) => new Date(post.date) <= new Date())
+              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+              .map((post) => (
               <article key={post.slug} className="soft-card overflow-hidden group">
                 <Link href={`/blog/${post.slug}`} className="block">
                   <div className="relative h-60 overflow-hidden">

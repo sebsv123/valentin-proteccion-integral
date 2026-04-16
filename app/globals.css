@@ -221,3 +221,41 @@ img { max-width: 100%; height: auto; }
   background: var(--blue);
   border-radius: 99px;
 }
+
+/* ─── MagicUI / DentalLanding theme tokens (Tailwind v4) ─── */
+@theme {
+  --color-primary:             #003366;
+  --color-primary-foreground:  #ffffff;
+  --color-secondary:           #f1f5f9;
+  --color-secondary-foreground:#1e293b;
+  --color-muted:               #f1f5f9;
+  --color-muted-foreground:    #5b6470;
+  --color-accent:              #f1f5f9;
+  --color-accent-foreground:   #1e293b;
+  --color-card:                #ffffff;
+  --color-card-foreground:     #1e293b;
+  --color-background:          #f8fafc;
+  --color-foreground:          #1e293b;
+  --color-border:              #e2e8f0;
+  --color-input:               #e2e8f0;
+  --color-ring:                #003366;
+  --color-destructive:         #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  --animate-grid:    grid 15s linear infinite;
+  --animate-shimmer: shimmer 8s infinite;
+}
+
+@keyframes grid {
+  0%   { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%, 90%, 100% {
+    background-position: calc(-100% - var(--shimmer-width, 100px)) 0;
+  }
+  30%, 60% {
+    background-position: calc(100% + var(--shimmer-width, 100px)) 0;
+  }
+}

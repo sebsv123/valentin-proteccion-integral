@@ -1,11 +1,61 @@
+# Dependencies
 node_modules
+
+# Next.js build output
 .next
 out
+dist
+build
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
+# Environment variables
 .env
 .env.local
 .env.production
+.env*.local
 .dev.vars
 .dev.vars.*
-.DS_Store
+!.env.example
+
+# Vercel / Cloudflare
 .vercel
-.env*.local
+.wrangler
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ==============================
+# SECURITY — NEVER COMMIT THESE
+# ==============================
+
+# Accidental shell output files (e.g. git status > tatus)
+tatus
+status
+*.log
+logs/
+
+# Database dumps
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# Backups & archives
+backups/
+backup*/
+*.bak
+*.tgz
+*.tar.gz
+*.zip
+
+# Cloudflare credentials
+cloudflared/creds.json
+*.credentials.json
+
+# Local test scripts with hardcoded secrets
+_test_*.mjs
+_test_*.js
+_test_*.json

@@ -23,7 +23,7 @@ import { buildWhatsAppHref, site, testimonials } from '@/lib/products';
 export const metadata: Metadata = {
   title: `Quiénes Somos · Rosa Valentín y Sebastián Sifontes | ${site.name}`,
   description:
-    'Conoce al equipo de Valentín Protección Integral: Rosa Valentín y Sebastián Sifontes. Agentes de seguros vinculados registrados en la DGSFP con más de 10 años ayudando a familias en Madrid.',
+    'Conoce al equipo de Valentín Protección Integral: Rosa Valentín y Sebastián Sifontes. Agentes exclusivos de seguros registrados en la DGSFP con más de 10 años ayudando a familias en Madrid.',
   openGraph: {
     title: `Quiénes Somos · Rosa Valentín y Sebastián Sifontes | ${site.name}`,
     description:
@@ -57,8 +57,8 @@ const team = [
     nif: '72295271S',
     dgsfp: 'C046172295271S',
     location: 'Boadilla del Monte, Madrid',
-    phone: '+34 689 79 13 80',
-    phoneHref: '+34689791380',
+    phone: '+34 603 448 765',
+    phoneHref: '+34603448765',
     whatsappMsg: 'Hola Sebastián, quiero orientación sobre un seguro de vida o para mi negocio.',
     bio: 'Sebastián gestiona personalmente las consultas de seguros de vida, accidentes y negocios. Su enfoque directo y práctico ayuda a entender exactamente qué se cubre y por qué, sin rodeos ni letra pequeña.',
     specialties: ['Vida', 'Accidentes', 'Negocios / Autónomos', 'Protección Jurídica', 'Electrodomésticos'],
@@ -154,7 +154,7 @@ export default function SobreNosotrosPage() {
                       {member.dgsfp}
                     </p>
                     <p className="mt-1 leading-5">
-                      Agente de seguros vinculado registrado en la Dirección General de Seguros y
+                      Agente exclusivo de seguros registrado en la Dirección General de Seguros y
                       Fondos de Pensiones (DGSFP).
                     </p>
                   </div>
@@ -321,21 +321,21 @@ export default function SobreNosotrosPage() {
                 <strong>Valentín Protección Integral</strong> · C. de los Reyes Católicos, 1, Boadilla del Monte, Madrid.
               </p>
               <p>
-                <strong>Rosa Valentín</strong> · NIF: 79234434D · Registro DGSFP: C012479234434D · Agente de seguros vinculado.
+                <strong>Rosa Valentín</strong> · NIF: 79234434D · Registro DGSFP: C012479234434D · Agente exclusivo de seguros.
               </p>
               <p>
-                <strong>Sebastián Sifontes Valentín</strong> · NIF: 72295271S · Registro DGSFP: C046172295271S · Agente de seguros vinculado.
+                <strong>Sebastián Sifontes Valentín</strong> · NIF: 72295271S · Registro DGSFP: C046172295271S · Agente exclusivo de seguros.
               </p>
               <p>
                 Actividad supervisada por la Dirección General de Seguros y Fondos de Pensiones (DGSFP).
                 Puede verificar nuestro registro en{' '}
                 <a
-                  href="https://www.dgsfp.mineco.es"
+                  href="https://rrpp.dgsfp.mineco.es/Mediador"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="underline hover:text-[var(--blue)]"
                 >
-                  www.dgsfp.mineco.es
+                  el registro público de la DGSFP
                 </a>.
               </p>
             </div>

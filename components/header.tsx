@@ -146,7 +146,7 @@ export function Header() {
             <a href={buildWhatsAppHref('Hola, quiero una consulta sin compromiso para elegir un seguro.')} className="btn-whatsapp !text-sm !px-5 !py-2.5 shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.6)]">WhatsApp</a>
           </div>
 
-          <button className="flex items-center gap-2 text-white/90 hover:text-white px-4 py-2.5 rounded-[14px] text-sm hover:bg-white/10 transition-colors font-semibold border border-white/20 shrink-0" onClick={() => document.querySelector<HTMLButtonElement>('.sm-toggle')?.click()} aria-label="Abrir menú">
+          <button className="flex items-center gap-2 text-white/90 hover:text-white px-4 py-2.5 rounded-[14px] text-sm hover:bg-white/10 transition-colors font-semibold border border-white/20 shrink-0 xl:hidden" onClick={() => document.querySelector<HTMLButtonElement>('.sm-toggle')?.click()} aria-label="Abrir menú">
             <Menu className="h-5 w-5" /> Menú
           </button>
 

@@ -579,6 +579,8 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 .sm-scope .sm-panel-list[data-numbering] { counter-reset: smItem; }
 .sm-scope .sm-panel-list[data-numbering] .sm-panel-item::after { counter-increment: smItem; content: counter(smItem, decimal-leading-zero); position: absolute; top: 0.1em; right: 3.2em; font-size: 18px; font-weight: 400; color: var(--sm-accent, #0F5E9C); letter-spacing: 0; pointer-events: none; user-select: none; opacity: var(--sm-num-opacity, 0); }
 .sm-scope .staggered-menu-wrapper:not([data-open]) .staggered-menu-header { opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+.sm-scope .staggered-menu-wrapper:not([data-open]) .staggered-menu-panel,
+.sm-scope .staggered-menu-wrapper:not([data-open]) .sm-prelayers { display: none; pointer-events: none; }
 .sm-scope .staggered-menu-wrapper[data-open] .staggered-menu-header { opacity: 1; visibility: visible; transition: opacity 0.3s, visibility 0.3s; transition-delay: 0.2s; }
 @media (max-width: 1024px) { .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; } .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(0%); } }
 @media (max-width: 640px) { .sm-scope .staggered-menu-panel { width: 100%; left: 0; right: 0; } .sm-scope .staggered-menu-wrapper[data-open] .sm-logo-img { filter: invert(0%); } }

@@ -36,6 +36,7 @@ tatus
 status
 *.log
 logs/
+validation-artifacts/
 
 # Database dumps
 *.sql

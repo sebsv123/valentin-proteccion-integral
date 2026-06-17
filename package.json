@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "lint": "node scripts/lint-production-content.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:related": "node scripts/validate-foreigners-page.mjs",
     "build": "next build",
     "start": "next start"
   },
@@ -29,6 +32,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.0",
     "@tailwindcss/postcss": "latest",
     "@types/node": "latest",
     "@types/react": "latest",

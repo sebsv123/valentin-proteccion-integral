@@ -177,7 +177,7 @@ export const products: Product[] = [
       },
       {
         q: '¿Cómo contacto con Sebastián?',
-        a: 'Puedes llamarle o escribirle por WhatsApp al +34 689 791 380 para cualquier duda sobre tu póliza de vida.',
+        a: 'Puedes escribir por WhatsApp al +34 603 448 765 para cualquier duda sobre tu póliza de vida.',
       },
       {
         q: '¿Un seguro de ACCIDENTES es lo mismo que uno de VIDA?',
@@ -192,9 +192,9 @@ export const products: Product[] = [
     customAdvisor: {
       name: 'Sebastián',
       photo: '/images/agent/sebastian.jpg',
-      phone: '+34 689 791 380',
-      phoneHref: '+34689791380',
-      whatsappNumber: '34689791380',
+      phone: '+34 603 448 765',
+      phoneHref: '+34603448765',
+      whatsappNumber: '34603448765',
     },
   },
   {

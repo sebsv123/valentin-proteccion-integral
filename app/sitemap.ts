@@ -6,7 +6,7 @@ export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.domain.replace(/\/$/, '');
-  const staticRoutes = ['/', '/seguros', '/como-te-ayudamos', '/sobre-mi', '/blog', '/contacto', '/opiniones'];
+  const staticRoutes = ['/', '/seguros', '/como-te-ayudamos', '/sobre-mi', '/blog', '/contacto', '/opiniones', '/extranjeros'];
   return [
     ...staticRoutes.map((route) => ({ url: `${base}${route}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: route === '/' ? 1 : 0.8 })),
     ...products.map((product) => ({ url: `${base}/seguros/${product.slug}`, lastModified: new Date(), changeFrequency: 'weekly' as const, priority: 0.75 })),

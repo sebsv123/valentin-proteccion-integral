@@ -4,3 +4,4 @@ https://valentinproteccionintegral.com/seguros/accidentes/pyme-autonomos,redirec
 https://valentinproteccionintegral.com/en/insurance/accident-insurance,hreflang_mismatch,WARNING,none,medium,Standalone EN entity has no equivalent ES entity,locale equivalence audit,F1
 https://valentinproteccionintegral.com/en/insurance/accident-insurance/business-self-employed,locale_missing,WARNING,none,medium,No canonical ES equivalent exists,design decision,F1
 https://valentinproteccionintegral.com/zonas,mojibake,WARNING,none,unknown,Known source encoding debt is out of scope,app/zonas/**,Zonas
+https://valentinproteccionintegral.com/landing/asesoria-gratuita,sitemap_issue,WARNING,public 200 outside sitemap,medium,Campaign route is publicly indexable but absent from sitemap; no correction in F0-B0.1,HTTP 200 index follow without sitemap entry,F2

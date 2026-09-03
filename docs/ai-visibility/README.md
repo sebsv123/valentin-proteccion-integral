@@ -13,3 +13,5 @@ Operational laws:
 - F0 does not modify production behavior.
 
 `baseline_sha` is the pre-intervention reference. Results are observational and unknown values remain explicitly unknown.
+
+Raw captures and competitive source landscapes belong in the ignored local artifact store, not in `public/` or runtime imports. Versioned files contain only methodology, schemas and derived non-sensitive baseline data.

@@ -1,0 +1,24 @@
+url,page_family,reason_no_alternate,expected,future_phase
+https://valentinproteccionintegral.com/seguros/accidentes-decesos,accident-pack,Accident pack intentionally ES-only,yes,Accident follow-up
+https://valentinproteccionintegral.com/en/insurance/accident-insurance,accident-standalone,No semantic ES equivalent,yes,Accident follow-up
+https://valentinproteccionintegral.com/en/insurance/accident-insurance/business-self-employed,accident-child,No canonical ES equivalent,yes,Accident follow-up
+https://valentinproteccionintegral.com/zonas,local-SEO,Zones ES-only,yes,Zonas
+https://valentinproteccionintegral.com/zonas/boadilla-del-monte,local-SEO,Zones ES-only,yes,Zonas
+https://valentinproteccionintegral.com/zonas/madrid,local-SEO,Zones ES-only,yes,Zonas
+https://valentinproteccionintegral.com/zonas/majadahonda,local-SEO,Zones ES-only,yes,Zonas
+https://valentinproteccionintegral.com/zonas/pozuelo-de-alarcon,local-SEO,Zones ES-only,yes,Zonas
+https://valentinproteccionintegral.com/zonas/madrid,local-SEO,Zones ES-only,yes,Zonas
+https://valentinproteccionintegral.com/seguros/salud-individual,product-legacy,No alternate observed in public HTML,unknown,product routing review
+https://valentinproteccionintegral.com/seguros/salud-senior,product-legacy,No alternate observed in public HTML,unknown,product routing review
+https://valentinproteccionintegral.com/seguros/salud-dental,product-legacy,No alternate observed in public HTML,unknown,product routing review
+https://valentinproteccionintegral.com/extranjeros/alquileres,foreigners,No alternate observed in public HTML,unknown,foreigners review
+https://valentinproteccionintegral.com/empresas,corporate,No alternate observed in public HTML,unknown,corporate review
+https://valentinproteccionintegral.com/empresas/salud,corporate,No alternate observed in public HTML,unknown,corporate review
+https://valentinproteccionintegral.com/empresas/ciberseguridad,corporate,No alternate observed in public HTML,unknown,corporate review
+https://valentinproteccionintegral.com/para/familias,audience,No alternate observed in public HTML,unknown,audience review
+https://valentinproteccionintegral.com/para/seniors,audience,No alternate observed in public HTML,unknown,audience review
+https://valentinproteccionintegral.com/para/jovenes-profesionales,audience,No alternate observed in public HTML,unknown,audience review
+https://valentinproteccionintegral.com/garantias,trust,No alternate observed in public HTML,unknown,trust pages review
+https://valentinproteccionintegral.com/blog/cuanto-te-indemniza-realmente-tu-seguro-hipoteca-nomina-en-invalidez-solo-50,blog-explicit,Blog explicit not translated,yes,Blog explicit
+https://valentinproteccionintegral.com/blog/por-que-necesitas-mas-de-9-000e-en-proteccion-familiar-madrid-2026-must-have,blog-explicit,Blog explicit not translated,yes,Blog explicit
+https://valentinproteccionintegral.com/blog/pasaporte-europeo-mascotas-obligatorio-2026-vacunas-precio-madrid,blog-explicit,Blog explicit not translated,yes,Blog explicit

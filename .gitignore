@@ -27,6 +27,7 @@ node_modules/
 .unlighthouse/
 .lighthouseci/
 lighthouse-results/
+artifacts/ai-visibility/f0-zero/
 
 # ==============================
 # LOGS

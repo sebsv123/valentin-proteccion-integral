@@ -1,0 +1,10 @@
+project: VPI AI Visibility Foundation 3.0
+baseline_version: zero
+baseline_sha: 21fb6cdb079722e5a0e4d851bd3abd6ad70dee27
+production_sha: 21fb6cdb079722e5a0e4d851bd3abd6ad70dee27
+captured_at: 2026-09-04T00:38:50+02:00
+primary_domain: https://valentinproteccionintegral.com
+default_locale: es
+secondary_locale: en
+experiment_status: pre-intervention
+public_changes_since_snapshot: false

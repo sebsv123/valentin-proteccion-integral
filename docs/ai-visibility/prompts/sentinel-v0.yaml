@@ -1,0 +1,3 @@
+version: sentinel-v0
+selection_rule: fixed subset of benchmark-v0; canonical_prompt only
+prompts: [E01, E03, E05, F01, F04, F07, F08, F10, F11, F12, C01, N01]

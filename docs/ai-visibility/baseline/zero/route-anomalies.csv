@@ -1,0 +1,6 @@
+url,anomaly_type,severity,public_impact,seo_impact,description,evidence,future_phase
+https://valentinproteccionintegral.com/seguros/accidentes,redirect_chain,WARNING,none,low,Historical ES redirect remains intentional,308 to /seguros/accidentes-decesos,Accident design
+https://valentinproteccionintegral.com/seguros/accidentes/pyme-autonomos,redirect_chain,WARNING,none,medium,Historical child redirect remains intentional,308 to pack,Accident design
+https://valentinproteccionintegral.com/en/insurance/accident-insurance,hreflang_mismatch,WARNING,none,medium,Standalone EN entity has no equivalent ES entity,locale equivalence audit,F1
+https://valentinproteccionintegral.com/en/insurance/accident-insurance/business-self-employed,locale_missing,WARNING,none,medium,No canonical ES equivalent exists,design decision,F1
+https://valentinproteccionintegral.com/zonas,mojibake,WARNING,none,unknown,Known source encoding debt is out of scope,app/zonas/**,Zonas

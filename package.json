@@ -10,6 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test:related": "node scripts/validate-foreigners-page.mjs",
     "test:pilot-kit": "node scripts/ai-visibility/validate-pilot-kit.mjs",
+    "prepare:zero-baseline-kit": "node scripts/ai-visibility/prepare-zero-baseline-kit.mjs",
+    "test:zero-baseline-kit": "node scripts/ai-visibility/validate-zero-baseline-kit.mjs",
     "test:leads": "NODE_ENV=test LEAD_DELIVERY_CONTEXT=test node --conditions=react-server --test scripts/lead-email.test.ts scripts/lead-regression.test.ts && NODE_ENV=test LEAD_DELIVERY_CONTEXT=test node --conditions=react-server scripts/lead-realsend.check.ts",
     "start:test-safe": "NODE_ENV=test LEAD_DELIVERY_CONTEXT=test next dev"
   },

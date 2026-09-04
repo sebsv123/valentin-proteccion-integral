@@ -2,15 +2,20 @@
 
 ## Status
 
+**ENTITY PRE-F1 BASELINE CLOSED**
+
 The Zero Baseline is staged before intervention. The immediate gate is the canonical Entity family only.
 
 - `E01-A`: 4/4 complete
 - `E02-A`: 4/4 complete
 - `E03-A`: 4/4 complete
 - Entity Layer A: **12/24 complete**
-- Remaining Entity Layer A: `E04-A`, `E05-A`, `E06-A` = **12 runs**
-- Next group: `E04-A`
-- After `E06-A`: stop at **ENTITY PRE-F1 BASELINE CLOSED**
+- Remaining Entity Layer A: none
+- Attempted Entity Layer A: **24/24**
+- Valid evaluable Entity Layer A: **23/24**
+- Protocol-failed attempts: **1/24**, only `Z0-E04-A-COPILOT`
+- `E06-A`: 4/4 complete
+- The pre-F1 Entity baseline is now closed.
 - Next family after that checkpoint: `F01-A`
 
 The four-engine order remains ChatGPT → Google → Copilot → Perplexity. Each group must be completed and validated before the next group begins.

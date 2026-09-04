@@ -1,13 +1,13 @@
-run_id,benchmark_version,prompt_id,prompt_text,family,engine,engine_surface,intended_sequence,status,capture_ref
-P0-E01-CHATGPT,benchmark-v0,E01,"¿Qué es Valentín Protección Integral?",entity,ChatGPT,ChatGPT,1,pending,pending
-P0-E01-GOOGLE,benchmark-v0,E01,"¿Qué es Valentín Protección Integral?",entity,Google,Google AI Mode / AI Overview,2,pending,pending
-P0-E01-COPILOT,benchmark-v0,E01,"¿Qué es Valentín Protección Integral?",entity,Copilot,Microsoft Copilot,3,pending,pending
-P0-E01-PERPLEXITY,benchmark-v0,E01,"¿Qué es Valentín Protección Integral?",entity,Perplexity,Perplexity,4,pending,pending
-P0-F01-CHATGPT,benchmark-v0,F01,Seguro médico para visado de estudios en España,foreigners,ChatGPT,ChatGPT,5,pending,pending
-P0-F01-GOOGLE,benchmark-v0,F01,Seguro médico para visado de estudios en España,foreigners,Google,Google AI Mode / AI Overview,6,pending,pending
-P0-F01-COPILOT,benchmark-v0,F01,Seguro médico para visado de estudios en España,foreigners,Copilot,Microsoft Copilot,7,pending,pending
-P0-F01-PERPLEXITY,benchmark-v0,F01,Seguro médico para visado de estudios en España,foreigners,Perplexity,Perplexity,8,pending,pending
-P0-N01-CHATGPT,benchmark-v0,N01,"¿Qué gestoría me puede llevar la contabilidad trimestral de un autónomo?",negative,ChatGPT,ChatGPT,9,pending,pending
-P0-N01-GOOGLE,benchmark-v0,N01,"¿Qué gestoría me puede llevar la contabilidad trimestral de un autónomo?",negative,Google,Google AI Mode / AI Overview,10,pending,pending
-P0-N01-COPILOT,benchmark-v0,N01,"¿Qué gestoría me puede llevar la contabilidad trimestral de un autónomo?",negative,Copilot,Microsoft Copilot,11,pending,pending
-P0-N01-PERPLEXITY,benchmark-v0,N01,"¿Qué gestoría me puede llevar la contabilidad trimestral de un autónomo?",negative,Perplexity,Perplexity,12,pending,pending
+"run_id","benchmark_version","prompt_id","prompt_text","family","engine","engine_surface","intended_sequence","status","capture_ref"
+"P0-E01-CHATGPT","benchmark-v0","E01","¿Qué es Valentín Protección Integral?","entity","ChatGPT","ChatGPT","1","complete","artifacts/ai-visibility/f0-zero/P0-E01-CHATGPT/response.txt"
+"P0-E01-GOOGLE","benchmark-v0","E01","¿Qué es Valentín Protección Integral?","entity","Google","Google AI Mode / AI Overview","2","complete","artifacts/ai-visibility/f0-zero/P0-E01-GOOGLE/response.txt"
+"P0-E01-COPILOT","benchmark-v0","E01","¿Qué es Valentín Protección Integral?","entity","Copilot","Microsoft Copilot","3","complete","artifacts/ai-visibility/f0-zero/P0-E01-COPILOT/response.txt"
+"P0-E01-PERPLEXITY","benchmark-v0","E01","¿Qué es Valentín Protección Integral?","entity","Perplexity","Perplexity","4","complete","artifacts/ai-visibility/f0-zero/P0-E01-PERPLEXITY/response.txt"
+"P0-F01-CHATGPT","benchmark-v0","F01","Seguro médico para visado de estudios en España","foreigners","ChatGPT","ChatGPT","5","complete","artifacts/ai-visibility/f0-zero/P0-F01-CHATGPT/response.txt"
+"P0-F01-GOOGLE","benchmark-v0","F01","Seguro médico para visado de estudios en España","foreigners","Google","Google AI Mode / AI Overview","6","complete","artifacts/ai-visibility/f0-zero/P0-F01-GOOGLE/response.txt"
+"P0-F01-COPILOT","benchmark-v0","F01","Seguro médico para visado de estudios en España","foreigners","Copilot","Microsoft Copilot","7","complete","artifacts/ai-visibility/f0-zero/P0-F01-COPILOT/response.txt"
+"P0-F01-PERPLEXITY","benchmark-v0","F01","Seguro médico para visado de estudios en España","foreigners","Perplexity","Perplexity","8","complete","artifacts/ai-visibility/f0-zero/P0-F01-PERPLEXITY/response.txt"
+"P0-N01-CHATGPT","benchmark-v0","N01","¿Qué gestoría me puede llevar la contabilidad trimestral de un autónomo?","negative","ChatGPT","ChatGPT","9","complete","artifacts/ai-visibility/f0-zero/P0-N01-CHATGPT/response.txt"
+"P0-N01-GOOGLE","benchmark-v0","N01","¿Qué gestoría me puede llevar la contabilidad trimestral de un autónomo?","negative","Google","Google AI Mode / AI Overview","10","complete","artifacts/ai-visibility/f0-zero/P0-N01-GOOGLE/response.txt"
+"P0-N01-COPILOT","benchmark-v0","N01","¿Qué gestoría me puede llevar la contabilidad trimestral de un autónomo?","negative","Copilot","Microsoft Copilot","11","complete","artifacts/ai-visibility/f0-zero/P0-N01-COPILOT/response.txt"
+"P0-N01-PERPLEXITY","benchmark-v0","N01","¿Qué gestoría me puede llevar la contabilidad trimestral de un autónomo?","negative","Perplexity","Perplexity","12","complete","artifacts/ai-visibility/f0-zero/P0-N01-PERPLEXITY/response.txt"

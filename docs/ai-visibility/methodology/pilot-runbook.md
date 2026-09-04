@@ -50,7 +50,7 @@ Submit the prompt exactly once. Do not reformulate, follow up, ask the engine to
 
 ## Capture procedure
 
-Store local, unversioned evidence under `artifacts/ai-visibility/f0-zero/pilot/<run_id>/`:
+Store local, unversioned evidence under `artifacts/ai-visibility/f0-zero/<run_id>/`:
 
 ```text
 screenshot.png     # when available
@@ -58,6 +58,8 @@ response.txt       # complete initial response, before opening sources
 sources.txt        # visible source list, after response capture
 metadata.yaml      # run context and capture quality
 ```
+
+For the historical F0-B2 gate, evidence is valid as either `visual_raw_capture` (original screenshot/raw dump) or `manual_verbatim_transcription` (literal complete response supplied by the operator plus `capture-meta.json` and SHA-256). A manual transcription is never labelled as a screenshot or automatic dump. A missing response is `AWAITING_TRANSCRIPTION` and fails the closure gate.
 
 First save the complete response. Then inspect or capture the visible sources. Do not click a source before saving the initial response if the click may alter the interface. `capture_ref` and `response_capture_ref` point to the local run folder/file; they must not be left pending after execution.
 
@@ -96,3 +98,7 @@ After all 12 runs, second-review at least three runs selected deterministically 
 ## Files and pre/post state
 
 Before execution, all 12 rows in `pilot-v0-manifest.csv` and `pilot-v0.csv` are `pending`; `source-landscape-pilot-v0.csv` contains only its header. After execution, update only the result fields and evidence references. Keep raw artifacts out of Git. Do not modify runtime or production. Do not run external prompts from the contaminated Foundation conversation.
+
+## Prospective full-baseline capture requirements
+
+Future baseline runs must capture at execution time: run ID, exact prompt, engine/surface, timestamp, language, observed country, account/login context, `response.txt`, visible sources and locality/context when observable. A screenshot is additionally required whenever interpretation depends on visual UI state, including Google AI cards/overviews, maps or local packs, source carousels, visually ordered rankings or QA disagreements. These prospective requirements are not imposed retroactively on this historical pilot.

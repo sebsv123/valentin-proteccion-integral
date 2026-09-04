@@ -23,7 +23,7 @@ const credentials = [
   {
     icon: ShieldCheck,
     label: 'Agente registrada en la DGSFP',
-    sub: 'Agentes registrados en la DGSFP',
+    sub: 'Registro oficial de la actividad',
   },
 ]
 

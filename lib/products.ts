@@ -72,7 +72,7 @@ export const site = {
   heroTagline: 'Tus asesores de seguros en Madrid',
   brandLine: 'Registro oficial DGSFP · Orientación cercana · Consulta gratuita',
   brandSubline: 'Salud · Vida · Mascotas · Dental · Viaje · Decesos',
-  advisorName: siteConfig.responsiblePerson.displayName,
+  advisorName: { es: 'nuestro equipo', en: 'our team' },
 };
 
 export const buildWhatsAppHref = (message: string) =>

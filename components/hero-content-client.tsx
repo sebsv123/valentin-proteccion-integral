@@ -57,7 +57,7 @@ export function HeroContentClient() {
       <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-[var(--blue-deep)]" aria-label={isEnglish ? 'Trust signals' : 'Señales de confianza'}>
         <li>{isEnglish ? '+10 years of experience' : '+10 años de experiencia'}</li>
         <li>{isEnglish ? '+1,200 families protected' : '+1.200 familias protegidas'}</li>
-        <li>{isEnglish ? 'DGSFP-registered agents' : 'Agentes registrados DGSFP'}</li>
+        <li>{isEnglish ? 'Officially registered insurance guidance' : 'Orientación de seguros con registro oficial'}</li>
       </ul>
     </div>
   );

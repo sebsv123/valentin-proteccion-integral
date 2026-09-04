@@ -455,7 +455,7 @@ export function AccidentesDecesosLanding() {
                 className="inline-flex items-center justify-center gap-2 text-sm font-medium text-amber-400 mb-6 hover:text-amber-300 transition-colors underline underline-offset-2"
               >
                 <BadgeCheck className="h-4 w-4" />
-                Agentes colegiados — Verificación oficial
+                Asesoramiento profesional — Verificación oficial
               </a>
 
               <div className="grid sm:grid-cols-3 gap-4 mt-8">

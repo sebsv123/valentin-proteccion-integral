@@ -35,7 +35,7 @@ export function EditorialProductHero({ product }: { product: Product }) {
             <aside className={styles.reviewCard} aria-label={en ? 'What we review with you' : 'Qué revisamos contigo'}><div className={styles.reviewHeading}><span aria-hidden="true"><ListChecks /></span><h2>{en ? 'What we review with you' : 'Qué revisamos contigo'}</h2></div><ul>{(en ? ['Co-payments', 'Hospitalisation', 'Provider network', 'Reimbursement'] : reviewItems).map((item) => <li key={item}><Check aria-hidden="true" />{item}</li>)}</ul></aside>
           </div>
         </div>
-        <div className={styles.trustRow} aria-label={en ? 'Experience and trust' : 'Experiencia y confianza'}><p><span aria-hidden="true"><ShieldCheck /></span><strong>{en ? '+10 years' : '+10 años'}</strong> {en ? 'of experience' : 'de experiencia'}</p><p><span aria-hidden="true"><Users /></span><strong>+1.200</strong> {en ? 'families protected' : 'familias protegidas'}</p><p><span aria-hidden="true"><BadgeCheck /></span>{en ? 'DGSFP-registered agents' : 'Agentes registrados DGSFP'}</p></div>
+        <div className={styles.trustRow} aria-label={en ? 'Experience and trust' : 'Experiencia y confianza'}><p><span aria-hidden="true"><ShieldCheck /></span><strong>{en ? '+10 years' : '+10 años'}</strong> {en ? 'of experience' : 'de experiencia'}</p><p><span aria-hidden="true"><Users /></span><strong>+1.200</strong> {en ? 'families protected' : 'familias protegidas'}</p><p><span aria-hidden="true"><BadgeCheck /></span>{en ? 'Officially registered insurance guidance' : 'Orientación de seguros con registro oficial'}</p></div>
       </div>
     </section>
   );

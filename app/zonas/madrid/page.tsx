@@ -39,7 +39,7 @@ const serviceSchema = {
     "longitude": -3.7038
   },
   "areaServed": ["Madrid", "Madrid Centro", "Chamberí", "Salamanca", "Retiro", "Latina", "Carabanchel", "Vallecas", "Madrid Oeste"],
-  "description": "Agentes de seguros registrados DGSFP en Madrid. Salud, vida, dental, mascotas, decesos y seguros para autónomos.",
+  "description": "Orientación de seguros con registro oficial en Madrid. Salud, vida, dental, mascotas, decesos y seguros para autónomos.",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
@@ -129,7 +129,7 @@ export default function MadridPage() {
               Familias protegidas en Madrid
             </p>
             <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-emerald-400 mt-4">
-              Agentes registrados
+              Orientación de seguros con registro oficial
             </p>
           </div>
         </section>

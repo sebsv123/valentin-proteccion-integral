@@ -19,12 +19,12 @@ const FAQChat = dynamicImport(() => import("@/components/faq-chat").then(m => m.
 
 export const metadata: Metadata = {
   title: "Seguro de Salud Privado en Madrid desde 22,50€/mes | Valentín",
-  description: "Seguro de salud privado en Madrid desde 22,50€/mes. Coberturas según modalidad y condiciones de la póliza. Asesoramiento directo con Rosa y Sebastián, agentes registrados en la DGSFP.",
+  description: "Seguro de salud privado en Madrid desde 22,50€/mes. Coberturas según modalidad y condiciones de la póliza. Asesoramiento directo con Rosa y Sebastián.",
   keywords: ["seguro salud privado Madrid","seguro medico privado Madrid","salud privada Madrid sin copagos","contratar seguro salud privado Madrid","seguro médico sin copagos Madrid precio","seguro médico privado sin carencias Madrid"],
   alternates: { canonical: "https://valentinproteccionintegral.com/seguros/salud-individual" },
   openGraph: {
     title: "Seguro de Salud Privado en Madrid desde 22,50€/mes | Valentín",
-    description: "Seguro de salud privado en Madrid desde 22,50€/mes. Coberturas según modalidad y condiciones de la póliza. Asesoramiento directo con Rosa y Sebastián, agentes registrados en la DGSFP.",
+    description: "Seguro de salud privado en Madrid desde 22,50€/mes. Coberturas según modalidad y condiciones de la póliza. Asesoramiento directo con Rosa y Sebastián.",
     url: "https://valentinproteccionintegral.com/seguros/salud-individual",
     siteName: "Valentín Protección Integral",
     locale: "es_ES",
@@ -506,7 +506,7 @@ export default async function SaludIndividualPage() {
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium mb-6">
                   <Award className="w-4 h-4" />
-                  Agentes certificados DGSFP
+                  Orientación de seguros con registro oficial
                 </div>
                 
                 <h2 className="text-[40px] sm:text-[48px] font-bold text-gray-900 leading-tight mb-6">
@@ -656,7 +656,7 @@ export default async function SaludIndividualPage() {
       </main>
       <footer className="bg-gray-950 text-white/50 py-8 text-center text-xs">
         <p>© 2026 Valentín Protección Integral · NIF: 79234434D · DGSFP: C012479234434D</p>
-        <p className="mt-1">Agentes de seguros registrados DGSFP · Boadilla del Monte, Madrid</p>
+        <p className="mt-1">Orientación de seguros con registro oficial · Boadilla del Monte, Madrid</p>
         <div className="flex items-center justify-center gap-4 mt-3">
           <a href="tel:+34603448765" className="text-white/40 hover:text-white/70 transition-colors">603 44 87 65</a>
           <span className="text-white/20">·</span>
@@ -667,4 +667,3 @@ export default async function SaludIndividualPage() {
     </>
   );
 }
-

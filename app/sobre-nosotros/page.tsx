@@ -16,11 +16,11 @@ import { AdeslasAgentLink } from '@/components/adeslas-agent-link';
 
 export const metadata: Metadata = {
   title: "Rosa y Sebastián · Asesores de Seguros en Madrid",
-  description: "Rosa Valentín, agente de seguros registrada en la DGSFP, y Sebastián Valentín forman el equipo de Valentín Protección Integral en Madrid.",
+  description: "Rosa Isabel Valentín González y Sebastián Sifontes Valentín son cofundadores de Valentín Protección Integral en Madrid, con relaciones individuales de distribución exclusiva con SegurCaixa Adeslas y ASISA.",
   keywords: "rosa valentin agente seguros, sebastian valentin equipo seguros, asesoria seguros boadilla del monte",
   openGraph: {
     title: "Rosa y Sebastián · Asesores de Seguros en Madrid",
-    description: "Rosa Valentín es la agente registrada y Sebastián forma parte del equipo de Valentín Protección Integral.",
+    description: "Rosa y Sebastián son cofundadores de Valentín Protección Integral y mantienen relaciones individuales de distribución exclusiva con SegurCaixa Adeslas y ASISA.",
     url: "https://valentinproteccionintegral.com/sobre-nosotros",
     siteName: "Valentín Protección Integral",
     locale: "es_ES",
@@ -35,37 +35,10 @@ export const metadata: Metadata = {
 
 export const dynamic = 'force-static';
 
-const rosaSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Rosa Valentín",
-  "jobTitle": "Agente de Seguros",
-  "description": "Asesora de seguros con más de 10 años acompañando a familias en Madrid y Boadilla del Monte.",
-  "worksFor": { "@type": "LocalBusiness", "name": "Valentín Protección Integral" },
-  "knowsAbout": ["Seguros de Salud", "Seguros de Vida", "Seguros para Autónomos", "Seguros Dentales", "Seguros de Decesos", "Seguros de Mascotas"],
-  "areaServed": "Madrid",
-  "sameAs": [
-    "https://www.linkedin.com/in/rosa-isabel-valentin-gonzalez-3a0b16141/"
-  ]
-};
-
-const sebastianSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sebastián Valentín",
-  "jobTitle": "Agente de Seguros",
-  "description": "Asesor especializado en seguros de salud y accidentes para familias y autónomos en Madrid.",
-  "worksFor": { "@type": "LocalBusiness", "name": "Valentín Protección Integral" },
-  "knowsAbout": ["Seguros de Salud", "Seguros para Autónomos", "Seguros de Accidentes", "Seguros Dentales"],
-  "areaServed": "Madrid"
-};
-
 export default function SobreNosotrosPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rosaSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sebastianSchema) }} />
       <SchemaBreadcrumb
         items={[
           { name: 'Inicio', item: site.domain, position: 1 },
@@ -129,7 +102,7 @@ export default function SobreNosotrosPage() {
 
                 {/* BLOQUE ROSA */}
                 <p className="kicker font-bold text-[var(--blue)] mt-8">Rosa Valentín</p>
-                <p className="text-sm text-[var(--muted)] mb-4">Socia fundadora · Asesora de seguros</p>
+                <p className="text-sm text-[var(--muted)] mb-4">Cofundadora de VPI · Agente exclusiva de seguros de SegurCaixa Adeslas</p>
                 <p className="text-base leading-8 text-[var(--muted)]">
                   Mi nombre es Rosa Valentín. Soy asesora certificada con <strong>más de 10 años de experiencia</strong> en seguros de salud, vida, mascotas, viaje, dental, accidentes, hospitalización y decesos. Trabajo desde <strong>Boadilla del Monte, Madrid</strong>, atendiendo a familias y particulares de toda España.
                 </p>
@@ -162,13 +135,15 @@ export default function SobreNosotrosPage() {
 
                 {/* Pilar 5 — Honestidad e independencia */}
                 <div className="mt-6 rounded-[24px] border border-[var(--blue-deep)]/20 bg-[var(--blue-deep)]/4 px-6 py-5">
-                  <p className="text-sm font-bold uppercase tracking-widest text-[var(--blue-deep)] mb-2">Agentes registrados</p>
+                  <p className="text-sm font-bold uppercase tracking-widest text-[var(--blue-deep)] mb-2">Actividad y registro profesional</p>
                   <p className="text-base leading-8 text-[var(--muted)]">
-                    Valentín Protección Integral es una marca comercial, no una compañía
-                    aseguradora. La actividad la desarrolla una agente de seguros registrada en
-                    la DGSFP, cuya inscripción puede consultarse en el registro público de la
-                    DGSFP. Eso significa que te asesoramos con criterio profesional y registro
-                    oficial, orientándote entre los productos que podemos distribuir.
+                    Valentín Protección Integral es una marca comercial y proyecto de mediación de
+                    seguros, no una compañía aseguradora ni una correduría independiente. Rosa y
+                    Sebastián son cofundadores al mismo nivel y mantienen sus relaciones
+                    individuales de distribución separadas de la marca. La responsable legal de la
+                    actividad publicada es Rosa Isabel Valentín González, cuya inscripción puede
+                    consultarse en el registro público de la DGSFP. Orientamos entre los productos
+                    que podemos distribuir.
                   </p>
                   <div className="mt-4">
                     <AdeslasAgentLink
@@ -184,7 +159,7 @@ export default function SobreNosotrosPage() {
                 <div className="mt-10 pt-8 border-t border-[var(--border)]">
                   <div>
                       <p className="kicker font-bold text-[var(--blue)]">Sebastián Valentín</p>
-                      <p className="text-sm text-[var(--muted)] mb-4">Socio · Especialista en Salud</p>
+                      <p className="text-sm text-[var(--muted)] mb-4">Cofundador de VPI · Agente exclusivo de seguros de ASISA</p>
                       <h3 className="font-heading text-2xl font-bold text-[var(--blue-deep)] mb-4">
                         El rigor técnico al servicio de tu tranquilidad
                       </h3>
@@ -198,7 +173,7 @@ export default function SobreNosotrosPage() {
                         una póliza, qué no cubre y por qué. Sin atajos. Sin letra pequeña escondida.
                       </p>
                       <p className="mt-4 text-base leading-8 text-[var(--muted)]">
-                        <strong>Forma parte del equipo de Valentín Protección Integral.</strong>
+                        <strong>Es cofundador de Valentín Protección Integral.</strong>
                       </p>
 
                       {/* Mini-stats Sebastián */}

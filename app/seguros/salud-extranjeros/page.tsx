@@ -598,7 +598,7 @@ export function SaludExtranjerosPageView({ locale = 'es' }: { locale?: 'es' | 'e
       <footer className="bg-slate-950 text-slate-500 py-12 border-t border-slate-900">
         <div className="container mx-auto px-4 text-center">
           <p className="font-bold text-white mb-4">Valentín Protección Integral</p>
-          <p className="text-sm">© 2026 · {en ? 'DGSFP-registered insurance agents' : 'Agentes de seguros registrados DGSFP'} · NIF 79234434D · Boadilla del Monte, Madrid</p>
+          <p className="text-sm">© 2026 · {en ? 'Officially registered insurance guidance' : 'Orientación de seguros con registro oficial'} · NIF 79234434D · Boadilla del Monte, Madrid</p>
           <div className="flex items-center justify-center gap-4 mt-4 text-sm">
             <a href="tel:+34603448765" className="text-slate-400 hover:text-white transition-colors">603 44 87 65</a>
             <span className="text-slate-600">·</span>

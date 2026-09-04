@@ -396,7 +396,7 @@ export default function BlogPostPage() {
               <div className="bg-white/10 rounded-2xl p-6 backdrop-blur md:col-span-2">
                 <div className="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center mb-3 text-amber-300 font-bold">5</div>
                 <h3 className="font-bold mb-2">Honestidad</h3>
-                <p className="text-slate-300 text-sm">"Cubrimos lo que los veterinarios no: viajes sin estrés ni multas." Agentes registrados DGSFP.</p>
+                <p className="text-slate-300 text-sm">"Cubrimos lo que los veterinarios no: viajes sin estrés ni multas." Orientación de seguros con registro oficial.</p>
               </div>
             </div>
 

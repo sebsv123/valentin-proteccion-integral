@@ -403,7 +403,7 @@ export async function ProductPageView({ slug, locale = 'es' }: { slug: string; l
                     {en ? 'Rosa and Sebastián help you choose the travel insurance you actually need' : 'Rosa y Sebastián te ayudan a elegir el seguro de viaje que realmente necesitas'}
                   </h2>
                   <p className="text-lg text-[var(--muted)] leading-relaxed mb-4">
-                    {en ? 'With more than 10 years comparing options for families and frequent travellers in Madrid, we know that the insurance sold by a bank is rarely the most comprehensive. We explain what sits behind each plan before you arrange it.' : 'Con más de 10 años comparando opciones para familias y viajeros frecuentes en Madrid, sabemos que el seguro que vende el banco rara vez es el más completo. Te explicamos qué hay detrás de cada modalidad antes de que contrates.'}
+                    {en ? 'With more than 10 years reviewing cover for families and frequent travellers in Madrid, we explain what sits behind each available plan before you arrange it.' : 'Con más de 10 años revisando coberturas para familias y viajeros frecuentes en Madrid, te explicamos qué hay detrás de cada modalidad que podemos ofrecer antes de que contrates.'}
                   </p>
                   <p className="text-base font-semibold text-[var(--muted)] leading-relaxed mb-6">
                     {en ? 'Travelling soon? Tell us your destination and dates — we will prepare options during our opening hours.' : '¿Viajas pronto? Cuéntanos destino y fechas — te preparamos opciones en nuestro horario de atención.'}

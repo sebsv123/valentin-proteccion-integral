@@ -323,7 +323,7 @@ export default function AccidentesDecesosPage() {
               <div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 text-amber-700 text-sm font-medium mb-6">
                   <Award className="w-4 h-4" />
-                  Agentes certificados DGSFP
+                  Orientación de seguros con registro oficial
                 </div>
                 
                 <h2 className="text-[40px] sm:text-[48px] font-bold text-slate-900 leading-tight mb-6">

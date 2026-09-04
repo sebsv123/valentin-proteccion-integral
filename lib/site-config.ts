@@ -4,7 +4,8 @@
  *
  * Reglas (no romper):
  * - VPI es una MARCA COMERCIAL, no una compañía aseguradora.
- * - La responsable profesional es Rosa Isabel Valentín González.
+ * - Rosa y Sebastián son cofundadores al mismo nivel.
+ * - La responsable legal/profesional publicada del sitio es Rosa Isabel Valentín González.
  * - Datos de Rosa (NIF y clave DGSFP) verificados: no mezclar con los de
  *   ningún otro miembro del equipo.
  * - El código DGSFP personal de Sebastián NO debe publicarse en ninguna parte.
@@ -12,6 +13,30 @@
  *
  * Los componentes deben leer de aquí en lugar de escribir estos datos a mano.
  */
+
+const legalOwner = {
+  fullName: 'Rosa Isabel Valentín González',
+  displayName: 'Rosa Valentín',
+  role: 'Agente de seguros registrada en la DGSFP · Responsable de la actividad',
+  nif: '79234434D',
+  dgsfpCode: 'C012479234434D',
+  dgsfpRegistryUrl: 'https://rrpp.dgsfp.mineco.es/',
+} as const;
+
+const coFounders = [
+  {
+    fullName: 'Rosa Isabel Valentín González',
+    displayName: 'Rosa Valentín',
+    role: 'Cofundadora de VPI',
+    insurerRelationship: 'Agente exclusiva de seguros de SegurCaixa Adeslas',
+  },
+  {
+    fullName: 'Sebastián Sifontes Valentín',
+    displayName: 'Sebastián Valentín',
+    role: 'Cofundador de VPI',
+    insurerRelationship: 'Agente exclusivo de seguros de ASISA',
+  },
+] as const;
 
 export const siteConfig = {
   brand: {
@@ -24,26 +49,17 @@ export const siteConfig = {
     domain: process.env.NEXT_PUBLIC_SITE_URL || 'https://valentinproteccionintegral.com',
   },
 
-  /** Persona profesional públicamente responsable de la actividad y del sitio. */
-  responsiblePerson: {
-    fullName: 'Rosa Isabel Valentín González',
-    displayName: 'Rosa Valentín',
-    role: 'Agente de seguros registrada en la DGSFP · Responsable de la actividad',
-    nif: '79234434D',
-    dgsfpCode: 'C012479234434D',
-    // Registro público donde puede comprobarse la inscripción
-    dgsfpRegistryUrl: 'https://rrpp.dgsfp.mineco.es/',
-  },
+  /** Modelo corporativo: ambos fundadores tienen el mismo nivel. */
+  coFounders,
 
-  /** Otros miembros del equipo. NUNCA publicar su clave DGSFP. */
-  team: [
-    {
-      fullName: 'Sebastián Sifontes Valentín',
-      displayName: 'Sebastián Valentín',
-      role: 'Miembro del equipo · Especialista en salud y accidentes',
-      // dgsfpCode intencionadamente ausente: no debe publicarse
-    },
-  ],
+  /** Disclosure legal del sitio; no implica jerarquía fundacional. */
+  legalOwner,
+
+  /** Compatibilidad para disclosures legales existentes; no usar como grafo corporativo. */
+  responsiblePerson: legalOwner,
+
+  /** Relaciones profesionales individuales; no atribuirlas a la marca. */
+  professionalRelationships: coFounders.map(({ fullName, insurerRelationship }) => ({ fullName, insurerRelationship })),
 
   contact: {
     phone: '+34 603 448 765',

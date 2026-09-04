@@ -16,7 +16,7 @@ export function ProductHero({ product, locale }: { product: Product; locale?: 'e
   if (product.slug === 'salud') return <EditorialProductHero product={product} />;
   const subpages = getSubpagesForProduct(product.slug);
   const advisor = product.customAdvisor || {
-    name: site.advisorName,
+    name: site.advisorName[en ? 'en' : 'es'],
     whatsappNumber: site.whatsappNumber,
     phoneHref: site.phoneHref
   };
@@ -324,7 +324,7 @@ export function RelatedProducts({ product, healthVariant = false, locale }: { pr
 export function ProductCTASection({ product, title, text, message, locale }: { product: Product; title: string; text: string; message: string; locale?: 'es'|'en' }) {
   const en = locale ? locale === 'en' : useLocale() === 'en';
   const advisor = product.customAdvisor || {
-    name: site.advisorName,
+    name: site.advisorName[en ? 'en' : 'es'],
     whatsappNumber: site.whatsappNumber,
     phoneHref: site.phoneHref,
     phone: site.phone

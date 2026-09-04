@@ -413,7 +413,7 @@ export default function BlogPostPage() {
               No esperes al imprevisto. Calcula tu gap real hoy.
             </h2>
             <p className="text-xl text-white/80 mb-8">
-              En el 95% de los casos, mejoramos los presupuestos bancarios con coberturas superiores y primas más ajustadas. <strong>Agentes registrados DGSFP.</strong>
+              En el 95% de los casos, mejoramos los presupuestos bancarios con coberturas superiores y primas más ajustadas. <strong>Orientación de seguros con registro oficial.</strong>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a href="tel:603448765" className="inline-flex items-center justify-center gap-3 text-2xl font-bold text-white hover:text-amber-300 transition-colors">

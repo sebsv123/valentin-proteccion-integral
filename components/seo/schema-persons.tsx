@@ -1,115 +1,54 @@
+const brandId = 'https://valentinproteccionintegral.com/#organization';
+
 export default function SchemaPersons({ locale = 'es' }: { locale?: string }) {
   const isEnglish = locale === 'en';
-  const rosa = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "inLanguage": locale,
-    "name": "Rosa Valentín",
-    "jobTitle": isEnglish ? "Registered insurance agent (DGSFP)" : "Agente de Seguros Registrada DGSFP",
-    "description": isEnglish ? "DGSFP-registered insurance agent responsible for Valentín Protección Integral in Madrid. Specialist in health, pet, dental, travel, accident, funeral and business insurance. Clear advice without sales pressure." : "Agente de seguros registrada en la DGSFP, responsable profesional de la marca Valentín Protección Integral en Madrid. Especialista en seguros de salud, mascotas, dental, viaje, accidentes, decesos y negocios. Asesora con claridad y sin presión comercial.",
-    "url": "https://valentinproteccionintegral.com/sobre-nosotros",
-    "image": "https://valentinproteccionintegral.com/og-image.webp",
-    "telephone": "+34 603 448 765",
-    "email": "contacto@valentinproteccionintegral.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Boadilla del Monte",
-      "addressRegion": "Comunidad de Madrid",
-      "addressCountry": "ES"
-    },
-    "sameAs": [
-      "https://www.instagram.com/segurosvalentin/",
-      "https://wa.me/34603448765"
-    ],
-    "knowsAbout": isEnglish ? [
-      "Health insurance", "Pet insurance", "Dental insurance", "Travel insurance", "Accident insurance", "Legal protection", "Home appliance insurance", "Funeral insurance", "Business insurance", "Insurance for international residents", "Pet liability insurance", "Insurance for self-employed people"
-    ] : [
-      "Seguros de salud",
-      "Seguros para mascotas",
-      "Seguros dentales",
-      "Seguros de viaje",
-      "Seguros de accidentes",
-      "Protección jurídica",
-      "Seguros de electrodomésticos",
-      "Seguros de decesos",
-      "Seguros para negocios y pymes",
-      "Seguros para extranjeros con visado en España",
-      "Ley de Bienestar Animal seguros mascotas",
-      "Seguros para autónomos Madrid"
-    ],
-    "worksFor": {
-      "@type": "LocalBusiness",
-      "name": "Valentín Protección Integral",
-      "url": "https://valentinproteccionintegral.com"
-    }
-  };
-
-  const sebastian = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sebastián Sifontes Valentín",
-    "inLanguage": locale,
-    "jobTitle": isEnglish ? "Life, health and accident insurance specialist" : "Especialista en seguros de vida, salud y accidentes",
-    "description": isEnglish ? "Economist and specialist in life, health and accident insurance. Part of the Valentín Protección Integral team, supporting enquiries about family protection and life insurance." : "Economista y especialista en seguros de vida, salud y accidentes. Graduado en Doble Grado de Gestión y Administración Pública y Economía por la Universidad Complutense de Madrid, con estancia académica en la Freie Universität Berlin. Máster en Big Data, Data Science e Inteligencia Artificial (UCM, 2025-2026). Forma parte del equipo de Valentín Protección Integral y atiende consultas sobre protección familiar y seguros de vida.",
-    "url": "https://valentinproteccionintegral.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/sebastian-sifontes-valentin-752665187"
-    ],
-    "alumniOf": [
+  const rosaId = 'https://valentinproteccionintegral.com/sobre-nosotros#rosa-valentin';
+  const sebastianId = 'https://valentinproteccionintegral.com/sobre-nosotros#sebastian-valentin';
+  const graph = {
+    '@context': 'https://schema.org',
+    '@graph': [
       {
-        "@type": "CollegeOrUniversity",
-        "name": "Universidad Complutense de Madrid",
-        "url": "https://www.ucm.es"
+        '@type': 'InsuranceAgency',
+        '@id': brandId,
+        name: 'Valentín Protección Integral',
+        description: isEnglish
+          ? 'Commercial insurance mediation brand and project, not an insurer or an independent brokerage.'
+          : 'Marca comercial y proyecto de mediación de seguros; no es una aseguradora ni una correduría independiente.',
+        founder: [{ '@id': rosaId }, { '@id': sebastianId }],
       },
       {
-        "@type": "CollegeOrUniversity",
-        "name": "Freie Universität Berlin",
-        "url": "https://www.fu-berlin.de"
-      }
-    ],
-    "hasCredential": [
-      {
-        "@type": "EducationalOccupationalCredential",
-        "name": "Doble Grado en Gestión y Administración Pública – Economía",
-        "credentialCategory": "degree",
-        "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Universidad Complutense de Madrid" }
+        '@type': 'Person',
+        '@id': rosaId,
+        inLanguage: locale,
+        name: 'Rosa Isabel Valentín González',
+        alternateName: 'Rosa Valentín',
+        jobTitle: isEnglish ? 'Co-founder of VPI and exclusive insurance agent for SegurCaixa Adeslas' : 'Cofundadora de VPI y agente exclusiva de seguros de SegurCaixa Adeslas',
+        description: isEnglish ? 'Co-founder of Valentín Protección Integral and individual exclusive insurance agent for SegurCaixa Adeslas. The website legal disclosure identifies Rosa as responsible for the published activity.' : 'Cofundadora de Valentín Protección Integral y agente exclusiva individual de seguros de SegurCaixa Adeslas. El disclosure legal del sitio identifica a Rosa como responsable de la actividad publicada.',
+        url: 'https://valentinproteccionintegral.com/sobre-nosotros',
+        image: 'https://valentinproteccionintegral.com/og-image.webp',
+        telephone: '+34 603 448 765',
+        email: 'contacto@valentinproteccionintegral.com',
+        affiliation: { '@id': brandId },
+        sameAs: ['https://www.instagram.com/segurosvalentin/', 'https://wa.me/34603448765', 'https://www.linkedin.com/in/rosa-isabel-valentin-gonzalez-3a0b16141/'],
+        knowsAbout: isEnglish ? ['Health insurance', 'Pet insurance', 'Dental insurance', 'Travel insurance', 'Accident insurance', 'Funeral insurance', 'Business insurance'] : ['Seguros de salud', 'Seguros para mascotas', 'Seguros dentales', 'Seguros de viaje', 'Seguros de accidentes', 'Seguros de decesos', 'Seguros para negocios y pymes'],
       },
       {
-        "@type": "EducationalOccupationalCredential",
-        "name": "Máster en Big Data, Data Science e Inteligencia Artificial",
-        "credentialCategory": "postgraduate",
-        "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Universidad Complutense de Madrid" }
-      }
+        '@type': 'Person',
+        '@id': sebastianId,
+        inLanguage: locale,
+        name: 'Sebastián Sifontes Valentín',
+        alternateName: 'Sebastián Valentín',
+        jobTitle: isEnglish ? 'Co-founder of VPI and exclusive insurance agent for ASISA' : 'Cofundador de VPI y agente exclusivo de seguros de ASISA',
+        description: isEnglish ? 'Co-founder of Valentín Protección Integral and individual exclusive insurance agent for ASISA, with expertise in life, health and accident insurance.' : 'Cofundador de Valentín Protección Integral y agente exclusivo individual de seguros de ASISA, especializado en seguros de vida, salud y accidentes.',
+        url: 'https://valentinproteccionintegral.com/sobre-nosotros',
+        affiliation: { '@id': brandId },
+        sameAs: ['https://www.linkedin.com/in/sebastian-sifontes-valentin-752665187'],
+        alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'Universidad Complutense de Madrid', url: 'https://www.ucm.es' }, { '@type': 'CollegeOrUniversity', name: 'Freie Universität Berlin', url: 'https://www.fu-berlin.de' }],
+        hasCredential: [{ '@type': 'EducationalOccupationalCredential', name: 'Doble Grado en Gestión y Administración Pública – Economía', credentialCategory: 'degree', recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Universidad Complutense de Madrid' } }, { '@type': 'EducationalOccupationalCredential', name: 'Máster en Big Data, Data Science e Inteligencia Artificial', credentialCategory: 'postgraduate', recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Universidad Complutense de Madrid' } }],
+        knowsAbout: isEnglish ? ['Life insurance', 'Health insurance', 'Personal accident insurance', 'Economic data analysis'] : ['Seguros de vida', 'Seguros de salud', 'Seguros de accidentes personales', 'Economía y análisis de datos'],
+      },
     ],
-    "knowsAbout": isEnglish ? ["Life insurance", "Mortgage-linked life insurance", "Family protection through insurance", "Health insurance", "Personal accident insurance", "Economic data analysis"] : [
-      "Seguros de vida",
-      "Seguro de vida vinculado a hipoteca",
-      "Protección familiar mediante seguros",
-      "Capital decreciente en seguros de vida",
-      "Seguros de salud ASISA",
-      "Seguros de accidentes personales",
-      "Economía y administración pública",
-      "Big Data aplicado al sector asegurador",
-      "Inteligencia Artificial en seguros",
-      "Análisis de datos económicos"
-    ],
-    "worksFor": {
-      "@type": "LocalBusiness",
-      "name": "Valentín Protección Integral",
-      "url": "https://valentinproteccionintegral.com"
-    }
   };
 
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(rosa) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(sebastian) }}
-      />
-    </>
-  );
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph) }} />;
 }

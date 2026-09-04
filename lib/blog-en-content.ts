@@ -11,7 +11,7 @@ export const blogEnglishContent: Record<string, Omit<BlogContent, 'image'>> = {
     "title": "What is the best quality-price health insurance in Spain? Honest Guide 2026",
     "excerpt": "There is no single best health insurance. There is the best one for your age, your health, where you live and what you need to cover. Here is the guide that comparators cannot give you.",
     "metaTitle": "Best quality-price medical insurance Spain 2026 | Valentine",
-    "metaDescription": "Are you looking for the best quality-price health insurance in 2026? We compare the main options on the market for families, self-employed people and individuals. Honest guide.",
+    "metaDescription": "Are you looking for good-value health insurance in 2026? We review products and cover options that may fit families, self-employed people and individuals. Honest guide.",
     "imageAlt": "Rosa Valentín advisor analyzing the best quality-price ratio in health insurance",
     "sections": [
       {
@@ -265,7 +265,7 @@ export const blogEnglishContent: Record<string, Omit<BlogContent, 'image'>> = {
       {
         "heading": "How can I help you choose without pressure?",
         "content": [
-          "As a registered insurance agent, I do not represent a single company. That means I compare several real options and explain the differences to you before you decide.",
+          "As a registered insurance agent, I help you review the products and cover options available through the professional relationships we work with, explaining the differences before you decide.",
           "The process is simple: a 15-20 minute conversation on WhatsApp or phone in which I ask you the right questions (your current doctor, your actual use, your budget), and I present two or three options with compared coverage.",
           "No endless forms, no pressure, no hidden fine print. Only clear information so you can decide wisely."
         ]
@@ -1059,7 +1059,7 @@ export const blogEnglishContent: Record<string, Omit<BlogContent, 'image'>> = {
       "content": [
         "Civil liability is the key cover in compulsory dog insurance in Madrid. Its function is to cover personal and material damage caused by the animal to third parties. Imagine that your dog, in a moment of excitement in Retiro or on the Boadilla mountain, causes a cyclist to lose balance and suffer an injury. Without liability insurance, you as the owner would have to respond with all your personal assets to the medical and damage claim. With the policy in force, the insurer is responsible for the compensation up to the limit agreed in the contract.",
         "In the Community of Madrid, given recent jurisprudence and the costs of compensation for personal accidents, we recommend that the civil liability capital be not less than 150,000 euros, with limits of 300,000 euros being highly advisable for complete peace of mind. Many basic offers on the market offer very low capital that could be insufficient in the event of a serious incident. In addition to direct damages, a good policy should include legal protection, guaranteeing that you will have a legal defense in case you are unfairly reported for your pet's behavior.",
-        "Another vital point is that the insurance is \"without deductible\" or with a reduced deductible. If your insurance has a deductible of 200 euros, any small damage caused by your dog below that figure will have to be paid for out of your own pocket. As DGSFP registered agents in Madrid, we analyze the conditions of each company to ensure that compliance with the law is comfortable for your economy. It is not just about having a role to teach the municipal police, but about having a real safety net that protects your financial stability from the unpredictable behavior of any living being."
+        "Another vital point is that the insurance is \"without deductible\" or with a reduced deductible. If your insurance has a deductible of 200 euros, any small damage caused by your dog below that figure will have to be paid for out of your own pocket. As insurance agents in Madrid, we review the conditions of the cover we can offer so that compliance with the law is comfortable for your economy. It is not just about having a role to teach the municipal police, but about having a real safety net that protects your financial stability from the unpredictable behavior of any living being."
       ]
     },
     {

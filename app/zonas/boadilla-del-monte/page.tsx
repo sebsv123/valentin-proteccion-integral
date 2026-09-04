@@ -11,7 +11,7 @@ import { WhatsAppLink } from '@/components/whatsapp-link';
 export const metadata: Metadata = {
   title: "Seguros en Boadilla del Monte — Asesoría Personal | VPI",
   description:
-    "Agentes de seguros registrados DGSFP en Boadilla del Monte. Salud, vida, dental, mascotas y más. Asesoramiento con registro oficial en la DGSFP. Consulta gratis por WhatsApp.",
+    "Orientación de seguros con registro oficial en Boadilla del Monte. Salud, vida, dental, mascotas y más. Consulta gratis por WhatsApp.",
   keywords: [
     "seguros Boadilla del Monte",
     "asesor seguros Boadilla del Monte",
@@ -61,7 +61,7 @@ const serviceSchema = {
     "longitude": -3.8783
   },
   "areaServed": ["Boadilla del Monte", "Majadahonda", "Pozuelo de Alarcón", "Las Rozas", "Madrid"],
-  "description": "Agentes de seguros registrados DGSFP en Boadilla del Monte. Salud, vida, dental, mascotas, decesos y seguros para autónomos.",
+  "description": "Orientación de seguros con registro oficial en Boadilla del Monte. Salud, vida, dental, mascotas, decesos y seguros para autónomos.",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
@@ -110,7 +110,7 @@ export default function BoadillaPage() {
                   Asesoría personal y sin intermediarios
                 </p>
                 <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-                  Rosa y Sebastián son los Agentes de seguros registrados DGSFP en Boadilla del Monte. 
+                  Rosa y Sebastián ofrecen orientación de seguros en Boadilla del Monte.
                   Más de 10 años ayudando a vecinos a elegir el mejor seguro, 
                   con asesoramiento personalizado, sin coste ni compromiso.
                 </p>

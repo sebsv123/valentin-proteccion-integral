@@ -39,7 +39,7 @@ const serviceSchema = {
     "longitude": -3.8729
   },
   "areaServed": ["Majadahonda", "Boadilla del Monte", "Pozuelo de Alarcón", "Las Rozas", "Madrid"],
-  "description": "Agentes de seguros registrados DGSFP en Majadahonda. Salud, vida, dental, mascotas, decesos y seguros para autónomos.",
+  "description": "Orientación de seguros con registro oficial en Majadahonda. Salud, vida, dental, mascotas, decesos y seguros para autónomos.",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",

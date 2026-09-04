@@ -17,11 +17,11 @@ import { localizedProductPath, localizedSubpagePath } from '@/lib/product-locale
 
 export const metadata: Metadata = {
   title: "Todos Nuestros Seguros en Madrid | Valentín Protección",
-  description: "Salud, vida, dental, mascotas, viaje y mucho más. Comparamos las mejores opciones del mercado por ti, sin presión y sin complicaciones. Pide cita gratis.",
+  description: "Salud, vida, dental, mascotas, viaje y mucho más. Te ayudamos a valorar las modalidades y coberturas que podemos distribuir, sin presión y sin complicaciones.",
   keywords: "seguros madrid, comparar seguros madrid, asesor seguros madrid, tipos de seguros",
   openGraph: {
     title: "Todos Nuestros Seguros en Madrid | Valentín Protección",
-    description: "Salud, vida, dental, mascotas, viaje y mucho más. Comparamos las mejores opciones del mercado por ti, sin presión y sin complicaciones.",
+    description: "Salud, vida, dental, mascotas, viaje y mucho más. Te ayudamos a valorar las modalidades y coberturas que podemos distribuir, sin presión y sin complicaciones.",
     url: "https://valentinproteccionintegral.com/seguros",
     siteName: "Valentín Protección Integral",
     locale: "es_ES",

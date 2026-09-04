@@ -101,7 +101,7 @@ export function HeroLeadSection() {
                 </span>
                 <span className="w-1 h-1 rounded-full bg-[var(--muted)]/40 hidden sm:block" />
                 <span className="hidden sm:flex items-center gap-1.5 text-sm font-semibold text-[var(--muted)]">
-                  <span className="text-green-500">✓</span> Agentes registrados DGSFP
+                  <span className="text-green-500">✓</span> Orientación de seguros con registro oficial
                 </span>
                 <span className="w-1 h-1 rounded-full bg-[var(--muted)]/40 hidden sm:block" />
                 <span className="flex items-center gap-1.5 text-sm font-semibold text-[var(--muted)]">

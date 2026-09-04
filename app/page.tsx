@@ -30,13 +30,13 @@ import { getSeoInsuranceCatalog } from '@/lib/seo-insurance-catalog';
 export const metadata: Metadata = {
   title: "Asesor de Seguros en Madrid — Salud, Vida y Más | VPI",
   description:
-    "Agente de seguros registrado DGSFP en Madrid. Salud, vida, dental y mascotas con criterio profesional y registro en la DGSFP. Sin presión comercial.",
+    "Marca comercial de mediación de seguros en Madrid, cofundada por Rosa y Sebastián. Salud, vida, dental y mascotas con orientación clara y sin presión comercial.",
   keywords: "asesor de seguros madrid, asesores de seguros madrid, seguro de salud madrid, seguro de vida madrid, agente seguros registrado DGSFP madrid, consulta seguros gratis madrid",
-  authors: [{ name: "Rosa Valentín" }],
+  authors: [{ name: "Valentín Protección Integral" }],
   publisher: "Valentín Protección Integral",
   openGraph: {
     title: "Asesor de Seguros en Madrid — Salud, Vida y Más | VPI",
-    description: "Agente de seguros registrado DGSFP en Madrid. Seguros de salud, vida, dental y mascotas con criterio profesional y registro en la DGSFP.",
+    description: "Marca comercial de mediación de seguros en Madrid, cofundada por Rosa y Sebastián. Salud, vida, dental y mascotas con orientación clara y sin presión comercial.",
     url: "https://valentinproteccionintegral.com",
     siteName: "Valentín Protección Integral",
     locale: "es_ES",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Asesor de Seguros en Madrid — Salud, Vida y Más | VPI",
-    description: "Agente de seguros registrado DGSFP en Madrid. Seguros de salud, vida, dental y mascotas con criterio profesional y registro en la DGSFP.",
+    description: "Marca comercial de mediación de seguros cofundada por Rosa y Sebastián. Orientación clara sobre coberturas disponibles en Madrid.",
   },
   alternates: {
     canonical: "https://valentinproteccionintegral.com",
@@ -82,7 +82,12 @@ export function HomePageView({ content, locale }: { content?: unknown; locale?: 
             "@context": "https://schema.org",
             "@type": ["LocalBusiness", "InsuranceAgency"],
             "name": "Valentín Protección Integral",
-            "description": currentLocale === 'en' ? "DGSFP-registered insurance advice in Madrid covering health, pet, dental, travel, accident, funeral and business insurance." : "Asesora de seguros en Madrid especializada en salud, mascotas, dental, viaje, accidentes, decesos y negocios. Más de 10 años de experiencia.",
+            "@id": "https://valentinproteccionintegral.com/#organization",
+            "description": currentLocale === 'en' ? "Commercial insurance mediation brand and project co-founded by Rosa and Sebastián; not an insurer or independent brokerage." : "Marca comercial y proyecto de mediación de seguros cofundado por Rosa y Sebastián; no es una aseguradora ni una correduría independiente.",
+            "founder": [
+              { "@type": "Person", "@id": "https://valentinproteccionintegral.com/sobre-nosotros#rosa-valentin", "name": "Rosa Isabel Valentín González" },
+              { "@type": "Person", "@id": "https://valentinproteccionintegral.com/sobre-nosotros#sebastian-valentin", "name": "Sebastián Sifontes Valentín" }
+            ],
             "url": currentLocale === 'en' ? "https://valentinproteccionintegral.com/en" : "https://valentinproteccionintegral.com",
             "inLanguage": currentLocale,
             "logo": "https://valentinproteccionintegral.com/brand/logo-vpi.webp",

@@ -13,9 +13,10 @@ export default function SchemaLocalBusiness({ cityName, postcode, locale = 'es' 
   const schema = {
     "@context": "https://schema.org",
     "@type": "InsuranceAgency",
+    "@id": "https://valentinproteccionintegral.com/#organization",
     "inLanguage": locale,
     "name": site.name,
-    "description": isEnglish ? "DGSFP-registered insurance advice in Madrid. Personal guidance on health, pet, dental, travel, accident, funeral and business insurance. Over 10 years of experience. Initial consultation free." : "Agentes de seguros registrados en la DGSFP en Madrid. Asesoramiento personalizado en salud, mascotas, dental, viaje, accidentes, decesos y negocios. Más de 10 años de experiencia. Primera consulta gratuita.",
+    "description": isEnglish ? "Commercial insurance mediation brand and project in Madrid, not an insurer or an independent brokerage. Personal guidance on available health, pet, dental, travel, accident, funeral and business cover." : "Marca comercial y proyecto de mediación de seguros en Madrid; no es una aseguradora ni una correduría independiente. Orientación personalizada sobre las coberturas disponibles de salud, mascotas, dental, viaje, accidentes, decesos y negocios.",
     "url": isEnglish ? "https://valentinproteccionintegral.com/en" : "https://valentinproteccionintegral.com",
     "telephone": site.phone,
     "email": "contacto@valentinproteccionintegral.com",

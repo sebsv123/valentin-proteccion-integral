@@ -22,7 +22,7 @@ export const healthForeignersContent = {
       { q: '¿Cuánto tarda en estar lista la póliza?', a: 'Lo normal es que lo tengas todo en 24-48 horas hábiles. Si tienes una urgencia, avísanos por WhatsApp y podemos intentar agilizarlo para el mismo día.' },
       { q: '¿Qué pasa si me rechazan el seguro en extranjería?', a: 'Contamos con una garantía de devolución: si el seguro no cumple los requisitos técnicos y es rechazado por ese motivo, te devolvemos el importe.' },
     ],
-    finalTitle: 'Evita errores que puedan retrasar tu visado', finalIntro: 'Asegura tu aprobación hoy mismo con expertos en extranjería.', finalCta: 'Quiero mi seguro para visado ahora', fast: 'Atención rápida (respuesta en menos de 10 minutos)', complete: 'Gestión completa en 24–48h', footerMeta: 'Agentes de seguros registrados DGSFP',
+    finalTitle: 'Evita errores que puedan retrasar tu visado', finalIntro: 'Asegura tu aprobación hoy mismo con expertos en extranjería.', finalCta: 'Quiero mi seguro para visado ahora', fast: 'Atención rápida (respuesta en menos de 10 minutos)', complete: 'Gestión completa en 24–48h', footerMeta: 'Orientación de seguros con registro oficial',
   },
   en: {
     topNotice: 'We check that the plan matches the usual requirements of your process before you buy', mobileNotice: 'We check your case before you buy',
@@ -45,6 +45,6 @@ export const healthForeignersContent = {
       { q: 'How long does it take to issue the policy?', a: 'It normally takes 24–48 business hours. If your case is urgent, tell us on WhatsApp and we can try to speed it up.' },
       { q: 'What happens if the insurance is rejected by immigration?', a: 'We offer a refund guarantee: if the insurance does not meet the technical requirements and is rejected for that reason, we refund the amount.' },
     ],
-    finalTitle: 'Avoid mistakes that could delay your visa', finalIntro: 'Prepare your application with specialists in immigration insurance.', finalCta: 'I want my visa insurance now', fast: 'Fast support (reply in under 10 minutes)', complete: 'Complete management in 24–48 hours', footerMeta: 'DGSFP-registered insurance agents',
+    finalTitle: 'Avoid mistakes that could delay your visa', finalIntro: 'Prepare your application with specialists in immigration insurance.', finalCta: 'I want my visa insurance now', fast: 'Fast support (reply in under 10 minutes)', complete: 'Complete management in 24–48 hours', footerMeta: 'Officially registered insurance guidance',
   },
 } as const;

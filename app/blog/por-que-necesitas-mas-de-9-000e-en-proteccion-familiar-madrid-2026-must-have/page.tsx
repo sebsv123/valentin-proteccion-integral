@@ -375,7 +375,7 @@ export default function BlogPostPage() {
 
             <div className="bg-amber-500/20 rounded-2xl p-6 mb-8 border border-amber-500/30 text-center">
               <p className="text-amber-300 font-bold mb-2">🔥 Honestidad: Mejoramos bancos en el 95% de casos</p>
-              <p className="text-slate-300 text-sm">Como agentes registrados DGSFP, analizamos todo el mercado y cerramos los huecos reales que dejan las pólizas bancarias estándar.</p>
+              <p className="text-slate-300 text-sm">Como agentes de seguros, revisamos las coberturas que podemos ofrecer y ayudamos a detectar los huecos reales que pueden dejar las pólizas bancarias estándar.</p>
             </div>
 
             <div className="text-center">

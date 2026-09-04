@@ -56,7 +56,7 @@ export function ContactoPageView({ locale = 'es' }: { locale?: 'es' | 'en' } = {
             "@type": "LocalBusiness",
             "inLanguage": locale,
             "name": "Valentín Protección Integral",
-            "description": en ? "DGSFP-registered insurance advisers in Boadilla del Monte, Madrid. Personal guidance on health, life, dental, pet, accident and travel insurance." : "Agentes de seguros registrados DGSFP en Boadilla del Monte, Madrid. Asesoramiento personalizado en seguros de salud, vida, dental, mascotas, accidentes y viaje.",
+            "description": en ? "Personal insurance guidance in Boadilla del Monte, Madrid, with official registration. Health, life, dental, pet, accident and travel insurance." : "Asesoramiento personalizado en seguros en Boadilla del Monte, Madrid, con registro oficial. Salud, vida, dental, mascotas, accidentes y viaje.",
             "url": en ? "https://valentinproteccionintegral.com/en/contact" : "https://valentinproteccionintegral.com/contacto",
             "telephone": "+34603448765",
             "email": "info@valentinproteccionintegral.com",

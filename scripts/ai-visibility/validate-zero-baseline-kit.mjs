@@ -32,7 +32,8 @@ for (const row of manifest.rows) {
   const expectedPrompt = row.variant_id === 'A' ? prompt.canonical_prompt : row.variant_id === 'B' ? prompt.variant_B : prompt.variant_C;
   if (row.prompt_text !== expectedPrompt) fail(`${row.run_id}: exact prompt mismatch`);
   if (!engines.includes(row.engine)) fail(`${row.run_id}: invalid engine`);
-  if (row.status !== 'pending') fail(`${row.run_id}: pre-execution status must be pending`);
+  if (!['pending','complete','deferred_robustness'].includes(row.status)) fail(`${row.run_id}: invalid execution status ${row.status}`);
+  if (row.status === 'deferred_robustness' && row.layer !== 'B') fail(`${row.run_id}: only Layer B may be deferred_robustness`);
   if (row.capture_ref !== `artifacts/ai-visibility/f0-zero-baseline/${row.run_id}/response.txt`) fail(`${row.run_id}: non-deterministic capture_ref`);
 }
 const layerA = manifest.rows.filter((row) => row.layer === 'A');
@@ -51,6 +52,9 @@ for (const row of dataset.rows) {
   if (!manifest.rows.some((candidate) => candidate.run_id === row.run_id)) fail(`Dataset row has unknown run_id ${row.run_id}`);
   for (const field of prospectiveRequired) if (row[field] === undefined || row[field] === '') fail(`${row.run_id}.${field} is missing`);
   for (const field of ['location_context','location_context_source','search_enabled','ai_surface_present']) if (!allowedTri.has(row[field]) && !['prompt_explicit','response_inferred','platform_observed'].includes(row[field])) fail(`${row.run_id}.${field} has invalid enum`);
+  const historicalEarlyCapture = /^Z0-E01-[AB]-/.test(row.run_id);
+  const manifestStatus = manifest.rows.find((candidate) => candidate.run_id === row.run_id)?.status;
+  if (manifestStatus === 'complete' && !historicalEarlyCapture) for (const field of ['execution_timestamp','browser_language','observed_country','account_context','memory_context','location_context','location_context_source','search_enabled','ai_surface_present','capture_quality','annotator']) if (['unknown','pending',''].includes(row[field])) fail(`${row.run_id}.${field} must be recorded for prospective completed runs`);
 }
 if (batches.rows.length !== 54 || new Set(batches.rows.map((row) => row.batch_id)).size !== 9) fail('Batches must contain 54 groups in 9 batches');
 if (batches.rows.some((row) => row.completion_state !== 'pending' || row.validation_state !== 'pending')) fail('Batches must begin pending');

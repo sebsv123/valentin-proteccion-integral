@@ -23,6 +23,8 @@ The four engines are executed in this order for every prompt/variant group:
 3. Microsoft Copilot
 4. Perplexity
 
+Operational priority is currently Layer A CORE only: execute the 30 canonical `A` groups (120 runs) in registry order, then review them before starting Layer B. Layer B remains part of the frozen 216-run design and is marked `deferred_robustness`, never cancelled. E01-A is the first four-run CORE completion; E01-B was captured early as valid robustness evidence and is excluded from CORE completion. The next group is E02-A. From the next run onward, all observable execution metadata is mandatory; the historical unknown warnings on E01-A/E01-B are not retroactively changed.
+
 Do not run all prompts for one engine before moving to the next engine. Complete and validate the four-engine group before advancing to the next group.
 
 ## Clean execution context
@@ -92,4 +94,3 @@ The pre-generated QA sample contains 44 of 216 runs, approximately 20.4%, select
 Before execution run `npm run test:zero-baseline-kit`. It checks the frozen registry, exact run counts, Sentinel restriction, engine combinations, unique/non-overlapping IDs, deterministic capture paths, dataset schema, batch plan, source-landscape schema and QA sample.
 
 After each batch, rerun the validator and the relevant capture/hash checks. No Mention Rate, Citation Rate, Recommendation Rate, Correct Entity Rate, Correct Service Rate, Absorption Rate, source share, ranking or winner is calculated until the complete zero baseline is closed and validated.
-

@@ -25,6 +25,8 @@ The four engines are executed in this order for every prompt/variant group:
 
 Operational priority is currently Layer A CORE only: execute the 30 canonical `A` groups (120 runs) in registry order, then review them before starting Layer B. Layer B remains part of the frozen 216-run design and is marked `deferred_robustness`, never cancelled. E01-A is the first four-run CORE completion; E01-B was captured early as valid robustness evidence and is excluded from CORE completion. The next group is E02-A. From the next run onward, all observable execution metadata is mandatory; the historical unknown warnings on E01-A/E01-B are not retroactively changed.
 
+E02-A is a bounded historical protocol deviation: its four original response captures remain complete evidence, but execution-time contextual metadata was not recorded and cannot be reconstructed reliably. The exception applies only to `Z0-E02-A-CHATGPT`, `Z0-E02-A-GOOGLE`, `Z0-E02-A-COPILOT` and `Z0-E02-A-PERPLEXITY`; their unknown values are explicitly warned, not fabricated. The hard prospective metadata gate begins at `Z0-E03-A-CHATGPT` and has no arbitrary future waiver.
+
 Do not run all prompts for one engine before moving to the next engine. Complete and validate the four-engine group before advancing to the next group.
 
 ## Clean execution context

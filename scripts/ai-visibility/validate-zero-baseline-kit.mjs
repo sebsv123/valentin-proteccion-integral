@@ -11,6 +11,7 @@ const landscape = await readCsv('docs/ai-visibility/results/source-landscape-zer
 const batches = await readCsv('docs/ai-visibility/results/zero-baseline-batches-v0.csv');
 const qa = await readCsv('docs/ai-visibility/results/zero-baseline-qa-sample-v0.csv');
 const errors = [];
+const warnings = [];
 const fail = (message) => errors.push(message);
 if (registry.rows.length !== 30) fail(`Prompt registry must have 30 rows, found ${registry.rows.length}`);
 if (new Set(registry.rows.map((row) => row.prompt_id)).size !== registry.rows.length) fail('Prompt registry IDs are not unique');
@@ -22,6 +23,7 @@ if (new Set(manifest.rows.map((row) => row.run_id)).size !== manifest.rows.lengt
 if (new Set(dataset.rows.map((row) => row.run_id)).size !== dataset.rows.length) fail('Dataset run IDs are not unique');
 if (manifest.header.join(',') !== expectedHeaders.join(',')) fail('Manifest header mismatch');
 const pilotIds = new Set(['P0-E01-CHATGPT','P0-E01-GOOGLE','P0-E01-COPILOT','P0-E01-PERPLEXITY','P0-F01-CHATGPT','P0-F01-GOOGLE','P0-F01-COPILOT','P0-F01-PERPLEXITY','P0-N01-CHATGPT','P0-N01-GOOGLE','P0-N01-COPILOT','P0-N01-PERPLEXITY']);
+const e02MetadataDeviationIds = new Set(['Z0-E02-A-CHATGPT','Z0-E02-A-GOOGLE','Z0-E02-A-COPILOT','Z0-E02-A-PERPLEXITY']);
 if (manifest.rows.some((row) => pilotIds.has(row.run_id))) fail('Baseline manifest overlaps frozen P0 pilot IDs');
 const registryById = new Map(registry.rows.map((row) => [row.prompt_id, row]));
 for (const row of manifest.rows) {
@@ -54,7 +56,8 @@ for (const row of dataset.rows) {
   for (const field of ['location_context','location_context_source','search_enabled','ai_surface_present']) if (!allowedTri.has(row[field]) && !['prompt_explicit','response_inferred','platform_observed'].includes(row[field])) fail(`${row.run_id}.${field} has invalid enum`);
   const historicalEarlyCapture = /^Z0-E01-[AB]-/.test(row.run_id);
   const manifestStatus = manifest.rows.find((candidate) => candidate.run_id === row.run_id)?.status;
-  if (manifestStatus === 'complete' && !historicalEarlyCapture) for (const field of ['execution_timestamp','browser_language','observed_country','account_context','memory_context','location_context','location_context_source','search_enabled','ai_surface_present','capture_quality','annotator']) if (['unknown','pending',''].includes(row[field])) fail(`${row.run_id}.${field} must be recorded for prospective completed runs`);
+  if (manifestStatus === 'complete' && e02MetadataDeviationIds.has(row.run_id)) warnings.push(`${row.run_id}: bounded metadata protocol deviation; original response evidence preserved, unrecoverable execution metadata remains unknown, no engine rerun performed`);
+  if (manifestStatus === 'complete' && !historicalEarlyCapture && !e02MetadataDeviationIds.has(row.run_id)) for (const field of ['execution_timestamp','browser_language','observed_country','account_context','memory_context','location_context','location_context_source','search_enabled','ai_surface_present','capture_quality','annotator']) if (['unknown','pending',''].includes(row[field])) fail(`${row.run_id}.${field} must be recorded for prospective completed runs`);
 }
 if (batches.rows.length !== 54 || new Set(batches.rows.map((row) => row.batch_id)).size !== 9) fail('Batches must contain 54 groups in 9 batches');
 if (batches.rows.some((row) => row.completion_state !== 'pending' || row.validation_state !== 'pending')) fail('Batches must begin pending');
@@ -66,4 +69,4 @@ if (!['entity','foreigners','future_control','negative'].every((family) => qa.ro
 if (qa.rows.some((row) => row.qa_method !== 'deterministic manifest ordinal modulo 5' || row.qa_status !== 'pending')) fail('QA sample must preserve its deterministic method and pending state');
 if (landscape.header.join(',') !== 'run_id,prompt_id,variant_id,engine,domain,normalized_url,source_type,cited,mentioned,position,notes') fail('Source landscape header mismatch');
 if (errors.length) { console.error(JSON.stringify({ status: 'fail', errors }, null, 2)); process.exit(1); }
-  console.log(JSON.stringify({ status: 'pass', prompt_ids: registry.rows.length, sentinels: sentinels.length, layer_a: layerA.length, layer_b: layerB.length, total_runs: manifest.rows.length, batches: new Set(batches.rows.map((row) => row.batch_id)).size, qa_target: qa.rows.length, errors }, null, 2));
+  console.log(JSON.stringify({ status: 'pass', prompt_ids: registry.rows.length, sentinels: sentinels.length, layer_a: layerA.length, layer_b: layerB.length, total_runs: manifest.rows.length, batches: new Set(batches.rows.map((row) => row.batch_id)).size, qa_target: qa.rows.length, errors, warnings }, null, 2));

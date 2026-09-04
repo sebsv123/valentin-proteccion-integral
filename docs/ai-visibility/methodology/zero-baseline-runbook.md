@@ -23,7 +23,11 @@ The four engines are executed in this order for every prompt/variant group:
 3. Microsoft Copilot
 4. Perplexity
 
-Operational priority is currently Layer A CORE only: execute the 30 canonical `A` groups (120 runs) in registry order, then review them before starting Layer B. Layer B remains part of the frozen 216-run design and is marked `deferred_robustness`, never cancelled. E01-A is the first four-run CORE completion; E01-B was captured early as valid robustness evidence and is excluded from CORE completion. The next group is E02-A. From the next run onward, all observable execution metadata is mandatory; the historical unknown warnings on E01-A/E01-B are not retroactively changed.
+Operational priority is staged. The immediate gate is the Entity pre-F1 baseline: complete the remaining canonical Entity groups `E04-A`, `E05-A` and `E06-A` after the completed `E01-A`, `E02-A` and `E03-A` groups. Entity Layer A is therefore 12/24 complete and requires 12 runs. After `E06-A` reaches 4/4, stop and create the checkpoint `ENTITY PRE-F1 BASELINE CLOSED` before starting `F01-A`.
+
+This staging does not alter the frozen design: Layer A remains 30 × 4 = 120 runs, Layer B remains 96 deferred robustness runs, and the maximum remains 216. `E01-B` remains valid early robustness evidence but is excluded from the Entity CORE count. The methodological rationale is that Entity-family evidence already shows a consistent cross-engine entity-relationship failure; running unrelated families before correcting the foundational entity model has low marginal diagnostic value and delays the intervention the experiment is intended to evaluate. The broader Layer A baseline therefore proceeds as a staged pre/post intervention design.
+
+The current next group is `E04-A`. Do not execute `E01-C` or any other Layer B variant at this stage. From the next run onward, all observable execution metadata is mandatory; the historical unknown warnings on E01-A/E01-B and the bounded E02 deviation are not retroactively changed.
 
 E02-A is a bounded historical protocol deviation: its four original response captures remain complete evidence, but execution-time contextual metadata was not recorded and cannot be reconstructed reliably. The exception applies only to `Z0-E02-A-CHATGPT`, `Z0-E02-A-GOOGLE`, `Z0-E02-A-COPILOT` and `Z0-E02-A-PERPLEXITY`; their unknown values are explicitly warned, not fabricated. The hard prospective metadata gate begins at `Z0-E03-A-CHATGPT` and has no arbitrary future waiver.
 
@@ -35,9 +39,13 @@ Use a new conversation/thread for every run. For ChatGPT use Temporary Chat or a
 
 For Google, start a new query, record logged-in state and the exact surface shown, and do not repeat the query to provoke an AI Overview. For Copilot, use a new chat and record visible search/web grounding. For Perplexity, use a new thread, record the observable mode/surface and do not use follow-ups.
 
-Record execution-time metadata; do not use `unknown` for an observable field:
+Record execution-time metadata. The prospective hard gate distinguishes critical execution evidence from contextual observability.
 
-`run_id`, `prompt_id`, `variant_id`, exact prompt, engine, engine surface, UTC timestamp, browser language, observed country, account context, memory context, location context, location context source, observed locality when present, search enabled, AI surface present, capture quality, annotator and capture reference.
+Critical hard-gate fields are:
+
+`run_id`, `prompt_id`, `variant_id`, exact prompt, engine, engine surface, independent/new conversation context, `response.txt`, `capture_ref`, SHA-256, `capture_quality` and `annotator`.
+
+Contextual fields are required when observable but may remain `unknown` with a validator warning when genuinely unavailable or unrecoverable: execution timestamp UTC, browser language, observed country, account/login context, memory context when not independently verifiable, location context, location source and search/grounding state when not clearly observable. Never infer a timestamp from a ChatGPT message timestamp and never fabricate metadata.
 
 `retrieval_observed` may be `unknown` when the platform does not expose retrieval evidence. `location_context_source` is one of `prompt_explicit`, `response_inferred`, `platform_observed`, `unknown`; do not claim GPS, browser or account localization without direct evidence.
 

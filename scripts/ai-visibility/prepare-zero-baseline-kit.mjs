@@ -31,7 +31,7 @@ const groups = prompts.flatMap((prompt) => {
   return variants.map(([variantId, promptText]) => ({ prompt, variantId, promptText }));
 });
 const manifestHeaders = ['baseline_version','run_id','layer','prompt_id','variant_id','prompt_text','family','engine','engine_surface','run_sequence','status','capture_ref'];
-const datasetHeaders = ['baseline_version','run_id','layer','prompt_id','variant_id','prompt_text','engine','engine_surface','execution_timestamp','browser_language','observed_country','account_context','memory_context','location_context','location_context_source','observed_locality','search_enabled','ai_surface_present','retrieval_observed','vpi_mentioned','vpi_cited','vpi_recommended','entity_correct','service_correct','absorption_observed','vpi_urls','mention_position','citation_position','response_capture_ref','capture_quality','annotator','qa_status','qa_disagreement','notes'];
+const datasetHeaders = ['baseline_version','run_id','layer','prompt_id','variant_id','prompt_text','engine','engine_surface','execution_timestamp','browser_language','observed_country','account_context','memory_context','conversation_context','location_context','location_context_source','observed_locality','search_enabled','ai_surface_present','retrieval_observed','vpi_mentioned','vpi_cited','vpi_recommended','entity_correct','service_correct','absorption_observed','vpi_urls','mention_position','citation_position','response_capture_ref','capture_quality','annotator','qa_status','qa_disagreement','notes'];
 const manifestRows = [];
 const datasetRows = [];
 let sequence = 1;

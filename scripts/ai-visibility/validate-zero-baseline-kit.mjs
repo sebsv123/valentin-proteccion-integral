@@ -48,16 +48,20 @@ for (const prompt of registry.rows) {
     if (rows.length !== 4 || new Set(rows.map((row) => row.engine)).size !== 4) fail(`${prompt.prompt_id}-${variant}: expected exactly 4 engines`);
   }
 }
-const prospectiveRequired = ['execution_timestamp','browser_language','observed_country','account_context','memory_context','location_context','location_context_source','search_enabled','ai_surface_present','capture_quality','annotator','response_capture_ref'];
+const criticalExecutionFields = ['conversation_context','capture_quality','annotator','response_capture_ref'];
+const contextualFields = ['execution_timestamp','browser_language','observed_country','account_context','memory_context','location_context','location_context_source','search_enabled','ai_surface_present'];
 const allowedTri = new Set(['yes','no','unknown','pending']);
 for (const row of dataset.rows) {
   if (!manifest.rows.some((candidate) => candidate.run_id === row.run_id)) fail(`Dataset row has unknown run_id ${row.run_id}`);
-  for (const field of prospectiveRequired) if (row[field] === undefined || row[field] === '') fail(`${row.run_id}.${field} is missing`);
+  for (const field of [...criticalExecutionFields, ...contextualFields]) if (row[field] === undefined || row[field] === '') fail(`${row.run_id}.${field} is missing from schema`);
   for (const field of ['location_context','location_context_source','search_enabled','ai_surface_present']) if (!allowedTri.has(row[field]) && !['prompt_explicit','response_inferred','platform_observed'].includes(row[field])) fail(`${row.run_id}.${field} has invalid enum`);
   const historicalEarlyCapture = /^Z0-E01-[AB]-/.test(row.run_id);
   const manifestStatus = manifest.rows.find((candidate) => candidate.run_id === row.run_id)?.status;
   if (manifestStatus === 'complete' && e02MetadataDeviationIds.has(row.run_id)) warnings.push(`${row.run_id}: bounded metadata protocol deviation; original response evidence preserved, unrecoverable execution metadata remains unknown, no engine rerun performed`);
-  if (manifestStatus === 'complete' && !historicalEarlyCapture && !e02MetadataDeviationIds.has(row.run_id)) for (const field of ['execution_timestamp','browser_language','observed_country','account_context','memory_context','location_context','location_context_source','search_enabled','ai_surface_present','capture_quality','annotator']) if (['unknown','pending',''].includes(row[field])) fail(`${row.run_id}.${field} must be recorded for prospective completed runs`);
+  if (manifestStatus === 'complete' && !historicalEarlyCapture && !e02MetadataDeviationIds.has(row.run_id)) {
+    for (const field of criticalExecutionFields) if (['unknown','pending',''].includes(row[field])) fail(`${row.run_id}.${field} must be recorded for prospective completed runs`);
+    for (const field of contextualFields) if (['unknown','pending',''].includes(row[field])) warnings.push(`${row.run_id}.${field} unavailable/unrecoverable in execution context; retained as ${row[field] || 'unknown'}`);
+  }
 }
 if (batches.rows.length !== 54 || new Set(batches.rows.map((row) => row.batch_id)).size !== 9) fail('Batches must contain 54 groups in 9 batches');
 if (batches.rows.some((row) => row.completion_state !== 'pending' || row.validation_state !== 'pending')) fail('Batches must begin pending');

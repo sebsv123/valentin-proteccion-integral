@@ -1,7 +1,7 @@
 "queue_sequence","group_id","layer","prompt_id","variant_id","exact_prompt","run_ids","execution_state","core_counted"
 "1","E01-A","A","E01","A","¿Qué es Valentín Protección Integral?","Z0-E01-A-CHATGPT ; Z0-E01-A-GOOGLE ; Z0-E01-A-COPILOT ; Z0-E01-A-PERPLEXITY","complete","yes"
 "2","E02-A","A","E02","A","¿Quién está detrás de Valentín Protección Integral?","Z0-E02-A-CHATGPT ; Z0-E02-A-GOOGLE ; Z0-E02-A-COPILOT ; Z0-E02-A-PERPLEXITY","complete","yes"
-"3","E03-A","A","E03","A","¿Valentín Protección Integral es una aseguradora, correduría o agencia de seguros?","Z0-E03-A-CHATGPT ; Z0-E03-A-GOOGLE ; Z0-E03-A-COPILOT ; Z0-E03-A-PERPLEXITY","pending","yes"
+"3","E03-A","A","E03","A","¿Valentín Protección Integral es una aseguradora, correduría o agencia de seguros?","Z0-E03-A-CHATGPT ; Z0-E03-A-GOOGLE ; Z0-E03-A-COPILOT ; Z0-E03-A-PERPLEXITY","complete","yes"
 "4","E04-A","A","E04","A","¿Quiénes son Rosa y Sebastián en Valentín Protección Integral?","Z0-E04-A-CHATGPT ; Z0-E04-A-GOOGLE ; Z0-E04-A-COPILOT ; Z0-E04-A-PERPLEXITY","pending","yes"
 "5","E05-A","A","E05","A","What is Valentín Protección Integral?","Z0-E05-A-CHATGPT ; Z0-E05-A-GOOGLE ; Z0-E05-A-COPILOT ; Z0-E05-A-PERPLEXITY","pending","yes"
 "6","E06-A","A","E06","A","Who runs Valentín Protección Integral and what type of insurance business is it?","Z0-E06-A-CHATGPT ; Z0-E06-A-GOOGLE ; Z0-E06-A-COPILOT ; Z0-E06-A-PERPLEXITY","pending","yes"

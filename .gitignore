@@ -29,6 +29,7 @@ node_modules/
 lighthouse-results/
 artifacts/ai-visibility/f0-zero/
 artifacts/ai-visibility/f0-zero-baseline/
+artifacts/ai-visibility/f1-post/
 
 # ==============================
 # LOGS

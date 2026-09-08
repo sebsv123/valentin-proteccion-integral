@@ -2,11 +2,12 @@
 
 ## Scope and status
 
-Read-only audit performed on 2026-09-04. **F1B audit completed; F1B
-intervention has not started.** No LinkedIn, Crunchbase, TodoEnlaces or Rankia
-action was taken; no external profile was changed; no new on-site change was
-made; and no AI engine test was run. F1A remains the only applied intervention
-under review; this record does not alter historical baseline observations.
+Read-only audit performed on 2026-09-04 and closed as a diagnostic checkpoint.
+The post-F1A measurement was deliberately paused after E01-A, and **F1B
+intervention planning now begins; no F1B correction has yet been applied.** No
+LinkedIn, Crunchbase, TodoEnlaces or Rankia action was taken; no external
+profile was changed; no new on-site change was made. This record does not alter
+historical baseline observations.
 
 Deployment record:
 
@@ -111,9 +112,11 @@ copy or structured data on the basis of this audit alone.
 5. Re-run the same read-only corroboration matrix and record URLs/dated evidence
    before any further public copy change.
 
-All treatment candidates above are **DEFERRED UNTIL AFTER POST-F1A
-MEASUREMENT**. In particular, no correction request, profile edit, directory
-edit, Rankia action or additional site change is part of this F1B checkpoint.
+The treatment candidates above were deferred until after the post-F1A gate.
+That gate is now intentionally closed as a partial diagnostic after E01-A.
+No correction request, profile edit, directory edit, Rankia action or
+additional site change has yet been applied. The actionable pack is recorded in
+`f1b-external-correction-pack.md`.
 
 Priority candidates retained for the later intervention design are:
 
@@ -130,6 +133,7 @@ aligned with the approved human model and its legal-preservation decisions.
 External inconsistencies should be handled as profile/source corrections, not
 by weakening the on-site entity graph or inventing regulatory evidence.
 
-The earliest next step is the post-F1A measurement defined in
-`post-f1a-entity-measurement-gate.md`. External actions remain deferred until
-that measurement is closed and its results are frozen.
+The post-F1A measurement is paused after E01-A by operator decision. F1B
+external correction work may now proceed from the separate actionable pack;
+the next measurement should be a small verification set after corrections,
+not an automatic replay of all 24 Entity runs.

@@ -1,0 +1,13 @@
+run_id,prompt_id,variant_id,engine,domain,normalized_url,source_type,cited,mentioned,position,notes
+"Z1-E01-A-CHATGPT","E01","A","ChatGPT","valentinproteccionintegral.com","https://valentinproteccionintegral.com/sobre-nosotros","first_party","yes","yes","1","Observed VPI-owned source in canonical response; utm query omitted analytically."
+"Z1-E01-A-CHATGPT","E01","A","ChatGPT","valentinproteccionintegral.com","https://valentinproteccionintegral.com/seguros","first_party","yes","yes","2","Observed VPI-owned source in canonical response; utm query omitted analytically."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","valentinproteccionintegral.com","https://valentinproteccionintegral.com/","first_party","yes","yes","1","Observed inline source in canonical response."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","valentinproteccionintegral.com","https://valentinproteccionintegral.com/sobre-nosotros","first_party","yes","yes","2","Observed inline source in canonical response."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","www.todoenlaces.com","https://www.todoenlaces.com/valentin-proteccion-integral/","other","yes","yes","3","Observed external source in canonical response."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","www.linkedin.com","https://www.linkedin.com/company/valentin%C3%ADn-proteccion-integral","other","yes","yes","4","Observed external source in canonical response; normalized only in analytical layer."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","valentinproteccionintegral.com","https://valentinproteccionintegral.com/como-te-ayudamos","first_party","yes","yes","5","Observed inline source in canonical response."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","valentinproteccionintegral.com","https://valentinproteccionintegral.com/opiniones","first_party","yes","yes","6","Observed inline source in canonical response."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","valentinproteccionintegral.com","https://valentinproteccionintegral.com/empresas/ciberseguridad","first_party","yes","yes","7","Observed inline source in canonical response."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","valentinproteccionintegral.com","https://valentinproteccionintegral.com/empresas","first_party","yes","yes","8","Observed inline source in canonical response."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","valentinproteccionintegral.com","https://valentinproteccionintegral.com/autonomos","first_party","yes","yes","9","Observed inline/final-list source in canonical response."
+"Z1-E01-A-PERPLEXITY","E01","A","Perplexity","www.valentinproteccionintegral.com","https://www.valentinproteccionintegral.com/seguros/decesos","first_party","yes","yes","10","Observed inline/final-list source in canonical response."

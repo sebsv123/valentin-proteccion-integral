@@ -7,6 +7,7 @@ import { StickyWhatsApp } from "@/components/sticky-whatsapp";
 import { buildWhatsAppHref } from "@/lib/products";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
+import { AnswerFirstSection } from "@/components/answer-first-section";
 import { Sparkles, CheckCircle2, Clock, Shield, TrendingDown, Briefcase, Globe, ChevronDown, Star, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -197,6 +198,14 @@ export default function AutonomosRootPage() {
             </div>
           </div>
         </section>
+
+        <AnswerFirstSection
+          eyebrow="Respuesta rápida"
+          title="Qué puede resolver VPI para un autónomo"
+          answer="VPI puede orientarte sobre seguros de salud, accidentes y responsabilidad civil profesional. La posible deducción de salud depende de tu situación fiscal y de los límites y requisitos aplicables; VPI no presta asesoramiento fiscal personalizado."
+          facts={['Las primas de salud pueden ser deducibles para autónomos en estimación directa si se cumplen las condiciones.', 'El manual de ASISA recoge límites de 500 € por persona y 1.500 € para personas con discapacidad, con condiciones.', 'La cobertura, las carencias y la renovación dependen de la póliza.', 'La página de salud para autónomos explica el producto; este hub organiza la necesidad profesional.']}
+          links={[{ label: 'Ver salud para autónomos', href: '/seguros/salud/autonomos' }, { label: 'Ver salud para empresas', href: '/empresas/salud' }]}
+        />
 
         {/* IRPF EXPLICADO — Stripe cards */}
         <section className="py-20 border-t border-[#e5edf5]">

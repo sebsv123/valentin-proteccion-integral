@@ -166,20 +166,20 @@ export const blogEnglishBatch5: Record<string, EnglishContent> = {
   },
   'seguro-vida-hipoteca-obligatorio': {
     title: 'Is life insurance compulsory with a mortgage? What banks do not tell you',
-    excerpt: 'We clear up the myths about linking life insurance to mortgages under the legislation currently in force.',
+    excerpt: 'What to review when a mortgage is linked to life insurance: security, provider, sum insured and conditions.',
     metaTitle: 'Life insurance and mortgages: is it compulsory? | VPI',
-    metaDescription: 'Understand your legal position with the bank. Can it force you to take out life insurance with it? An overview of the law and the potential savings.',
+    metaDescription: 'A practical guide to reviewing mortgage-linked life insurance without confusing loan requirements with the conditions of a specific policy.',
     imageAlt: 'Family feeling secure in their new home',
     sections: [
       { heading: 'The Real Estate Credit Contracts Act', content: [
-        'Since the new mortgage law came into force, transparency has improved, but questions remain. The short answer is NO: the bank cannot force you to take out ITS life insurance.',
-        'However, the bank may require you to HAVE life insurance as security, while you remain free to take it out with the provider of your choice.',
+        'The answer depends on the binding offer, mortgage contract and applicable rules: a lender requiring insurance security is not the same as requiring you to buy it from a particular provider.',
+        'Before changing or cancelling a policy, review the required sum insured, beneficiary designation, loan discounts and notice period. Acceptance of an alternative should be checked in the lender’s documentation.',
       ] },
     ],
     tips: [
-      'You can take out life insurance outside the bank and still meet the mortgage conditions.',
-      'Always compare the bank’s price with a registered insurance advisor’s offer.',
-      'The price difference can exceed 40% per year.',
+      'Check whether the mortgage allows an alternative policy and which requirements it must meet.',
+      'Compare the sum insured, benefits, duration and premium—not only the initial price.',
+      'Ask for written confirmation before cancelling or replacing a policy.',
     ],
   },
   'seguro-ahorro-jubilacion-madrid': {

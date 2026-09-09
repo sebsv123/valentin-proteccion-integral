@@ -18,6 +18,7 @@ import { BusinessHealthFaqSection } from '@/components/business-health-faq-secti
 import { BusinessHealthFinalCta } from '@/components/business-health-final-cta';
 import { site } from '@/lib/products';
 import pageStyles from './business-health-page.module.css';
+import { AnswerFirstSection } from '@/components/answer-first-section';
 
 const businessFaq = [
   ['¿Cuál es el número mínimo de asegurados?', 'Existen opciones que pueden estudiarse desde dos asegurados. La composición admitida y las condiciones dependen de la modalidad y de cómo se configure el colectivo.'],
@@ -37,7 +38,7 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': [
 
 export const metadata: Metadata = {
   title: 'Seguro de salud para empresas y autónomos | Valentín Protección Integral',
-  description: 'Compara seguros de salud para empresas desde dos asegurados, con opciones ambulatorias, hospitalización, reembolso y ventajas fiscales según contratación.',
+  description: 'Valora opciones de seguro de salud para empresas desde dos asegurados, con opciones ambulatorias, hospitalización, reembolso y ventajas fiscales según contratación.',
   alternates: { canonical: `${site.domain}/empresas/salud` },
   robots: { index: true, follow: true },
   openGraph: { title: 'Seguro de salud para empresas y autónomos', description: 'Coberturas para pequeños equipos y empresas, con hospitalización, reembolso, asistencia en viajes y distintas formas de asumir el coste.', url: `${site.domain}/empresas/salud`, type: 'website', images: [{ url: `${site.domain}/brand/logo-vpi.jpeg`, alt: site.name }] },
@@ -50,6 +51,13 @@ export default function BusinessHealthPage() {
     <Script id="business-health-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <main className={pageStyles.page}>
       <div className="container-shell pt-6 md:pt-8"><Breadcrumbs items={[{ label: 'Inicio', href: '/' }, { label: 'Empresas', href: '/empresas' }, { label: 'Salud' }]} /></div>
+      <AnswerFirstSection
+        eyebrow="Respuesta rápida"
+        title="La salud de empresa depende del colectivo y de la modalidad"
+        answer="Pueden estudiarse opciones desde dos asegurados, pero la composición admitida, la hospitalización, el reembolso y la forma de asumir el coste dependen de la modalidad y de la propuesta concreta."
+        facts={['Las opciones ambulatorias no equivalen a las modalidades con hospitalización.', 'Pueden incorporarse familiares sólo cuando la modalidad lo contempla.', 'Para preparar una propuesta hacen falta personas, edades, provincia, cobertura y fecha.', 'La fiscalidad depende de la contratación y de la situación de la empresa o trabajador.']}
+        links={[{ label: 'Volver al hub de empresas', href: '/empresas' }, { label: 'Ver ciberprotección', href: '/empresas/ciberseguridad' }]}
+      />
       <BusinessHealthHero />
       <BusinessHealthDualValueSection />
       <BusinessHealthImplementationSection />

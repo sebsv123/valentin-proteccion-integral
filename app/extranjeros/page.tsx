@@ -10,6 +10,7 @@ import SpainArrivalGlobe from '@/components/extranjeros/spain-arrival-globe';
 import { ForeignersPartnerForm } from '@/components/foreigners-partner-form';
 import { ForeignersPartnerTracking } from '@/components/foreigners-partner-tracking';
 import { ForeignersTrackedLink } from '@/components/foreigners-tracked-link';
+import { AnswerFirstSection } from '@/components/answer-first-section';
 import { GoogleReviewsCarousel } from '@/components/google-reviews-carousel';
 import { Header } from '@/components/header';
 import { StickyWhatsApp } from '@/components/sticky-whatsapp';
@@ -320,6 +321,14 @@ export function ExtranjerosPageView({ locale = 'es' }: { locale?: 'es' | 'en' } 
             </div>
           </div>
         </section>
+
+        <AnswerFirstSection
+          eyebrow={en ? 'Quick answer' : 'Respuesta rápida'}
+          title={en ? 'The product page owns the insurance decision' : 'La página de producto concentra la decisión aseguradora'}
+          answer={en ? 'The foreigners hub helps you identify whether your case is studies, residence, renewal or family arrival. The canonical health page explains the product-specific copay, waiting-period, duration and certificate conditions.' : 'Este hub te ayuda a identificar si tu caso es de estudios, residencia, renovación o llegada familiar. La página canónica de salud explica las condiciones de copagos, carencias, duración y certificado según cada producto.'}
+          facts={en ? ['Students and Residents are distinct ASISA products.', 'Residents Premium has different waiting-period conditions.', 'The administration or consulate makes the final decision on the procedure.', 'The insurer and policy determine the certificate and contractual conditions.'] : ['Students y Residents son productos ASISA distintos.', 'Residents Premium tiene condiciones de carencia diferentes.', 'La administración o el consulado toman la decisión final del trámite.', 'La aseguradora y la póliza determinan el certificado y las condiciones contractuales.']}
+          links={en ? [{ label: 'Open the canonical health page', href: '/en/insurance/health/foreigners' }, { label: 'Review the health hub', href: '/en/insurance/health' }] : [{ label: 'Ver el seguro de salud para extranjeros', href: '/seguros/salud-extranjeros' }, { label: 'Ver el hub de salud', href: '/seguros/salud' }]}
+        />
 
         <section id="elige" className={`${styles.mobileSection} section-pad scroll-mt-[104px] bg-white md:scroll-mt-[120px]`} data-foreigners-section="selector">
           <div className="container-shell">

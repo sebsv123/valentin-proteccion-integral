@@ -268,11 +268,11 @@ export const products: Product[] = [
     cardImage: '/images/products/accidentes-hero.webp',
     cardAlt: 'Protección ante accidentes',
     summary:
-      'Indemnización, invalidez y hospitalización por causa accidental, sin necesidad de cuestionarios de salud complejos.',
+      'Protección por fallecimiento, invalidez u hospitalización por causa accidental, según la modalidad y sus condiciones.',
     highlights: [
-      'No requiere examen médico ni cuestionario de salud detallado.',
-      'Protección 24/7 tanto en la vida privada como profesional.',
-      'Indemnizaciones por fallecimiento o invalidez permanente absoluta.',
+      'Algunas modalidades pueden contratarse sin cuestionario médico; debe confirmarse en el producto concreto.',
+      'Opciones para actividad profesional y vida privada, según la modalidad.',
+      'Indemnizaciones por fallecimiento accidental y, en determinadas modalidades, invalidez permanente absoluta.',
     ],
     benefits: [
       'Ideal para autónomos que no pueden permitirse parar.',
@@ -281,7 +281,7 @@ export const products: Product[] = [
     ],
     whatIncludes: [
       'Indemnización por fallecimiento accidental.',
-      'Capital por invalidez permanente (total o parcial).',
+      'Capital por invalidez conforme al baremo y garantías de la modalidad contratada.',
       'Anticipo de gastos de sepelio y sucesiones.',
     ],
     whatVaries: [
@@ -297,16 +297,16 @@ export const products: Product[] = [
     cases: ['PARTICULARES', 'AUTÓNOMOS', 'PYMES', 'SIN EXAMEN MÉDICO'],
     faqs: [
       { q: "¿Qué diferencia hay entre el seguro de accidentes y el seguro de salud?", a: "El seguro de salud cubre asistencia médica ante enfermedades y accidentes. El seguro de accidentes paga una indemnización económica si sufres una invalidez permanente o falleces por accidente, complementando tus ingresos cuando más lo necesitas." },
-      { q: "¿Qué cubre un seguro de accidentes personales?", a: "Cubre fallecimiento por accidente, invalidez permanente total o parcial, gastos de hospitalización por accidente, y en algunos casos incapacidad temporal que te impida trabajar." },
+      { q: "¿Qué cubre un seguro de accidentes personales?", a: "Puede cubrir fallecimiento por accidente, invalidez permanente, hospitalización u otras garantías, pero el alcance depende de la modalidad y las condiciones de la póliza." },
       { q: "¿Necesita un autónomo un seguro de accidentes?", a: "Es muy recomendable. Si eres autónomo y tienes un accidente que te impide trabajar, no tienes cobertura de empresa. Un seguro de accidentes te garantiza ingresos durante la baja." },
-      { q: "¿Cuánto cuesta un seguro de accidentes?", a: "Desde 15€/mes para coberturas básicas. El precio varía según la actividad profesional, la edad y el capital asegurado. Te ayudamos a encontrar la cobertura justa al precio adecuado." }
+      { q: "¿Cuánto cuesta un seguro de accidentes?", a: "El precio depende de la edad, la actividad, el capital asegurado y las garantías contratadas. Revisamos la modalidad adecuada antes de darte una orientación." }
     ],
     disclaimer:
       'Capitales, invalidez, indemnización diaria y coberturas para autónomos sujetos a modalidad y condiciones del producto.',
     related: ['vida', 'salud', 'decesos'],
     whatsappMessage: 'Hola, quiero orientación sobre ACCIDENTES para mí o para mi negocio.',
-    metaTitle: 'Seguro de Accidentes Madrid · Desde 15€/mes',
-    metaDescription: 'Protección 24/7 ante accidentes, invalidez y fallecimiento. Sin examen médico y con una gestión rápida para particulares y autónomos.',
+    metaTitle: 'Seguro de Accidentes en Madrid · Coberturas según modalidad',
+    metaDescription: 'Protección ante accidentes, invalidez y fallecimiento accidental, con coberturas y condiciones según el producto.',
     h1: 'Seguro de Accidentes en Madrid: Cobertura 24/7',
   },
   {

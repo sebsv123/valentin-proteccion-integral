@@ -1362,27 +1362,27 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'seguro-vida-hipoteca-obligatorio',
     title: '¿Es obligatorio el seguro de vida con la hipoteca? Lo que los bancos no te cuentan',
-    excerpt: 'Desmontamos los mitos sobre la vinculación de seguros de vida e hipotecas según la legislación vigente.',
+    excerpt: 'Qué conviene revisar cuando una hipoteca se vincula a un seguro de vida: garantía, proveedor, capital y condiciones.',
     image: '/images/blog/blog_vida_hipoteca_1776077585025.webp',
     imageAlt: 'Familia segura en su nuevo hogar',
     date: '2026-04-13',
     category: 'consejos',
     readTime: '7 min',
     metaTitle: 'Seguro de vida e hipoteca: ¿Es obligatorio? | VPI',
-    metaDescription: 'Entiende tus derechos legales frente a la banca. ¿Pueden obligarte a contratar el seguro de vida con el banco? Análisis de la ley y ahorro real.',
+    metaDescription: 'Guía práctica para revisar un seguro de vida vinculado a una hipoteca sin confundir requisitos del préstamo con condiciones de una póliza concreta.',
     sections: [
       {
         heading: 'La Ley de Contratos de Crédito Inmobiliario',
         content: [
-          'Desde la entrada en vigor de la nueva ley hipotecaria, la transparencia ha mejorado, pero siguen existiendo dudas. La respuesta corta es NO: el banco no puede obligarte a contratar SU seguro de vida.',
-          'Sin embargo, el banco puede exigirte que TENGAS un seguro de vida como garantía, pero tú tienes la libertad de contratarlo con la entidad que prefieras.',
+          'La respuesta depende de la oferta vinculante, del contrato hipotecario y de la normativa aplicable: no debe confundirse la posibilidad de exigir una garantía aseguradora con la obligación de contratarla con una entidad concreta.',
+          'Antes de cambiar o cancelar una póliza, revisa el capital exigido, la designación del beneficiario, las bonificaciones del préstamo y el plazo de preaviso. La aceptación de una alternativa corresponde a la entidad y debe comprobarse documentalmente.',
         ],
       },
     ],
     tips: [
-      'Puedes contratar tu seguro de vida fuera del banco y seguir cumpliendo las condiciones.',
-      'Compara siempre el coste del seguro del banco vs. un agente de seguros registrado.',
-      'La diferencia de precio puede superar el 40% anual.',
+      'Revisa si el contrato permite una póliza alternativa y qué requisitos debe cumplir.',
+      'Compara capital, garantías, duración y prima; no sólo el precio inicial.',
+      'Pide confirmación documental antes de cancelar o sustituir una póliza.',
     ],
   },
   {
@@ -1758,30 +1758,30 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'seguros-vida-hipoteca-boadilla-madrid',
-    title: 'Seguro de vida vinculado a la hipoteca en Boadilla: Cómo ahorrar un 40%',
-    excerpt: '¿Tienes el seguro de vida con tu banco en Boadilla? Descubre por qué estás pagando de más y cómo desvincularlo legalmente para ahorrar miles de euros durante tu préstamo.',
+    title: 'Seguro de vida vinculado a la hipoteca en Boadilla: qué revisar',
+    excerpt: 'Una guía para revisar capital, garantías, renovación y condiciones cuando el seguro de vida está vinculado a una hipoteca.',
     image: '/images/products/proteccion-juridica.webp',
     imageAlt: 'Vivienda en Boadilla del Monte protegida con un seguro de vida independiente',
     date: '2026-04-14',
     category: 'consejos',
     readTime: '21 min',
-    metaTitle: 'Ahorrar Seguro Vida Hipoteca Boadilla · Guía Práctica 2026',
-    metaDescription: 'Pagando de más por el seguro de vida de tu hipoteca en Boadilla? Aprende a desvincularlo del banco y ahorrar hasta un 40% al año. Asesoría experta en Madrid.',
+    metaTitle: 'Seguro de vida e hipoteca en Boadilla · Qué revisar',
+    metaDescription: 'Qué revisar en un seguro de vida vinculado a una hipoteca: capital, garantías, renovación y condiciones de sustitución.',
     sections: [
       {
         heading: 'La trampa del seguro de vida ligado a la banca en Boadilla del Monte',
         content: [
-          'Para la mayoría de los vecinos de Boadilla del Monte, la compra de su vivienda ha sido la operación financiera más importante de su vida. En el proceso de contratación de la hipoteca, muchas entidades bancarias "sugieren" o incluso "obligan" a contratar un seguro de vida vinculado para garantizar el préstamo. Este seguro tiene un objetivo loable: asegurar que, en caso de fallecimiento o invalidez de los titulares, la hipoteca quede pagada y la vivienda sea propiedad total de la familia sin deudas. Sin embargo, lo que muchos propietarios en urbanizaciones como Las Lomas o el Sector B no saben es que contratar este seguro a través del banco suele ser radicalmente más caro que hacerlo en el mercado libre de seguros de Madrid.',
-          'Desde nuestra experiencia en seguros en Boadilla, hemos detectado que las pólizas bancarias pueden llegar a costar entre un 30% y un 50% más que un seguro de vida de idénticas coberturas contratado externamente. Esto sucede porque el banco utiliza el seguro como un producto de margen adicional, aprovechando la posición de fuerza durante la firma de la hipoteca. En 2026, la legislación española es muy clara al respecto: el cliente tiene derecho a contratar el seguro de vida con la compañía que prefiera, siempre y cuando la póliza incluya una cláusula de beneficiario a favor del banco por el importe de la deuda pendiente.',
-          'Desvincular el seguro de vida del banco en Boadilla no es solo un derecho legal, es una decisión de ahorro masivo. A lo largo de una hipoteca de 20 o 25 años, el ahorro total por cambiar la póliza puede superar los 10.000 o 15.000 euros familiares. Ese dinero, que se "regala" a la banca por falta de asesoramiento, podría destinarse a la educación de los hijos, a amortizaciones parciales de capital o simplemente a mejorar el seguro de salud familiar. En este artículo, vamos a desglosar paso a paso cómo realizar este cambio de forma legal, segura y sencilla desde nuestra asesoría en Boadilla del Monte.',
+          'El seguro de vida vinculado a una hipoteca puede cubrir el fallecimiento por cualquier causa y, si se contrata, una invalidez permanente y absoluta; en el producto ASISA Vida Capital Decreciente estas garantías y sus límites dependen de la póliza. Su finalidad es adaptar el capital asegurado a la deuda pendiente, pero el contrato hipotecario y la póliza deben revisarse por separado.',
+          'No hay que asumir que una póliza bancaria o una alternativa externa tiene siempre el mismo precio, capital o alcance. Antes de sustituirla, conviene revisar la oferta vinculante, la designación del beneficiario, las bonificaciones y los requisitos que la entidad acepte por escrito.',
+          'Esta guía ayuda a ordenar esas preguntas; no sustituye la revisión de la documentación hipotecaria, las condiciones particulares ni el asesoramiento legal que pueda ser necesario.',
         ],
       },
       {
         heading: '¿Por qué las pólizas bancarias son tan costosas y rígidas?',
         content: [
-          'La principal razón del sobrecoste bancario en Madrid radica en la falta de competencia interna. El banco le ofrece su "propio" seguro (o el de su aseguradora participada) sin comparar con el resto del mercado. Además, suelen aplicar primas constantes o tramos de edad muy amplios que no se ajustan a la realidad de longevidad actual. Otro problema grave es la "prima única financiada" (PUF), una práctica donde el banco le cobra todo el seguro de vida por adelantado sumándolo al préstamo hipotecario. Esto significa que usted acaba pagando intereses por su propio seguro de vida durante décadas, una auténtica aberración financiera que desaconsejamos totalmente en Boadilla.',
-          'Además del precio, la rigidez es un gran inconveniente. Un seguro de vida de hipoteca contratado fuera del banco en Madrid nos permite ser creativos: podemos asegurar capitales decrecientes según baja la deuda, o mejor aún, mantener el capital constante para que, además de pagar la hipoteca, quede una suma de dinero adicional para la familia en caso de percance. El banco solo quiere cubrir "su" deuda; nosotros queremos proteger a "su" familia. En Boadilla, donde el nivel de vida es alto, asegurar que la familia pueda mantener su residencia y sus gastos escolares es una prioridad que el banco rara vez contempla en sus pólizas estandarizadas.',
-          'Asimismo, la calidad del servicio post-venta en la banca ha caído drásticamente en Madrid. Ante un siniestro de invalidez, el banco suele ser juez y parte, ralentizando a menudo los trámites de cobro. Contar con un agente de seguros registrado DGSFP en Boadilla le garantiza una defensa activa de sus intereses frente a la compañía aseguradora. Nosotros gestionamos el siniestro, agilizamos el papeleo con la notaría y aseguramos que la garantía que usted pagó durante años se ejecute de forma inmediata y profesional, sin que usted tenga que pelear con un servicio de atención telefónico impersonal.',
+          'Las pólizas vinculadas a una hipoteca pueden tener primas niveladas, renovables o de pago único financiado, y cada estructura tiene consecuencias distintas. La prima única financiada añade el coste al préstamo, por lo que conviene revisar sus condiciones y el coste total antes de contratarla.',
+          'En algunas modalidades puede elegirse un capital decreciente para seguir la evolución de la deuda; en otras puede mantenerse un capital constante. La diferencia debe comprobarse en las condiciones particulares y no se puede asumir que una estructura sea siempre más adecuada para todas las familias.',
+          'VPI puede ayudar a ordenar las garantías, la documentación y el proceso de sustitución, pero la aceptación de una nueva póliza y la gestión del siniestro dependen de la entidad aseguradora y del contrato aplicable.',
         ],
       },
       {
@@ -1789,13 +1789,13 @@ export const blogPosts: BlogPost[] = [
         content: [
           'El mejor momento para cambiar el seguro de vida de su hipoteca en Boadilla es un mes antes de la fecha de renovación anual. De acuerdo con la Ley de Contrato de Seguro, usted debe notificar a su compañía actual (el banco) su deseo de no renovar con al menos 30 días de antelación. Este trámite debe hacerse por escrito, preferiblemente mediante un sistema que deje constancia del envío, como un burofax o una entrega con sello de recepción en la oficina bancaria de Madrid o Boadilla donde tenga su cuenta.',
           'Una vez notificada la cancelación, procedemos a la contratación de la nueva póliza. El requisito indispensable que le pedirá el banco es que la nueva póliza incluya una "cláusula de cesión de derechos" a su favor. Esto no significa que el banco se haga dueño del seguro, sino que tiene el derecho preferente de cobro sobre el capital si usted fallece, limitándose estrictamente al importe de la deuda que quede en ese momento. Si usted ha contratado un capital superior, el sobrante irá directamente a sus herederos legales. Este detalle es crucial y es donde nosotros, en la asesoría de Boadilla, ponemos especial atención para que su familia esté doblemente protegida.',
-          '¿Qué pasa con el diferencial de la hipoteca? Es una de las preocupaciones más comunes en Madrid. Muchos bancos bonifican el tipo de interés a cambio de contratar el seguro de vida (por ejemplo, bajando un 0,10% o 0,20% el diferencial). Nosotros realizamos el cálculo financiero comparativo por usted. En la inmensa mayoría de los casos en Boadilla, el ahorro masivo que conseguimos en la prima anual del seguro compensa con creces la ligerísima subida de la cuota hipotecaria por perder la bonificación. El resultado neto suele seguir siendo un ahorro de cientos de euros al año y, sobre todo, una protección de mucha mayor calidad médica y legal.',
+          '¿Qué pasa con el diferencial de la hipoteca? Algunos préstamos aplican bonificaciones vinculadas a determinados productos. Antes de sustituir el seguro, calcula el efecto de perder o mantener esa bonificación junto con la nueva prima; el resultado depende de las condiciones concretas del préstamo y de la póliza.',
         ],
       },
       {
         heading: 'Análisis de coberturas: Más allá del fallecimiento',
         content: [
-          'En un entorno residencial como Boadilla, el seguro de vida hipotecario debe contemplar obligatoriamente la Invalidez Permanente Absoluta (IPA). Esta cobertura garantiza que la hipoteca se cancele si el titular sufre un accidente o enfermedad que le impida desarrollar cualquier tipo de trabajo. En Madrid laboral, donde el estrés y los ritmos son frenéticos, la invalidez es un riesgo estadísticamente más probable que el fallecimiento prematuro, y su impacto económico para una familia en Boadilla es devastador si no está bien cubierta.',
+          'En un seguro de vida hipotecario puede valorarse la Invalidez Permanente Absoluta (IPA) como garantía adicional. En ASISA Vida Capital Decreciente aparece como garantía opcional, por lo que su inclusión, definición y límites deben confirmarse en la póliza.',
           'También valoramos la inclusión de la Invalidez Permanente Total (IPT), que cubre la incapacidad para la profesión habitual. Imagine a un cirujano o un piloto residente en Boadilla que, por un problema de visión o pulso, ya no puede ejercer su profesión pero sí otra de menor remuneración. Su seguro de vida debe estar ahí para compensar esa diferencia de ingresos y liquidar la deuda del hogar. El banco casi nunca ofrece estas coberturas "finas" porque no le interesan; nosotros sí, porque es lo que marca la diferencia entre una póliza que solo "cumple el papel" y una que realmente salva el futuro de una familia madrileña.',
           'Por último, vigilamos los capitales por doble o triple capital en caso de accidente de tráfico. Muchos de nuestros clientes en Boadilla se desplazan a diario por la M-50 o la A-6 para trabajar en Madrid. El riesgo en carretera es real. Contar con una póliza que duplique el capital si el fallecimiento ocurre en un accidente de circulación proporciona una tranquilidad adicional extraordinaria por un coste mínimo. No somos vendedores de seguros; somos consultores de protección en Boadilla que diseñamos el escudo que su hipoteca y su familia necesitan para dormir tranquilos cada noche.',
         ],
@@ -1805,7 +1805,7 @@ export const blogPosts: BlogPost[] = [
         content: [
           'La hipoteca es un compromiso a largo plazo, pero la elección de sus seguros no tiene por qué serlo. En Boadilla del Monte, donde la eficiencia financiera es clave para gestionar la economía familiar, revisar sus contratos de vida vinculados a la banca es la forma más rápida de generar liquidez inmediata. No permita que la inercia le haga seguir pagando un sobreprecio injustificado mes tras mes por una protección inferior a la que puede encontrar con nosotros.',
           'Nuestra asesoría en Boadilla se especializa en este proceso de desvinculación bancaria de forma profesional, educada y técnica. No buscamos el conflicto con su entidad bancaria, buscamos su beneficio como cliente. Miles de madrileños ya han dado el paso y han descubierto que es posible tener una mejor protección por mucho menos dinero. El seguro de vida debe ser una fuente de consuelo, no una carga económica desproporcionada.',
-          'Le invitamos a enviarnos una copia de su último recibo bancario y de las condiciones de su seguro de vida actual. De forma totalmente gratuita y confidencial, le entregaremos un estudio comparativo de ahorro y mejora de coberturas. Descubra cuánto puede ahorrar hoy mismo para seguir disfrutando de su vida en Boadilla con la máxima seguridad. Estamos listos para ayudarle a dar el salto a una protección inteligente y justa en Madrid.',
+          'Le invitamos a enviarnos una copia de su último recibo bancario y de las condiciones de su seguro de vida actual. Podemos ayudarle a ordenar capital, garantías, renovación y requisitos de sustitución para que compare decisiones con la documentación delante.',
         ],
       },
     ],
@@ -1816,7 +1816,7 @@ export const blogPosts: BlogPost[] = [
       'Si fumas o has cambiado de hábitos, tu seguro de vida también debería actualizarse para reflejar tu riesgo real en Madrid.',
     ],
     faqs: [
-      { question: '¿Me puede subir el banco la cuota si quito el seguro con ellos en Boadilla?', answer: 'Sí, es posible que pierdas la bonificación de "vinculación" (suele ser un 0,1%-0,2% del interés). Sin embargo, el ahorro en la prima del seguro casi siempre supera ese coste.' },
+      { question: '¿Me puede subir el banco la cuota si quito el seguro con ellos en Boadilla?', answer: 'Podrías perder una bonificación vinculada al seguro, pero el efecto depende de las condiciones del préstamo. Revisa el contrato y calcula el coste total antes de cambiar.' },
       { question: '¿Qué capital debo asegurar en mi vida hipotecario?', answer: 'Como mínimo, el saldo pendiente de tu hipoteca. No obstante, en Madrid recomendamos asegurar un capital adicional para gastos de defunción y estabilidad familiar inicial.' },
     ],
   },

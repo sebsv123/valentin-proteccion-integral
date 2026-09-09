@@ -13,12 +13,12 @@ import { Sparkles, CheckCircle2, Clock, Shield, Heart, AlertTriangle, Users, Umb
 
 export const metadata: Metadata = {
   title: "Seguro de Accidentes y Decesos en Madrid | Valentín",
-  description: "Seguro de accidentes y decesos en Madrid desde 3€/mes. Protección completa para ti y tu familia con gestión sin complicaciones.",
+  description: "Seguro de accidentes y decesos en Madrid, con capitales, garantías y condiciones según la modalidad.",
   keywords: ["pack accidentes decesos Madrid","seguro accidentes decesos combinado","proteccion completa familia Madrid"],
   alternates: { canonical: "https://valentinproteccionintegral.com/seguros/accidentes-decesos" },
   openGraph: {
     title: "Seguro de Accidentes y Decesos en Madrid | Valentín",
-    description: "Seguro de accidentes y decesos en Madrid desde 3€/mes. Protección completa para ti y tu familia con gestión sin complicaciones.",
+    description: "Seguro de accidentes y decesos en Madrid, con capitales, garantías y condiciones según la modalidad.",
     url: "https://valentinproteccionintegral.com/seguros/accidentes-decesos",
     siteName: "Valentín Protección Integral",
     locale: "es_ES",
@@ -138,7 +138,7 @@ export default function AccidentesDecesosPage() {
                   </span>
                   <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 text-white/80 text-sm border border-white/10">
                     <Shield className="w-4 h-4 text-amber-400" />
-                    Sin permanencia
+                    Condiciones claras
                   </span>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function AccidentesDecesosPage() {
               </h2>
               <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                 No tienes que elegir entre protegerte a ti o cuidar de tu familia. 
-                Este pack te da ambas coberturas al mejor precio.
+                Este pack reúne dos necesidades distintas; conviene revisar sus capitales y condiciones por separado.
               </p>
             </div>
             
@@ -186,14 +186,14 @@ export default function AccidentesDecesosPage() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">Accidentes</h3>
                 <p className="text-slate-600 leading-relaxed mb-6">
                   Cubre el imprevisto de hoy. Desde una caída en casa hasta un accidente de tráfico. 
-                  Invalidez, gastos médicos y hospitalización incluidos.
+                  Invalidez, gastos médicos u hospitalización pueden formar parte de la modalidad contratada.
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Muerte por accidente: 60.000€",
-                    "Invalidez permanente: hasta 100%",
-                    "Gastos médicos: 6.000€",
-                    "Hospitalización: 100€/día"
+                    "Muerte por accidente según modalidad",
+                    "Invalidez permanente según modalidad",
+                    "Gastos médicos según modalidad",
+                    "Hospitalización según modalidad"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-slate-700">
                       <CheckCircle2 className="w-5 h-5 text-amber-500 flex-shrink-0" />
@@ -210,14 +210,14 @@ export default function AccidentesDecesosPage() {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">Decesos</h3>
                 <p className="text-slate-600 leading-relaxed mb-6">
-                  Protege a tu familia del mañana. Cubre todos los gastos del funeral 
-                  y deja un capital a quienes más quieres.
+                  Protege a tu familia del mañana. El servicio funerario, el capital y la asistencia dependen
+                  de la modalidad contratada.
                 </p>
                 <ul className="space-y-3">
                   {[
-                    "Capital hasta 50.000€",
-                    "Gastos de funeral incluidos",
-                    "Repatriación si es necesario",
+                    "Capital según modalidad",
+                    "Servicio funerario según modalidad",
+                    "Repatriación cuando esté incluida",
                     "Gestión completa del trámite"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-slate-700">
@@ -237,7 +237,7 @@ export default function AccidentesDecesosPage() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-100 text-amber-700 text-sm mb-6">
                 <AlertTriangle className="w-4 h-4" />
-                Protección inmediata
+                Activación según póliza
               </div>
               <h2 className="text-[40px] sm:text-[48px] font-bold text-slate-900 leading-tight mb-4">
                 Accidentes
@@ -249,10 +249,10 @@ export default function AccidentesDecesosPage() {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { icon: Activity, title: "Muerte", desc: "60.000€ capital" },
-                { icon: Shield, title: "Invalidez", desc: "Hasta 100%" },
-                { icon: Umbrella, title: "Gastos médicos", desc: "6.000€ cubierto" },
-                { icon: Clock, title: "Hospital", desc: "100€/día" },
+                { icon: Activity, title: "Fallecimiento", desc: "Capital según modalidad" },
+                { icon: Shield, title: "Invalidez", desc: "Según modalidad" },
+                { icon: Umbrella, title: "Gastos médicos", desc: "Según modalidad" },
+                { icon: Clock, title: "Hospital", desc: "Según modalidad" },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-xl p-6 border border-slate-100 text-center">
                   <div className="w-12 h-12 rounded-lg bg-amber-50 flex items-center justify-center mb-4 mx-auto">
@@ -284,9 +284,9 @@ export default function AccidentesDecesosPage() {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { icon: Users, title: "Capital", desc: "Hasta 50.000€" },
-                { icon: Heart, title: "Funeral", desc: "Gastos cubiertos" },
-                { icon: Umbrella, title: "Repatriación", desc: "Si es necesario" },
+                { icon: Users, title: "Capital", desc: "Según modalidad" },
+                { icon: Heart, title: "Funeral", desc: "Según modalidad" },
+                { icon: Umbrella, title: "Repatriación", desc: "Si está incluida" },
                 { icon: CheckCircle2, title: "Gestión", desc: "Trámite completo" },
               ].map((item, i) => (
                 <div key={i} className="bg-slate-50 rounded-xl p-6 border border-slate-100 text-center">
@@ -378,9 +378,9 @@ export default function AccidentesDecesosPage() {
             </h2>
             
             <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
-              Un WhatsApp y te orientamos, sin compromiso.
+              Un WhatsApp y te orientamos sobre las modalidades disponibles.
               <br />
-              Descubre el pack que mejor protege a ti y a tu familia.
+              Revisa el pack y sus condiciones para tu situación.
             </p>
             
             <a 
@@ -402,7 +402,7 @@ export default function AccidentesDecesosPage() {
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 text-sm shadow-sm">
                 <Shield className="w-4 h-4 text-amber-500" />
-                Sin permanencia
+                Condiciones según póliza
               </div>
             </div>
             

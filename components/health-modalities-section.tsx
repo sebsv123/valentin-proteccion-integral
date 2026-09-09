@@ -42,7 +42,7 @@ const modalities = [
     title: 'Seguro médico para vivir en España',
     copy: 'Seguros específicos para estudios o residencia en España, con cobertura y documentación adaptadas al procedimiento correspondiente.',
     action: 'Ir a seguros para extranjeros',
-    href: '/extranjeros',
+    href: '/seguros/salud-extranjeros',
     icon: Globe2,
   },
 ] as const;
@@ -96,7 +96,7 @@ export function HealthModalitiesSection() {
               <p className={styles.modalityEyebrow}>{eyebrow}</p>
               <h3>{title}</h3>
               <p className={styles.modalityCopy}>{copy}</p>
-              <Link href={en && href === '/extranjeros' ? '/en/foreigners' : href} className={styles.textAction}>{action}<ArrowRight aria-hidden="true" /></Link>
+              <Link href={en && href === '/seguros/salud-extranjeros' ? '/en/insurance/health/foreigners' : href} className={styles.textAction}>{action}<ArrowRight aria-hidden="true" /></Link>
             </article>
           ))}
         </div>

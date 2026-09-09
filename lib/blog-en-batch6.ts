@@ -64,36 +64,36 @@ export const blogEnglishBatch6: Record<string, EnglishContent> = {
     ],
   },
   'seguros-vida-hipoteca-boadilla-madrid': {
-    title: 'Mortgage-linked life insurance in Boadilla: how to save 40%',
-    excerpt: 'Do you have your life insurance with your bank in Boadilla? Find out why you may be overpaying and how to separate it legally to save thousands over the life of your mortgage.',
-    metaTitle: 'Save on Mortgage Life Insurance in Boadilla · Practical Guide 2026',
-    metaDescription: 'Paying too much for mortgage life insurance in Boadilla? Learn how to separate it from the bank and save up to 40% a year, with expert advice in Madrid.',
+    title: 'Mortgage-linked life insurance in Boadilla: what to review',
+    excerpt: 'A practical guide to reviewing the sum insured, benefits, renewal and conditions when life insurance is linked to a mortgage.',
+    metaTitle: 'Mortgage-linked life insurance in Boadilla · What to review',
+    metaDescription: 'What to review in mortgage-linked life insurance: sum insured, benefits, renewal and replacement conditions.',
     imageAlt: 'Home in Boadilla del Monte protected by independent life insurance',
     sections: [
       { heading: 'The banking trap of mortgage-linked life insurance in Boadilla del Monte', content: [
-        'For most residents of Boadilla del Monte, buying a home has been the largest financial transaction of their lives. During the mortgage process, many banks “suggest” or even “require” linked life insurance to secure the loan. Its purpose is understandable: if a borrower dies or becomes disabled, the mortgage is paid and the family owns the home without debt. What many owners in developments such as Las Lomas or Sector B do not realise is that arranging this cover through the bank is often far more expensive than buying it on Madrid’s open insurance market.',
-        'In our experience with insurance in Boadilla, bank policies can cost 30% to 50% more than an external policy with identical cover. This happens because the bank uses insurance as an additional-margin product while it has a strong position during the mortgage signing. In 2026, Spanish law is clear: customers have the right to choose their insurer, provided the policy includes a beneficiary clause in favour of the bank for the outstanding debt.',
-        'Separating life insurance from the bank in Boadilla is not only a legal right but also a major saving decision. Over a 20- or 25-year mortgage, changing the policy can save €10,000 or €15,000 for the family. That money could go towards the children’s education, partial repayments or better family health insurance. This article breaks down how to make the change legally, safely and simply from our Boadilla practice.',
+        'Mortgage-linked life insurance may cover death from any cause and, if selected, absolute permanent disability; in ASISA Vida Capital Decreciente these benefits and limits depend on the policy. Its purpose is to align the sum insured with the outstanding debt, but the mortgage contract and policy should be reviewed separately.',
+        'Do not assume that a bank policy or an alternative policy always has the same price, sum insured or scope. Before replacing cover, review the binding offer, beneficiary designation, loan discounts and the requirements the lender accepts in writing.',
+        'This guide helps organise those questions; it does not replace review of the mortgage documents, policy conditions or legal advice where needed.',
       ] },
       { heading: 'Why are bank policies so expensive and rigid?', content: [
-        'The main reason for the bank overcharge in Madrid is a lack of internal competition. The bank offers its “own” policy, or one from an affiliated insurer, without comparing it with the wider market. It may also apply level premiums or very broad age bands that do not reflect current longevity. Another serious issue is the financed single premium: the bank charges the entire life policy upfront and adds it to the mortgage, meaning you pay interest on your own insurance for decades.',
-        'Price is not the only problem; rigidity is another major drawback. A mortgage life policy bought outside the bank allows us to structure decreasing sums as the debt falls, or keep the capital level so that the family receives additional money after the mortgage is paid. The bank wants to cover “its” debt; we want to protect “your” family. In Boadilla, where living standards are high, keeping the family home and meeting school costs is rarely reflected in standard bank policies.',
-        'Bank after-sales service has also declined sharply in Madrid. During a disability claim, the bank may be conflicted and can slow down the payment process. A DGSFP-registered advisor in Boadilla actively defends your interests with the insurer, manages the claim, speeds up notarial paperwork and helps ensure that the protection you have paid for is delivered professionally.',
+        'Mortgage-linked policies may use level premiums, renewable premiums or a financed single premium, and each structure has different consequences. A financed single premium adds the cost to the loan, so review the total cost and conditions before arranging it.',
+        'Some plans allow a decreasing sum insured that follows the debt, while others keep the sum level. The difference must be checked in the policy conditions; one structure is not automatically right for every family.',
+        'VPI can help organise the benefits, documents and replacement process, but acceptance of a new policy and claim handling depend on the insurer and the applicable contract.',
       ] },
       { heading: 'Legal steps to separate your mortgage life insurance today', content: [
         'The best time to change the policy is one month before its annual renewal date. Under the Insurance Contract Act, you must notify the current provider of your intention not to renew at least 30 days in advance. Do this in writing, preferably through a method that records delivery, such as a certified notice or a signed submission at the bank branch in Madrid or Boadilla.',
         'Once cancellation has been notified, arrange the new policy. The bank’s essential requirement will usually be a rights-assignment clause in its favour. This does not make the bank the owner of the policy; it gives the bank priority over the capital if you die, strictly up to the remaining debt. If the sum insured is higher, the balance goes to your legal heirs. This detail is crucial for protecting the family twice over.',
-        'What happens to the mortgage interest spread? Many banks reduce the rate by 0.10% or 0.20% if you keep their life insurance. We calculate the comparison for you. In most Boadilla cases, the saving on the annual premium more than offsets the small increase in the mortgage payment after losing the discount, leaving a net saving of hundreds of euros a year and stronger medical and legal protection.',
+        'What happens to the mortgage interest spread? Some loans apply discounts linked to particular products. Before replacing the policy, calculate the effect of keeping or losing that discount together with the new premium; the result depends on the loan and policy conditions.',
       ] },
       { heading: 'Cover analysis: beyond death', content: [
-        'In a residential area such as Boadilla, mortgage life insurance should include Absolute Permanent Disability. This cover cancels the mortgage if illness or an accident prevents the policyholder from doing any type of work. In Madrid’s demanding working environment, disability is an important financial risk for a Boadilla family if it is not properly covered.',
+        'Mortgage life insurance may include Absolute Permanent Disability as an additional benefit. In ASISA Vida Capital Decreciente it is optional, so its inclusion, definition and limits must be confirmed in the policy.',
         'We also assess Total Permanent Disability, which covers inability to continue in the usual occupation. A surgeon or pilot in Boadilla who can no longer work because of eyesight or hand control but could do a lower-paid job needs cover that helps bridge the income difference and settle the household debt. Banks rarely offer these more precise benefits, but they can make the difference between a policy that merely meets a requirement and one that protects a family’s future.',
         'Finally, we review double or triple capital for a road accident. Many clients travel daily on the M-50 or A-6 to work in Madrid. A policy that doubles the sum insured if death occurs in a traffic accident can add meaningful peace of mind for a modest cost. We design the protection your mortgage and family need, rather than selling a generic policy.',
       ] },
       { heading: 'Conclusion: take back control of your finances in Boadilla', content: [
         'A mortgage is a long-term commitment, but choosing your insurance does not have to be. In Boadilla del Monte, reviewing a bank-linked life policy is one of the quickest ways to create immediate liquidity. Do not let inertia keep you paying an unjustified premium for cover that may be less suitable than the alternatives.',
         'Our Boadilla practice specialises in separating bank-linked cover professionally, politely and technically. We are not looking for conflict with your bank; we are looking for your benefit. Better protection for less money is possible. Life insurance should bring comfort, not an excessive financial burden.',
-        'Send us a copy of your latest bank receipt and your current policy conditions. We will provide a free, confidential comparison of savings and cover improvements. We are ready to help you move towards fair, intelligent protection in Madrid and Boadilla.',
+        'Send us a copy of your latest bank receipt and current policy conditions. We can help organise the sum insured, benefits, renewal and replacement requirements so you can assess the decision with the documents in front of you.',
       ] },
     ],
     tips: [
@@ -103,7 +103,7 @@ export const blogEnglishBatch6: Record<string, EnglishContent> = {
       'If you smoke or your habits have changed, update your life insurance to reflect your current risk in Madrid.',
     ],
     faqs: [
-      { question: 'Can the bank increase my mortgage payment if I cancel its policy in Boadilla?', answer: 'You may lose a linked-product discount, often 0.1%–0.2% of the interest rate. However, the saving on the insurance premium will usually outweigh that cost.' },
+      { question: 'Can the bank increase my mortgage payment if I cancel its policy in Boadilla?', answer: 'You may lose a discount linked to the insurance, but the effect depends on the mortgage terms. Review the contract and calculate the total cost before changing.' },
       { question: 'How much should I insure for a mortgage?', answer: 'At a minimum, the outstanding mortgage balance. In Madrid, we also recommend considering additional capital for funeral costs and the family’s initial financial stability.' },
     ],
   },

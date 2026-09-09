@@ -12,6 +12,7 @@ import GuaranteeBadge from "@/components/GuaranteeBadge";
 import GarantiasSection from "@/components/GarantiasSection";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import { Sparkles, CheckCircle2, Clock, Shield, Heart, Users, Umbrella, FileCheck, Award, TrendingUp, Phone, HandHeart } from "lucide-react";
+import { AnswerFirstSection } from "@/components/answer-first-section";
 
 export const metadata: Metadata = {
   title: "Seguro de Decesos en Madrid — Gestión Completa Incluida | VPI",
@@ -213,6 +214,14 @@ export default function DecesosPage() {
             </div>
           </div>
         </section>
+
+        <AnswerFirstSection
+          eyebrow="Respuesta rápida"
+          title="Qué cubre un seguro de decesos"
+          answer="Puede cubrir el servicio funerario y la gestión asociada, pero el capital, el traslado, la repatriación, la asistencia y las carencias dependen del producto y de la póliza contratada."
+          facts={['El capital de sepelio es un límite de la prestación, no una promesa universal de “todo incluido”.', 'Traslado y asistencia en viaje pueden tener carencias y garantías específicas.', 'La edad, residencia, salud y capital influyen en la aceptación y el precio.', 'AFP y Prima Única son productos distintos y deben revisarse por separado.']}
+          links={[{ label: 'Ver accidentes y decesos', href: '/seguros/accidentes-decesos' }, { label: 'Ver opciones para mayores', href: '/para/seniors' }]}
+        />
 
         {/* MENSAJE PRINCIPAL — Qué resuelve */}
         <section className="py-20 bg-white">

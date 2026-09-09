@@ -117,7 +117,7 @@ const professionalBenefits = [
 const faqItems = [
   {
     q: '¿La póliza sirve para los trámites de estudios o residencia en España?',
-    a: 'Sí. La modalidad está diseñada para los trámites habituales de estudios, visado y residencia en España, con cobertura médica completa, sin copagos y sin periodos de carencia. También emitimos la documentación necesaria para incorporar al expediente.',
+    a: 'La opción aseguradora para estos trámites puede incluir cobertura médica completa, sin copagos y sin periodos de carencia, según el producto y las condiciones que figuren en la póliza o certificado. También emitimos la documentación necesaria para incorporar al expediente.',
   },
   {
     q: '¿Puedo contratarla solo con mi pasaporte?',
@@ -129,7 +129,7 @@ const faqItems = [
   },
   {
     q: '¿La póliza tiene copagos o periodos de carencia?',
-    a: 'No. La modalidad que utilizamos para estos trámites no tiene copagos ni periodos de carencia.',
+    a: 'Depende del producto. La opción que utilizamos para estos trámites puede contratarse sin copagos ni periodos de carencia cuando esas condiciones constan en la póliza o certificado.',
   },
   {
     q: '¿Puedo contratar el seguro antes de viajar a España?',

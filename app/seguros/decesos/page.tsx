@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Seguro de Decesos en Madrid — Gestión Completa Incluida",
     description:
-      "Cuando ocurre lo peor, tu familia solo tiene que llamarnos. Sin carencias ni sorpresas. Consulta gratuita.",
+      "Cuando ocurre lo peor, tu familia solo tiene que llamarnos. Consulta carencias y condiciones según la modalidad. Consulta gratuita.",
   },
   alternates: {
     canonical: "https://valentinproteccionintegral.com/seguros/decesos",
@@ -77,7 +77,7 @@ const serviceSchema = {
   "name": "Seguro de Decesos Madrid - Valentín Protección Integral",
   "provider": localBusinessSchema,
   "areaServed": ["Madrid", "Boadilla del Monte", "Majadahonda", "Pozuelo de Alarcón", "Las Rozas"],
-  "description": "Seguro de decesos que cubre todos los gastos de sepelio. Tu familia solo tiene que llamar."
+  "description": "Seguro de decesos con servicio funerario y gestión según el capital y las coberturas de la póliza."
 };
 
 const faqSchema = {
@@ -89,7 +89,7 @@ const faqSchema = {
       "name": "¿Qué es exactamente un seguro de decesos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Es un seguro que cubre todos los gastos del funeral y la gestión administrativa cuando fallece una persona. Tu familia solo tiene que llamar a la aseguradora y ellos se encargan de todo."
+        "text": "Es un seguro que puede cubrir el servicio funerario y la gestión administrativa cuando fallece una persona, según el capital y las coberturas de la póliza. Tu familia debe contactar con la aseguradora para activar el servicio."
       }
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       "name": "¿Cuánto cuesta?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Depende de la edad. Una persona de 50 años paga unos 15-25€/mes. Cuanto más joven se contrate, más barato sale."
+        "text": "El precio depende de la edad, el capital, la modalidad y las coberturas contratadas. Te facilitamos un presupuesto sujeto a las condiciones de la aseguradora."
       }
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       "name": "¿Hay que hacerse médicos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, no se requiere examen médico para contratar. Solo tienes que cumplimentar un cuestionario de salud sencillo."
+        "text": "La contratación y cualquier cuestionario o requisito de salud dependen del producto y de la aceptación de la aseguradora. Te explicamos las condiciones antes de contratar."
       }
     },
     {
@@ -113,7 +113,7 @@ const faqSchema = {
       "name": "¿Y si fallezco fuera de Madrid?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Incluye repatriación nacional e internacional. Te traen a España desde cualquier parte del mundo sin coste adicional para la familia."
+        "text": "El traslado o la repatriación dependen de la modalidad y de las garantías contratadas; revisamos sus límites y condiciones antes de contratar."
       }
     },
     {
@@ -121,7 +121,7 @@ const faqSchema = {
       "name": "¿Puedo contratarlo para mis padres?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, puedes contratarlo para cualquier familiar. Solo necesitas su consentimiento y datos personales. Es una forma de dejar todo resuelto."
+        "text": "Puede contratarse para familiares cuando cumplen las condiciones del producto y de aceptación de la aseguradora. Revisamos la edad, residencia y capital antes de confirmar la solicitud."
       }
     }
   ]
@@ -221,7 +221,7 @@ export default function DecesosPage() {
               En un momento difícil, tu familia merece tranquilidad
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              El seguro de decesos cubre todos los gastos del funeral y la repatriación 
+              El seguro de decesos puede cubrir el servicio funerario y la repatriación según la póliza
               si es necesario. Tu familia no tendrá que preocuparse por el dinero 
               ni por los trámites en el peor momento. Si buscas cobertura específica para personas mayores, consulta nuestra sección de{' '}
               <Link href="/para/seniors" className="text-indigo-600 font-semibold hover:text-indigo-700 underline">
@@ -245,7 +245,7 @@ export default function DecesosPage() {
                 { 
                   icon: Umbrella, 
                   title: "Gastos cubiertos", 
-                  desc: "Sepelio, traslado, velatorio. Todo pagado. Nada sale del bolsillo de tu familia."
+                  desc: "Sepelio, traslado y velatorio según el capital y las coberturas contratadas."
                 },
                 { 
                   icon: HandHeart, 
@@ -289,9 +289,9 @@ export default function DecesosPage() {
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {[
-                { icon: Heart, title: "Gastos de sepelio", desc: "Todo incluido" },
-                { icon: Umbrella, title: "Repatriación", desc: "Nacional e internacional" },
-                { icon: Users, title: "Traslado funerario", desc: "Dentro de España" },
+                { icon: Heart, title: "Gastos de sepelio", desc: "Según capital contratado" },
+                { icon: Umbrella, title: "Repatriación", desc: "Según modalidad" },
+                { icon: Users, title: "Traslado funerario", desc: "Según cobertura" },
                 { icon: FileCheck, title: "Gestoría", desc: "Trámites cubiertos" },
                 { icon: Shield, title: "Protección familiar", desc: "Cobertura completa" },
                 { icon: Clock, title: "Servicio 24h", desc: "Siempre disponible" },
@@ -474,23 +474,23 @@ export default function DecesosPage() {
           items={[
             { 
               q: "¿Qué es exactamente un seguro de decesos?", 
-              a: "Es un seguro que cubre todos los gastos del funeral y la gestión administrativa cuando fallece una persona. Tu familia solo tiene que llamar a la aseguradora y ellos se encargan de todo." 
+              a: "Es un seguro que puede cubrir el servicio funerario y la gestión administrativa cuando fallece una persona, según el capital y las coberturas de la póliza. Tu familia debe contactar con la aseguradora para activar el servicio."
             },
             { 
               q: "¿Cuánto cuesta?", 
-              a: "Depende de la edad. Una persona de 50 años paga unos 15-25€/mes. Cuanto más joven se contrate, más barato sale." 
+              a: "El precio depende de la edad, el capital, la modalidad y las coberturas contratadas. Te facilitamos un presupuesto sujeto a las condiciones de la aseguradora."
             },
             { 
               q: "¿Hay que hacerse médicos?", 
-              a: "No, no se requiere examen médico para contratar. Solo tienes que cumplimentar un cuestionario de salud sencillo." 
+              a: "La contratación y cualquier cuestionario o requisito de salud dependen del producto y de la aceptación de la aseguradora. Te explicamos las condiciones antes de contratar."
             },
             { 
               q: "¿Y si fallezco fuera de Madrid?", 
-              a: "Incluye repatriación nacional e internacional. Te traen a España desde cualquier parte del mundo sin coste adicional para la familia." 
+              a: "El traslado o la repatriación dependen de la modalidad y de las garantías contratadas; revisamos sus límites y condiciones antes de contratar."
             },
             { 
               q: "¿Puedo contratarlo para mis padres?", 
-              a: "Sí, puedes contratarlo para cualquier familiar. Solo necesitas su consentimiento y datos personales. Es una forma de dejar todo resuelto." 
+              a: "Puede contratarse para familiares cuando cumplen las condiciones del producto y de aceptación de la aseguradora. Revisamos la edad, residencia y capital antes de confirmar la solicitud."
             },
           ]}
         />

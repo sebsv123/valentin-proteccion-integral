@@ -175,7 +175,7 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
 
             <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
               {[
-                { icon: Stethoscope, title: 'Salud privada', desc: 'Sin copagos, acceso inmediato.' },
+                { icon: Stethoscope, title: 'Salud privada', desc: 'Coberturas y tiempos según modalidad.' },
                 { icon: Home, title: 'Vida familiar', desc: 'Protege tu patrimonio.' },
                 { icon: Dog, title: 'Mascotas', desc: 'La ley obliga. Te lo gestionamos.' },
                 { icon: Heart, title: 'Dental', desc: 'Revisiones sin espera.' },

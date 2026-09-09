@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getBlogSitemapEntries, getPublishedEnglishPosts } from '@/lib/blog-catalog';
+import { subpages } from '@/lib/products';
+import { localizedSubpagePath } from '@/lib/product-locales';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://valentinproteccionintegral.com';
@@ -54,6 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/en/insurance/health-insurance/senior`, lastModified: now, changeFrequency: 'weekly', priority: 0.8, alternates: { languages: { es: `${base}/seguros/salud/senior`, en: `${base}/en/insurance/health-insurance/senior`, 'x-default': `${base}/seguros/salud/senior` } } },
     { url: `${base}/en/insurance/travel-insurance`, lastModified: now, changeFrequency: 'weekly', priority: 0.85, alternates: { languages: { es: `${base}/seguros/viaje`, en: `${base}/en/insurance/travel-insurance`, 'x-default': `${base}/seguros/viaje` } } },
     { url: `${base}/en/insurance/travel-insurance/students`, lastModified: now, changeFrequency: 'weekly', priority: 0.8, alternates: { languages: { es: `${base}/seguros/viaje/estudios`, en: `${base}/en/insurance/travel-insurance/students`, 'x-default': `${base}/seguros/viaje/estudios` } } },
+    // SUBPÁGINAS DE PRODUCTO — inventario canónico de lib/products.ts
+    ...subpages.filter((subpage) => !(subpage.parent === 'accidentes' && subpage.slug === 'pyme-autonomos')).map((subpage) => {
+      const es = `${base}/seguros/${subpage.parent}/${subpage.slug}`;
+      const en = `${base}${localizedSubpagePath(subpage.parent, subpage.slug, 'en')}`;
+      return { url: es, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8, alternates: { languages: { es, en, 'x-default': es } } };
+    }),
     { url: `${base}/extranjeros/alquileres`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${base}/empresas/salud`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${base}/empresas/ciberseguridad`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
@@ -77,6 +85,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/zonas/majadahonda`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/zonas/pozuelo-de-alarcon`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/zonas/madrid`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${base}/zonas/las-rozas`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
 
     // CONFIANZA / AUTORIDAD
     { url: `${base}/como-te-ayudamos`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },

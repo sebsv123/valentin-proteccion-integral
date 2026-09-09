@@ -21,15 +21,15 @@ export async function generateMetadata({ params }: { params: Promise<{ zona: str
   const { zona } = await params;
   const zonaName = capitalizeZona(zona);
   return {
-    title: `Seguros en ${zonaName} â€” Agente Registrado DGSFP | Valentín Protección Integral`,
+    title: `Seguros en ${zonaName} — Agente Registrado DGSFP | Valentín Protección Integral`,
     description: `Asesor de seguros en ${zonaName}. Salud privada, vida, dental y mascotas. Asesoramiento con registro en la DGSFP. Consulta gratis.`,
     keywords: [`seguros ${zonaName}`, `agente seguros ${zonaName}`, `seguro salud ${zonaName}`, `asesor seguros ${zonaName}`],
     alternates: { canonical: `https://valentinproteccionintegral.com/zonas/${zona}` },
     openGraph: {
-      title: `Seguros en ${zonaName} â€” Agente Registrado DGSFP | Valentín Protección Integral`,
+      title: `Seguros en ${zonaName} — Agente Registrado DGSFP | Valentín Protección Integral`,
       description: `Asesor de seguros en ${zonaName}. Salud privada, vida, dental y mascotas. Asesoramiento con registro en la DGSFP. Consulta gratis.`,
       url: `https://valentinproteccionintegral.com/zonas/${zona}`,
-      siteName: 'ValentÃ­n ProtecciÃ³n Integral',
+      siteName: 'Valentín Protección Integral',
       locale: 'es_ES',
       type: 'website',
     },
@@ -41,13 +41,13 @@ export const dynamic = 'force-static';
 export default async function ZonaPage({ params }: { params: Promise<{ zona: string }> }) {
   const { zona } = await params;
   const zonaName = capitalizeZona(zona);
-  const wCotiza = buildWhatsAppHref(`Hola, soy de ${zonaName} y necesito informaciÃ³n sobre seguros.`);
+  const wCotiza = buildWhatsAppHref(`Hola, soy de ${zonaName} y necesito información sobre seguros.`);
 
-  // Schema LocalBusiness dinÃ¡mico
+  // Schema LocalBusiness dinámico
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: `ValentÃ­n ProtecciÃ³n Integral - Seguros ${zonaName}`,
+    name: `Valentín Protección Integral - Seguros ${zonaName}`,
     telephone: '+34603448765',
     address: {
       '@type': 'PostalAddress',
@@ -64,7 +64,7 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
       <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Header />
       <main className='min-h-screen bg-white'>
-        {/* HERO UBER â€” Mapa local style */}
+        {/* HERO UBER — Mapa local style */}
         <section className='py-16 lg:py-24'>
           <div className='container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-6xl'>
             <div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -75,7 +75,7 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
                   <GuaranteeBadge type='zonas' />
                 </div>
 
-                {/* H1 Uber style â€” 52px bold */}
+                {/* H1 Uber style — 52px bold */}
                 <h1 className='text-[40px] sm:text-[48px] lg:text-[52px] font-bold text-black leading-[1.23] mb-4'>
                   Seguros en {zonaName}:
                   <br />
@@ -87,7 +87,7 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
                   Te asesoramos para encontrar la cobertura más adecuada para ti en {zonaName}. Te explicamos las condiciones de cada póliza, sin letras pequeñas.
                 </p>
 
-                {/* CTAs Uber â€” pill 999px */}
+                {/* CTAs Uber — pill 999px */}
                 <div className='flex flex-wrap gap-4 mb-8'>
                   <WhatsAppButton
                     href={wCotiza}
@@ -142,7 +142,7 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
           </div>
         </section>
 
-        {/* LOCAL PROOF â€” Uber cards dark (genÃ©rico) */}
+        {/* LOCAL PROOF — Uber cards dark (genérico) */}
         <section className='py-16 bg-black text-white'>
           <div className='container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-5xl'>
             <p className='text-sm uppercase tracking-wider text-[#afafaf] mb-4'>{zonaName.toUpperCase()}, MADRID</p>
@@ -168,7 +168,7 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
           </div>
         </section>
 
-        {/* POPULARES â€” Uber grid (genÃ©rico) */}
+        {/* POPULARES — Uber grid (genérico) */}
         <section className='py-16'>
           <div className='container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-5xl'>
             <h2 className='text-[36px] font-bold text-black leading-[1.22] text-center mb-12'>Populares en {zonaName}</h2>
@@ -192,14 +192,14 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
           </div>
         </section>
 
-        {/* EQUIPO LOCAL (genÃ©rico) */}
+        {/* EQUIPO LOCAL (genérico) */}
         <section className='py-16 bg-[#efefef]'>
           <div className='container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-5xl'>
             <div className='grid lg:grid-cols-2 gap-12 items-center'>
               <div className='relative rounded-xl overflow-hidden shadow-[rgba(0,0,0,0.12)_0px_4px_16px_0px]'>
                 <Image
                   src='/images/rosa_y_sebastian.jpeg'
-                  alt={`Rosa ValentÃ­n Â· Asesora en ${zonaName}`}
+                  alt={`Rosa Valentín · Asesora en ${zonaName}`}
                   width={500}
                   height={500}
                   className='w-full h-auto object-cover object-[center_20%]'
@@ -212,9 +212,9 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
                   <MapPin className='w-4 h-4' />
                   Atendemos {zonaName}
                 </div>
-                <h2 className='text-[36px] font-bold text-black leading-[1.22] mb-4'>Rosa ValentÃ­n</h2>
+                <h2 className='text-[36px] font-bold text-black leading-[1.22] mb-4'>Rosa Valentín</h2>
                 <p className='text-lg text-[#4b4b4b] mb-6'>
-                  Tu agente de seguros en {zonaName}. Conozco las necesidades de las familias de la zona porque las asesoro cada dÃ­a.
+                  Tu agente de seguros en {zonaName}. Conozco las necesidades de las familias de la zona porque las asesoro cada día.
                 </p>
                 <div className='space-y-3 mb-8'>
                   <div className='flex items-center gap-3 text-[#4b4b4b]'>
@@ -235,7 +235,7 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
           </div>
         </section>
 
-        {/* PROCESO LOCAL (genÃ©rico) */}
+        {/* PROCESO LOCAL (genérico) */}
         <section className='py-16'>
           <div className='container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-5xl'>
             <h2 className='text-[36px] font-bold text-black leading-[1.22] text-center mb-12'>Proceso en {zonaName}</h2>
@@ -244,7 +244,7 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
               {[
                 { num: '1', title: 'WhatsApp', desc: `Escribe "${zonaName}" y tu necesidad. Te respondemos en nuestro horario de atención.` },
                 { num: '2', title: 'Propuesta', desc: 'Te asesoramos y te recomendamos la cobertura más adecuada para tu caso.' },
-                { num: '3', title: 'ContrataciÃ³n', desc: 'Online o presencial en nuestra oficina de Boadilla del Monte.' },
+                { num: '3', title: 'Contratación', desc: 'Online o presencial en nuestra oficina de Boadilla del Monte.' },
               ].map((step, i) => (
                 <div key={i} className='text-center'>
                   <div className='w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4'>{step.num}</div>
@@ -295,17 +295,17 @@ export default async function ZonaPage({ params }: { params: Promise<{ zona: str
                   allowFullScreen
                   loading='lazy'
                   referrerPolicy='no-referrer-when-downgrade'
-                  title={`UbicaciÃ³n ${zonaName}`}
+                  title={`Ubicación ${zonaName}`}
                 />
               </div>
             </div>
           </div>
         </section>
 
-        {/* RESEÃ‘AS GOOGLE */}
+        {/* RESEÑAS GOOGLE */}
         <GoogleReviewsWidget title={`Opiniones de clientes en ${zonaName}`} />
 
-        {/* GARANTÃAS PREMIUM */}
+        {/* GARANTÍAS PREMIUM */}
         <GarantiasSection brandColor='#10b981' />
       </main>
       <Footer />

@@ -62,6 +62,10 @@ const nextConfig: NextConfig = {
       { source: '/seguros/proteccion-juridica', destination: '/seguros', permanent: true },
       { source: '/seguros/electrodomesticos', destination: '/seguros', permanent: true },
       { source: '/seguros/accidentes/pyme-autonomos', destination: '/seguros/accidentes-decesos', permanent: true },
+      // Consolidación de la página de salud para extranjeros en su destino especializado
+      { source: '/seguros/salud/extranjeros', destination: '/seguros/salud-extranjeros', permanent: true },
+      // Consolidación de salud senior en la jerarquía de subpáginas de salud
+      { source: '/seguros/salud-senior', destination: '/seguros/salud/senior', permanent: true },
       // Consolidación ruta autónomos: /para/autonomos → /autonomos (canónica)
       {
         source: '/para/autonomos',

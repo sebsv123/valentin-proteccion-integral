@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: subpage.metaTitle,
     description: subpage.metaDescription,
     alternates: {
-      canonical: `${site.domain}/seguros/${subpage.parent}/${subpage.slug}`,
-      languages: { es: `${site.domain}/seguros/${subpage.parent}/${subpage.slug}`, en: `${site.domain}${localizedSubpagePath(subpage.parent, subpage.slug, 'en')}`, 'x-default': `${site.domain}/seguros/${subpage.parent}/${subpage.slug}` },
+      canonical: `${site.domain}${localizedSubpagePath(subpage.parent, subpage.slug, 'es')}`,
+      languages: { es: `${site.domain}${localizedSubpagePath(subpage.parent, subpage.slug, 'es')}`, en: `${site.domain}${localizedSubpagePath(subpage.parent, subpage.slug, 'en')}`, 'x-default': `${site.domain}${localizedSubpagePath(subpage.parent, subpage.slug, 'es')}` },
     },
     openGraph: {
       title: subpage.metaTitle,

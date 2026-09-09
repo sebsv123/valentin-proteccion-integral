@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/seguros`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/seguros/salud-individual`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/seguros/salud-dental`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/seguros/salud-senior`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/seguros/dental`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/seguros/mascotas`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/seguros/viaje`, lastModified: now, changeFrequency: 'weekly', priority: 0.85 },
@@ -57,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/en/insurance/travel-insurance`, lastModified: now, changeFrequency: 'weekly', priority: 0.85, alternates: { languages: { es: `${base}/seguros/viaje`, en: `${base}/en/insurance/travel-insurance`, 'x-default': `${base}/seguros/viaje` } } },
     { url: `${base}/en/insurance/travel-insurance/students`, lastModified: now, changeFrequency: 'weekly', priority: 0.8, alternates: { languages: { es: `${base}/seguros/viaje/estudios`, en: `${base}/en/insurance/travel-insurance/students`, 'x-default': `${base}/seguros/viaje/estudios` } } },
     // SUBPÁGINAS DE PRODUCTO — inventario canónico de lib/products.ts
-    ...subpages.filter((subpage) => !(subpage.parent === 'accidentes' && subpage.slug === 'pyme-autonomos')).map((subpage) => {
+    ...subpages.filter((subpage) => !((subpage.parent === 'accidentes' && subpage.slug === 'pyme-autonomos') || (subpage.parent === 'salud' && subpage.slug === 'extranjeros'))).map((subpage) => {
       const es = `${base}/seguros/${subpage.parent}/${subpage.slug}`;
       const en = `${base}${localizedSubpagePath(subpage.parent, subpage.slug, 'en')}`;
       return { url: es, lastModified: now, changeFrequency: 'weekly' as const, priority: 0.8, alternates: { languages: { es, en, 'x-default': es } } };

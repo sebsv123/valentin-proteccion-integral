@@ -60,10 +60,10 @@ const situationProfiles = [
 ] as const;
 
 const reviewItems = [
-  'Modalidad sin copagos cuando el trámite lo exige.',
-  'Certificado o documentación comercial disponible.',
+  'Modalidades sin copagos cuando el producto y el trámite lo requieren.',
+  'Certificado o documentación del producto tras la emisión.',
   'Cobertura sanitaria privada y ámbito territorial.',
-  'Plazos de contratación compatibles con la cita.',
+  'Fechas y emisión revisadas según la aseguradora.',
 ];
 
 const processSteps = [
@@ -118,7 +118,7 @@ const professionalBenefits = [
 const faqItems = [
   {
     q: '¿La póliza sirve para los trámites de estudios o residencia en España?',
-    a: 'La opción aseguradora para estos trámites puede incluir cobertura médica completa, sin copagos y sin periodos de carencia, según el producto y las condiciones que figuren en la póliza o certificado. También emitimos la documentación necesaria para incorporar al expediente.',
+    a: 'Depende del producto. Algunas modalidades pueden incluir cobertura médica sin copagos ni periodos de carencia cuando esas condiciones constan en la póliza o certificado. La documentación se incorpora al expediente una vez emitida por la aseguradora.',
   },
   {
     q: '¿Puedo contratarla solo con mi pasaporte?',

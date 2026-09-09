@@ -5,6 +5,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { WhatsAppIcon } from '@/components/ui/whatsapp-icon';
+import { AnswerFirstSection } from '@/components/answer-first-section';
 import { buildWhatsAppHref } from '@/lib/products';
 import { IndiaRoadmap } from './IndiaRoadmap';
 import { IndiaHandoff } from './IndiaHandoff';
@@ -159,6 +160,14 @@ export function IndiaPageView({ content: c, locale }: { content: IndiaContent; l
         </section>
 
         <IndiaHandoff content={c.handoff} />
+
+        <AnswerFirstSection
+          eyebrow={locale === 'en' ? 'Insurance for Spain' : 'Seguro para España'}
+          title={locale === 'en' ? 'If you are preparing a student move to Spain' : 'Si estás preparando tu llegada como estudiante a España'}
+          answer={locale === 'en' ? 'VPI can help you review the insurance side of the process. The canonical foreigners health page explains the difference between student and residence plans, including product-specific conditions.' : 'VPI puede ayudarte a revisar la parte aseguradora del proceso. La página canónica de salud para extranjeros explica la diferencia entre las modalidades para estudiantes y residencia, con sus condiciones específicas.'}
+          facts={locale === 'en' ? ['Insurance conditions depend on the named product and policy.', 'The insurer issues the certificate for the application.', 'The administration or consulate makes the final decision.'] : ['Las condiciones dependen del producto y de la póliza concreta.', 'La aseguradora emite el certificado para el expediente.', 'La administración o el consulado toma la decisión final.']}
+          links={[{ label: locale === 'en' ? 'Review health insurance for foreigners' : 'Ver el seguro de salud para extranjeros', href: locale === 'en' ? '/en/insurance/health/foreigners' : '/seguros/salud-extranjeros' }]}
+        />
 
         <section className={styles.culturalSection} aria-labelledby="cultural-title">
           <div className={styles.culturalImage}>

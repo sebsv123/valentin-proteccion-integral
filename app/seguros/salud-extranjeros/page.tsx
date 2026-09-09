@@ -8,6 +8,7 @@ import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 import { healthForeignersContent } from '@/app/seguros/health-foreigners-content';
 import { AnswerFirstSection } from '@/components/answer-first-section';
+import { ForeignersProductComparison } from '@/components/foreigners-product-comparison';
 
 // Dynamic imports for non-critical components (reduce initial JS bundle)
 const StickyWhatsApp = dynamicImport(() => import("@/components/sticky-whatsapp").then(m => m.StickyWhatsApp));
@@ -277,6 +278,8 @@ export function SaludExtranjerosPageView({ locale = 'es' }: { locale?: 'es' | 'e
           answer={en ? 'ASISA Health Students and ASISA Health Residents are described in the 2026 product manual as no-copayment, no-waiting-period products for different immigration situations. ASISA Health Residents Premium is intended for people who already have residence or a visa: it has no copayments but does have waiting periods.' : 'El manual de producto 2026 describe ASISA Health Students y ASISA Health Residents como productos sin copagos ni carencias para situaciones migratorias distintas. ASISA Health Residents Premium está pensado para personas que ya tienen residencia o visado: no tiene copagos, pero sí periodos de carencia.'}
           facts={en ? ['Students: student visa, 2 months to 1 year, non-renewable initial product.', 'Residents: residence/NIE/long-stay visa, one year, renewal conditions apply.', 'Health Premium: visa/residence, 2 months to 1 year, non-renewable.', 'Certificate, refund, travel assistance and repatriation depend on the named product and policy.'] : ['Students: visado de estudiante, de 2 meses a 1 año y producto inicial no renovable.', 'Residents: residencia/NIE/visado de larga estancia, un año y renovación condicionada.', 'Health Premium: visado/residencia, de 2 meses a 1 año y no renovable.', 'Certificado, devolución, asistencia y repatriación dependen del producto y la póliza.']}
         />
+
+        <ForeignersProductComparison locale={locale} />
 
         {/* SECCIÓN PERFILES — ¿Para quién es este seguro? */}
         <section className="py-16 bg-white border-b border-slate-100">

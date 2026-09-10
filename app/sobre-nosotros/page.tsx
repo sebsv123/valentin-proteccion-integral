@@ -158,8 +158,8 @@ export default function SobreNosotrosPage() {
                 {/* BLOQUE SEBASTIÁN */}
                 <div className="mt-10 pt-8 border-t border-[var(--border)]">
                   <div>
-                      <p className="kicker font-bold text-[var(--blue)]">Sebastián Valentín</p>
-                      <p className="text-sm text-[var(--muted)] mb-4">Cofundador de VPI · Agente exclusivo de seguros de ASISA</p>
+                      <p className="kicker font-bold text-[var(--blue)]">Sebastián Sifontes Valentín</p>
+                      <p className="text-sm text-[var(--muted)] mb-4">Cofundador de Valentín Protección Integral · Agente exclusivo de seguros de ASISA · DGSFP: C046172295271S</p>
                       <h3 className="font-heading text-2xl font-bold text-[var(--blue-deep)] mb-4">
                         El rigor técnico al servicio de tu tranquilidad
                       </h3>

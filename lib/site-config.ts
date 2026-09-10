@@ -6,9 +6,8 @@
  * - VPI es una MARCA COMERCIAL, no una compañía aseguradora.
  * - Rosa y Sebastián son cofundadores al mismo nivel.
  * - La responsable legal/profesional publicada del sitio es Rosa Isabel Valentín González.
- * - Datos de Rosa (NIF y clave DGSFP) verificados: no mezclar con los de
- *   ningún otro miembro del equipo.
- * - El código DGSFP personal de Sebastián NO debe publicarse en ninguna parte.
+ * - Los códigos DGSFP personales verificados se mantienen en cada cofundador;
+ *   no mezclarlos entre personas ni atribuirlos a la marca.
  * - ASISA / ASISA VIDA y cualquier aseguradora son ENTIDADES TERCERAS.
  *
  * Los componentes deben leer de aquí en lugar de escribir estos datos a mano.
@@ -29,12 +28,14 @@ const coFounders = [
     displayName: 'Rosa Valentín',
     role: 'Cofundadora de VPI',
     insurerRelationship: 'Agente exclusiva de seguros de SegurCaixa Adeslas',
+    dgsfpCode: 'C012479234434D',
   },
   {
     fullName: 'Sebastián Sifontes Valentín',
     displayName: 'Sebastián Valentín',
     role: 'Cofundador de VPI',
     insurerRelationship: 'Agente exclusivo de seguros de ASISA',
+    dgsfpCode: 'C046172295271S',
   },
 ] as const;
 
@@ -59,7 +60,7 @@ export const siteConfig = {
   responsiblePerson: legalOwner,
 
   /** Relaciones profesionales individuales; no atribuirlas a la marca. */
-  professionalRelationships: coFounders.map(({ fullName, insurerRelationship }) => ({ fullName, insurerRelationship })),
+  professionalRelationships: coFounders.map(({ fullName, insurerRelationship, dgsfpCode }) => ({ fullName, insurerRelationship, dgsfpCode })),
 
   contact: {
     phone: '+34 603 448 765',

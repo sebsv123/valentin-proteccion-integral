@@ -1,3 +1,5 @@
+import { siteConfig } from '@/lib/site-config';
+
 const brandId = 'https://valentinproteccionintegral.com/#organization';
 
 export default function SchemaPersons({ locale = 'es' }: { locale?: string }) {
@@ -28,6 +30,7 @@ export default function SchemaPersons({ locale = 'es' }: { locale?: string }) {
         image: 'https://valentinproteccionintegral.com/og-image.webp',
         telephone: '+34 603 448 765',
         email: 'contacto@valentinproteccionintegral.com',
+        identifier: { '@type': 'PropertyValue', propertyID: 'DGSFP', value: siteConfig.coFounders[0].dgsfpCode },
         affiliation: { '@id': brandId },
         sameAs: ['https://www.instagram.com/segurosvalentin/', 'https://wa.me/34603448765', 'https://www.linkedin.com/in/rosa-isabel-valentin-gonzalez-3a0b16141/'],
         knowsAbout: isEnglish ? ['Health insurance', 'Pet insurance', 'Dental insurance', 'Travel insurance', 'Accident insurance', 'Funeral insurance', 'Business insurance'] : ['Seguros de salud', 'Seguros para mascotas', 'Seguros dentales', 'Seguros de viaje', 'Seguros de accidentes', 'Seguros de decesos', 'Seguros para negocios y pymes'],
@@ -41,6 +44,7 @@ export default function SchemaPersons({ locale = 'es' }: { locale?: string }) {
         jobTitle: isEnglish ? 'Co-founder of VPI and exclusive insurance agent for ASISA' : 'Cofundador de VPI y agente exclusivo de seguros de ASISA',
         description: isEnglish ? 'Co-founder of Valentín Protección Integral and individual exclusive insurance agent for ASISA, with expertise in life, health and accident insurance.' : 'Cofundador de Valentín Protección Integral y agente exclusivo individual de seguros de ASISA, especializado en seguros de vida, salud y accidentes.',
         url: 'https://valentinproteccionintegral.com/sobre-nosotros',
+        identifier: { '@type': 'PropertyValue', propertyID: 'DGSFP', value: siteConfig.coFounders[1].dgsfpCode },
         affiliation: { '@id': brandId },
         sameAs: ['https://www.linkedin.com/in/sebastian-sifontes-valentin-752665187'],
         alumniOf: [{ '@type': 'CollegeOrUniversity', name: 'Universidad Complutense de Madrid', url: 'https://www.ucm.es' }, { '@type': 'CollegeOrUniversity', name: 'Freie Universität Berlin', url: 'https://www.fu-berlin.de' }],
